@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="zh-Hant" class="no-js">
-
 <head>
+    <meta name="robots" content="noindex">
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,14 +10,14 @@
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
-    <![endif]-->
-    <!-- slick css-->
-    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
-    <!-- hyUI css -->
-    <link rel="stylesheet" href="css/hyui.css">
-    <style> .demo_panel{
-        position:fixed;
+<![endif]-->
+<!-- slick css-->
+<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+<link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+<!-- hyUI css -->
+<link rel="stylesheet" href="css/hyui.css">
+<style> .demo_panel{
+    position:fixed;
     width:85px;
     height: 260px;
     padding: .5em 1em;
@@ -35,7 +36,7 @@
 .demo small{
     display: block;
 }
-    .switch {
+.switch {
   position: relative;
   display: block;
   width: 40px;
@@ -76,7 +77,7 @@
     z-index: 999;
 }
 .col_line{
-     position: relative;
+   position: relative;
 }
 .col_line:before{
     content: "";
@@ -161,7 +162,7 @@
   box-shadow: 0 0 1px #3dc8a6;
 }
 
-    </style>
+</style>
 </head>
 
 <body>
@@ -201,16 +202,16 @@
                 <h1>
                     <a href="#"><img src="images/logo.png" alt="網站標題" /></a>
                 </h1>
-               <!-- Search Start -->
+                <!-- Search Start -->
                 <div class="search">
-                        <div class="form_grp">
-                            <label for="mustSameAsId">搜尋</label>
-                            <input name="username" id="mustSameAsId" type="text" placeholder="請輸入文字" accesskey="S">
-                            <input name="" type="submit" title="查詢" value="查詢" />
-                        </div>
-                        <div class="btn_grp">
-                            <input name="" type="submit" value="進階搜尋" />
-                        </div>
+                    <div class="form_grp">
+                        <label for="mustSameAsId">搜尋</label>
+                        <input name="username" id="mustSameAsId" type="text" placeholder="請輸入文字" accesskey="S">
+                        <input name="" type="submit" title="查詢" value="查詢" />
+                    </div>
+                    <div class="btn_grp">
+                        <input name="" type="submit" value="進階搜尋" />
+                    </div>
                     <div class="keywordHot">
                         <ul>
                             <li><a href="#">熱門熱門</a></li>
@@ -520,15 +521,15 @@
     <!-- 客製js -->
     <script src="js/customize.js"></script>
     <script>
-    $('.switch1').find('.slider').off().click(function(event) {
-        $('body').find('.container').toggleClass('container_line');
-    });
-    $('.switch2').find('.slider').off().click(function(event) {
-        $('body').find('section').toggleClass('section_line');
-    });
-    $('.switch3').find('.slider').off().click(function(event) {
-        $('body').find('.col').toggleClass('col_line');
-    });
+        $('.switch1').find('.slider').off().click(function(event) {
+            $('body').find('.container').toggleClass('container_line');
+        });
+        $('.switch2').find('.slider').off().click(function(event) {
+            $('body').find('section').toggleClass('section_line');
+        });
+        $('.switch3').find('.slider').off().click(function(event) {
+            $('body').find('.col').toggleClass('col_line');
+        });
     </script>
 </body>
 
