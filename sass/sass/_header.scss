@@ -1,0 +1,443 @@
+//header
+.header {
+  position: relative;
+  z-index: 99;
+  height: 84px;
+  @extend %clearfix;
+  @include screen('mobile') {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    height: 60px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .3);
+    background: #fefefe;
+  }
+  // mobile btn for extend
+  %mobileCtrlBtn {
+    width: 60px !important;
+    height: 60px !important;
+    position: absolute;
+    top: 12px;
+    display: block;
+    font-size: 0em;
+    padding: 15px;
+    margin: 0;
+    min-width: auto;
+    min-height: auto;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    @include box-sizing;
+    @include screen('mobile') {
+      // display: block !important;
+      top: 0;
+    }
+  }
+  >.container {
+    max-width: $container-max;
+    overflow: visible;
+    position: relative; // menu
+    .sidebarCtrl {
+      display: block;
+      left: 10px;
+      @include screen('mobile') {
+        left: 0;
+        z-index: 999;
+      }
+      @extend %mobileCtrlBtn;
+      span {
+        position: absolute;
+        background: #888;
+        width: 50%;
+        height: 4px;
+        top: 35%;
+        left: 50%;
+        margin-left: -25%;
+        display: block;
+        border-radius: 3px;
+        &:nth-child(2) {
+          top: 50%;
+        }
+        &:nth-child(3) {
+          top: 65%;
+        }
+      }
+    }
+    // search
+    .searchCtrl {
+      display: none;
+      right: 0px;
+      font-size: 0em;
+      @include screen('mobile') {
+        display: block;
+        z-index: 999;
+      }
+      @extend %mobileCtrlBtn;
+      &:before {
+        width: 40px;
+        height: 40px;
+        background: url(../images/basic/icon_search.png) no-repeat center center;
+        background-size: 28px;
+        opacity: .6;
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        display: block;
+      }
+    }
+  }
+  h1 {
+    position: absolute;
+    left: 64px;
+    top: 20px;
+    width: 294px;
+    height: 54px;
+    margin: 0;
+    padding: 0;
+    @include box-sizing;
+    a {
+      display: block;
+      background: url(../images/logo.png) no-repeat center center;
+      width: 100%;
+      height: 100%;
+      background-size: contain;
+      img {
+        display: none;
+      }
+    }
+    @include screen('mobile') {
+      position: relative;
+      left: auto;
+      top: auto;
+      padding: 2px 50px;
+      width: 100%;
+      text-align: center;
+      height: 60px;
+      img {
+        width: auto;
+        height: auto;
+        max-height: 54px;
+        margin: 0px auto;
+        transform: scale(.8);
+        img {
+          display: block;
+        }
+      }
+    }
+  }
+  // 導覽列
+  .navigation {
+    @extend %clearfix;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 26px;
+    ul {
+      float: right;
+      padding: 0 15px 0 0;
+      margin: 0;
+      font-size: .938em;
+      list-style: none;
+    }
+    li {
+      float: left;
+      margin: 0;
+      border-left: 1px dotted #c4c2c2;
+      &:first-child,
+      &:last-child {
+        border-left: 0;
+      }
+      a {
+        display: inline-block;
+        padding: 0 .5em;
+        text-decoration: none;
+        @include aSetting_nocolor;
+        &.icon_fb,
+        &.icon_youtube,
+        &.icon_search,
+        &.icon_rss,
+        &.icon_sitemap,
+        &.icon_member {
+          width: 31px;
+          height: 31px;
+          display: block;
+          text-indent: -9999px;
+          &:hover {
+            filter: grayscale(1);
+          }
+        }
+        &.icon_fb {
+          background: url(../images/icon_fb.png) center center no-repeat;
+        }
+        &.icon_youtube {
+          background: url(../images/icon_youtube.png) center center no-repeat;
+        }
+        &.icon_search {
+          background: url(../images/icon_search.png) center center no-repeat;
+        }
+        &.icon_rss {
+          background: url(../images/icon_rss.png) center center no-repeat;
+          background-size: 22px;
+        }
+        &.icon_sitemap {
+          background: url(../images/icon_sitemap.png) center center no-repeat;
+          background-size: contain;
+        }
+        &.icon_member {
+          background: url(../images/icon_member.png) center center no-repeat;
+          background-size: contain;
+          position: relative;
+          text-indent: 0;
+          font-size: 0;
+          span {
+            width: 16px;
+            height: 16px;
+            display: block;
+            line-height: 16px;
+            border-radius: 50%;
+            background: #be092d;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+            font-size: .75rem;
+          }
+        }
+        &.icon_live,
+        &.icon_logout {
+          padding: 4px 16px;
+          @include gradient(#ab52a8, #873783, horizontal);
+          color: #fff;
+          border-radius: 2px;
+          margin-left: 10px;
+          &:hover {
+            @include gradient(#873783, #ab52a8, horizontal);
+          }
+        }
+      }
+      .search {
+        min-width: 25%;
+        max-width: 330px;
+        display: none;
+        vertical-align: middle;
+        padding: 1em;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 3px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 70px;
+        right: 15px;
+        z-index: 99999;
+        @include screen('mobile') {
+          border-radius: 0px
+        }
+        label {
+          font-size: 0em
+        }
+        form {
+          display: block;
+        }
+        .form_grp {
+          margin-bottom: 0;
+          margin-right: 0 !important;
+          input {
+            margin: 0;
+            padding: .2em 35px .2em .5em;
+            &[type="submit"] {
+              font-size: 0em;
+              width: 30px !important;
+              height: 30px;
+              max-width: auto;
+              min-width: auto;
+              background: url(../images/basic/icon_search.png) no-repeat center center;
+              background-size: 20px;
+              border: none;
+              display: inline-block;
+              margin-left: -40px !important;
+              margin-top: -2px !important;
+              opacity: .8;
+              &:hover,
+              &:focus {
+                opacity: 1
+              }
+            }
+          }
+        }
+        .btn_grp {
+          padding: .2em;
+          margin-right: 0;
+          margin-bottom: 0;
+          input,
+          input[type="submit"] {
+            margin: 0;
+            padding: .4em 1em .4em !important;
+            font-size: .813em
+          }
+        }
+        .keywordHot {
+          display: inline-block;
+          vertical-align: middle;
+          margin-left: .5em;
+          margin-top: .2em;
+          ul {
+            display: inline-block;
+            font-size: .813em;
+            line-height: 1.65em;
+            margin: 0;
+            padding: 0;
+            &:before {
+              display: inline-block;
+              content: "熱門關鍵字：";
+              color: #fff;
+              float: left;
+              opacity: .6;
+            }
+            li {
+              margin: 0 .6em 0 0;
+              padding: 0;
+              display: inline-block;
+              border-left: 0;
+            }
+            a {
+              color: #FFF;
+              &:hover,
+              &:focus {
+                text-decoration: underline
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//search
+.search {
+  // m_search
+  &.m_search {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: auto;
+    padding: 1em .3em;
+    display: block;
+    height: auto;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 999;
+    background: #333;
+    label {
+      font-size: 0em;
+      line-height: 0;
+    }
+    .form_grp {
+      width: 70%;
+      height: auto;
+      padding: 0 0 0 5% !important;
+      margin-top: 0;
+      text-align: right;
+      float: left;
+      height: 50px;
+      position: relative;
+      @include box-sizing();
+      label {
+        display: none;
+      }
+      input {
+        width: 100%;
+        margin: 0;
+        padding: .5em 45px .4em .5em;
+        &[type="submit"] {
+          font-size: 0em;
+          width: 36px !important;
+          height: 36px;
+          padding: 0;
+          // max-width:none;
+          // min-width:none;
+          background: url(../images/basic/icon_search.png) no-repeat center center;
+          background-size: 24px;
+          border: none;
+          display: inline-block;
+          // margin-left: -50px !important;
+          position: absolute;
+          right: 5px;
+          top: 0px;
+          opacity: .8;
+          // outline:1px solid red;
+          &:hover,
+          &:focus {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .btn_grp {
+      padding: .1em 5% .1em 0;
+      margin-bottom: 0;
+      width: 26%;
+      text-align: left;
+      @include box-sizing();
+      input {
+        width: 100% !important;
+        // padding: .6em .5em !important;
+        padding: .5em!important;
+        margin: 0;
+        margin-top: -2px!important;
+        border: 0px;
+      }
+    }
+    .keywordHot {
+      padding-left: 5%;
+      margin-top: 10px;
+      @extend %clearfix;
+      ul {
+        @include li-reset();
+        &:before {
+          display: inline-block;
+          content: "熱門關鍵字：";
+          color: #fff;
+          float: left;
+          opacity: .6;
+        }
+        li {
+          float: left;
+          margin-right: .6em;
+        }
+      }
+      a {
+        color: #FFF;
+        &:hover,
+        &:focus {
+          color: $primaryColor;
+        }
+      }
+    }
+  }
+}
+
+// header fix
+.header.fixed {
+  position: fixed;
+  width: 100%;
+  right: 0;
+  top: 0;
+  box-shadow: rgba(0, 0, 0, .5) 0 0 25px;
+  background: #eeeded;
+  z-index: 999;
+  @include screen('mobile') {
+    background: #eeeded;
+  }
+  .menu {
+    >ul {
+      >li {
+        >a {
+          color: #FFF;
+        }
+      }
+    }
+  }
+}
