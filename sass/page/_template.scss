@@ -93,11 +93,18 @@ body {
     top: 875px;
     bottom: 0;
     background: url(../images/bg_article_lp.png) repeat-y 0 0;
+    @include screen('mobile') {
+      background-size: 100% auto;
+      top: 180px;
+    }
   }
   h2.title {
     margin-top: 120px;
     position: relative;
     z-index: 2;
+    @include screen('mobile') {
+      margin: 0.4em 0;
+    }
   }
   .function_panel {
     z-index: 2;
@@ -115,16 +122,25 @@ body {
       right: 180px;
       top: -200px;
       z-index: -1;
+      @include screen('mobile') {
+        display: none;
+      }
     }
     .divide {
       width: 100%;
       height: 3px;
       background: $primaryColor;
       margin-bottom: 80px;
+      @include screen('mobile') {
+        margin-bottom: 40px;
+      }
     }
     .article_list {
       position: relative;
       margin-bottom: 150px;
+      @include screen('mobile') {
+        margin-bottom: 30px;
+      }
       .article_list_title {
         color: #9d4694;
         font-size: 1.5rem;
@@ -153,10 +169,27 @@ body {
         height: 284px;
         position: absolute;
         z-index: 3;
-        img {}
+        @include screen('mobile') {
+          position: relative;
+          width: 100%;
+          height: auto;
+          overflow: hidden;
+        }
+        img {
+          width: 100%;
+          height: auto;
+          @include screen('mobile') {
+            width: 100%;
+            height: auto;
+          }
+        }
         +ul {
           margin-left: 38%;
           margin-top: 65px;
+          @include screen('mobile') {
+            margin-left: 0;
+            margin-top: 20px;
+          }
         }
       }
     }
@@ -173,6 +206,9 @@ body {
     top: 420px;
     bottom: 0;
     background: url(../images/bg_article_cp.png) repeat-y 0 0;
+    @include screen('mobile') {
+      background-size: 100% auto;
+    }
   }
   .function_panel {
     z-index: 2;
@@ -183,6 +219,9 @@ body {
     margin-top: 200px;
     position: relative;
     z-index: 2;
+    @include screen('mobile') {
+      margin: 0.4em 0;
+    }
   }
   .cp {
     position: relative;
@@ -197,12 +236,18 @@ body {
       right: -63px;
       top: -320px;
       z-index: -1;
+      @include screen('mobile') {
+        display: none;
+      }
     }
     .article_txt {
       padding: 40px 30px 20px 30px;
       margin: 40px 0;
       background: rgba(255, 255, 255, 0.85);
       box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+      @include screen('mobile') {
+        margin: 0 0 40px 0;
+      }
       .article_author {
         float: right;
         padding: .5rem 1rem;
@@ -221,6 +266,9 @@ body {
       margin: 40px 0;
       background: rgba(255, 255, 255, 0.85);
       box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+      @include screen('mobile') {
+        margin: 0 0 40px 0;
+      }
       .article_judge {
         float: left;
         padding: .5rem 1rem;
