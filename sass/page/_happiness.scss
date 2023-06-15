@@ -292,7 +292,7 @@
           max-width: 560px;
           margin-left: auto;
           margin-right: auto;
-          
+
           @include screen('mobile') {
             // width: 100%;
           }
@@ -1255,16 +1255,16 @@
       @include screen('mobile') {
         width: 100%;
       }
-      &.happyChart1 {
-        padding-top: 60px;
-        background: url(../images/happiness/star.png) no-repeat center 10px;
-      }
-      &.happyChart2 {
-        padding-top: 60px;
-        @include screen('mobile') {
-          padding-top: 0;
-        }
-      }
+      // &.happyChart1 {
+      //   padding-top: 60px;
+      //   background: url(../images/happiness/star.png) no-repeat center 10px;
+      // }
+      // &.happyChart2 {
+      //   padding-top: 60px;
+      //   @include screen('mobile') {
+      //     padding-top: 0;
+      //   }
+      // }
       .chart {}
     }
   }
