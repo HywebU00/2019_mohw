@@ -4,7 +4,7 @@
         >ul>li {
             $fatFooterWidth: 100%;
             @include box-sizing(border-box);
-            width: $fatFooterWidth / $fatFooterliLength;
+            width: calc($fatFooterWidth / $fatFooterliLength);
             @include screen("mobile") {
                 width: 95%;
                 margin: 0px auto 3px;

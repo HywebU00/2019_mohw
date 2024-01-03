@@ -1,6 +1,6 @@
 .happiness {
   background: #fff url(../images/happiness/inner_bg.png) no-repeat center 0;
-  @include screen('mobile') {
+  @include screen("mobile") {
     background: none;
     padding: 5em 1em 0 1em;
   }
@@ -17,26 +17,45 @@
     color: #fff;
     font-weight: normal;
     font-size: 1.7rem;
-    @include screen('mobile') {
+    @include screen("mobile") {
       position: relative;
       top: 0;
       border-bottom: 2px solid #984696;
       padding: 1rem 0;
       margin-bottom: 1rem;
       border-radius: 9px;
-      background: #984696 url(../images/happiness/inner_bg.png) no-repeat center 0;
+      background: #984696 url(../images/happiness/inner_bg.png) no-repeat center
+        0;
       margin: 15px;
       width: auto;
+      font-size: 1.5rem;
     }
     img {
       margin-bottom: 16px;
-      @include screen('mobile') {
+      @include screen("mobile") {
         display: none;
       }
     }
   }
+  .toptitle2 {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-weight: normal;
+    font-size: 1.7rem;
+    @include screen("mobile") {
+      display: none;
+    }
+  }
   .function_panel {
-    @include screen('mobile') {
+    @include screen("mobile") {
       width: 100%;
       float: none;
       top: 0;
@@ -52,18 +71,31 @@
     margin: 20px 0 36px 0;
     display: flex;
     color: #545454;
+    @include screen("mobile") {
+      display: block;
+      padding: 36px;
+    }
     .info_left {
       flex-basis: 65%;
       padding-right: 60px;
+      @include screen("mobile") {
+        width: 100%;
+        margin-bottom: 1rem;
+        padding-right: 0;
+      }
       .info_title {
         font-size: 1.125rem;
         font-weight: bold;
         margin-bottom: 24px;
       }
-      .info_text {}
+      .info_text {
+      }
     }
     .info_right {
       flex-basis: 35%;
+      @include screen("mobile") {
+        width: 100%;
+      }
       .survey_fill {
         display: block;
         background: #7c1e77;
@@ -77,8 +109,26 @@
       }
       span {
         display: block;
-        font-size: .875rem;
+        font-size: 0.875rem;
       }
+    }
+  }
+  .survey_info2 {
+    padding: 36px 60px;
+    background: #f2f2f2;
+    border-radius: 10px;
+    margin: 20px 0 36px 0;
+    display: block;
+    color: #545454;
+    @include screen("mobile") {
+      padding: 36px;
+    }
+    .info_title {
+      font-size: 1.125rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .info_text {
     }
   }
 }
@@ -87,7 +137,7 @@
   width: 63%;
   float: left;
   margin-right: 30px;
-  @include screen('mobile') {
+  @include screen("mobile") {
     width: 100%;
     float: none;
     margin-right: 0;
@@ -108,10 +158,10 @@
       border-radius: 9px;
       background: #9c4694;
       font-size: 1.125rem;
-      transition: all .5s;
+      transition: all 0.5s;
       &:hover,
       &:focus {
-        background: #00857C;
+        background: #00857c;
         color: #fff;
       }
       &:focus {
@@ -128,7 +178,7 @@
       font-size: 1.75rem;
       font-weight: bold;
       line-height: 100%;
-      margin: 0 .5rem 1rem 0;
+      margin: 0 0.5rem 1rem 0;
       color: #9c4694;
     }
     .welcome_alertblock {
@@ -165,14 +215,14 @@
       }
       .alertlist {
         background: #fff;
-        box-shadow: 0 0 5px 0 rgba(0, 0, 0, .1);
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
         border-radius: 9px;
         border: 1px solid #c690c1;
         position: absolute;
         left: -30px;
         top: 50px;
         width: 300px;
-        padding: .5rem 1rem;
+        padding: 0.5rem 1rem;
         box-sizing: border-box;
         display: none;
         &:before {
@@ -227,7 +277,7 @@
               }
               .alert_time {
                 color: #be092d;
-                font-size: .9375rem;
+                font-size: 0.9375rem;
               }
               &:hover {
                 text-decoration: underline;
@@ -247,11 +297,11 @@
             background: #9c4694;
             color: #fff;
             border-radius: 7px;
-            font-size: .875rem;
-            transition: all .5s;
+            font-size: 0.875rem;
+            transition: all 0.5s;
             &:hover,
             &:focus {
-              background: #00857C;
+              background: #00857c;
               color: #fff;
             }
           }
@@ -285,16 +335,16 @@
         align-items: center;
         background: #fff;
         overflow: hidden;
-        aspect-ratio:560/208;
+        aspect-ratio: 560/208;
         img {
           width: auto;
-          max-height: 208px;
-          max-width: 560px;
+          max-height: 100%;
+          max-width: 100%;
           margin-left: auto;
           margin-right: auto;
 
-          @include screen('mobile') {
-            // width: 100%;
+          @include screen("mobile") {
+            max-width: 100%;
           }
         }
       }
@@ -307,7 +357,7 @@
       li {
         padding: 12px 0;
         border-bottom: 1px solid #cdcdcd;
-        font-size: .9375rem;
+        font-size: 0.9375rem;
         display: flex;
         align-items: center;
         time {
@@ -324,13 +374,13 @@
           display: block;
           white-space: nowrap;
           &.color1 {
-            background: #00857C;
+            background: #00857c;
           }
           &.color2 {
-            background: #D11036;
+            background: #d11036;
           }
           &.color3 {
-            background: #AC5834;
+            background: #ac5834;
           }
         }
         .text {
@@ -363,13 +413,13 @@
     ul {
       @include li-reset;
       display: flex;
-      @include screen('mobile') {
+      @include screen("mobile") {
         flex-direction: column;
       }
       li {
         display: flex;
         flex: 1 1 45%;
-        @include screen('mobile') {
+        @include screen("mobile") {
           margin-bottom: 10px;
         }
         a {
@@ -383,16 +433,16 @@
           padding: 32px 18px;
           margin-right: 8px;
           border-radius: 8px;
-          transition: all .5s;
+          transition: all 0.5s;
           &:hover,
           &:focus {
             color: #444;
             background: #ffbda1;
           }
           &:focus {
-            outline: 2px solid #00857C;
+            outline: 2px solid #00857c;
           }
-          @include screen('mobile') {
+          @include screen("mobile") {
             margin-right: 0;
           }
           .questionnaire_text {
@@ -423,7 +473,7 @@
             background: #7f7f7f;
             &:hover,
             &:focus {
-              background: #00857C;
+              background: #00857c;
               color: #fff;
             }
             &:focus {
@@ -481,11 +531,12 @@
             img {
               width: 100%;
               height: auto;
-              transition: all .5s;
+              transition: all 0.5s;
               transform: scale(1);
             }
           }
-          .text {}
+          .text {
+          }
           &:hover,
           &:focus {
             color: #984696;
@@ -505,7 +556,7 @@
 .happiness_right {
   padding-top: 44px;
   overflow: hidden;
-  @include screen('mobile') {
+  @include screen("mobile") {
     width: 100%;
     float: none;
     margin-right: 0;
@@ -561,7 +612,8 @@
           width: 18px;
           height: 18px;
           display: inline-block;
-          background: url(../images/happiness/arrow3.png) no-repeat center center;
+          background: url(../images/happiness/arrow3.png) no-repeat center
+            center;
           margin-right: 5px;
           margin-top: -2px;
           vertical-align: middle;
@@ -579,7 +631,7 @@
         margin-bottom: 12px;
       }
       .member_text {
-        margin-bottom: .25rem;
+        margin-bottom: 0.25rem;
         span {
           font-weight: bold;
           margin-right: 8px;
@@ -594,13 +646,13 @@
           padding: 8px 1rem;
           border-radius: 7px;
           display: inline-block;
-          transition: all .5s;
+          transition: all 0.5s;
           &:hover,
           &:focus {
             background: #fff;
           }
           &:focus {
-            outline: 2px solid #00857C;
+            outline: 2px solid #00857c;
           }
         }
       }
@@ -641,12 +693,12 @@
           background: #9c4694;
           padding: 8px 1rem;
           border-radius: 7px;
-          transition: all .5s;
+          transition: all 0.5s;
           display: inline-block;
           &:hover,
           &:focus {
             color: #fff;
-            background: #00857C;
+            background: #00857c;
           }
           &:focus {
             outline: 2px solid #9c4694;
@@ -703,12 +755,12 @@
             background: #9c4694;
             color: #fff;
             border-radius: 7px;
-            font-size: .875rem;
-            transition: all .5s;
+            font-size: 0.875rem;
+            transition: all 0.5s;
             &:hover,
             &:focus {
               color: #fff;
-              background: #00857C;
+              background: #00857c;
             }
             &:focus {
               outline: 2px solid #9c4694;
@@ -725,12 +777,12 @@
         background: #9c4694;
         padding: 8px 1rem;
         border-radius: 7px;
-        transition: all .5s;
+        transition: all 0.5s;
         display: inline-block;
         &:hover,
         &:focus {
           color: #fff;
-          background: #00857C;
+          background: #00857c;
         }
         &:focus {
           outline: 2px solid #9c4694;
@@ -754,7 +806,7 @@
         width: 48%;
         margin-bottom: 12px;
         overflow: hidden;
-        @include screen('mobile') {
+        @include screen("mobile") {
           width: 32%;
         }
         a {
@@ -772,7 +824,7 @@
             position: absolute;
             z-index: 7;
             left: 0;
-            background: rgba(0, 0, 0, .5);
+            background: rgba(0, 0, 0, 0.5);
           }
           &:after {
             content: "";
@@ -785,7 +837,7 @@
             right: 0;
             z-index: 6;
             background-size: cover;
-            transition: all .5s;
+            transition: all 0.5s;
             background-position: center;
             transform: scale(1);
           }
@@ -806,27 +858,33 @@
           }
         }
         &:nth-child(1) a:after {
-          background: url(../images/happiness/banner1.jpg) no-repeat center center;
+          background: url(../images/happiness/banner1.jpg) no-repeat center
+            center;
           background-size: cover;
         }
         &:nth-child(2) a:after {
-          background: url(../images/happiness/banner2.jpg) no-repeat center center;
+          background: url(../images/happiness/banner2.jpg) no-repeat center
+            center;
           background-size: cover;
         }
         &:nth-child(3) a:after {
-          background: url(../images/happiness/banner3.jpg) no-repeat center center;
+          background: url(../images/happiness/banner3.jpg) no-repeat center
+            center;
           background-size: cover;
         }
         &:nth-child(4) a:after {
-          background: url(../images/happiness/banner4.jpg) no-repeat center center;
+          background: url(../images/happiness/banner4.jpg) no-repeat center
+            center;
           background-size: cover;
         }
         &:nth-child(5) a:after {
-          background: url(../images/happiness/banner5.jpg) no-repeat center center;
+          background: url(../images/happiness/banner5.jpg) no-repeat center
+            center;
           background-size: cover;
         }
         &:nth-child(6) a:after {
-          background: url(../images/happiness/banner6.jpg) no-repeat center center;
+          background: url(../images/happiness/banner6.jpg) no-repeat center
+            center;
           background-size: cover;
         }
       }
@@ -839,12 +897,12 @@
         background: #9c4694;
         padding: 8px 1rem;
         border-radius: 7px;
-        transition: all .5s;
+        transition: all 0.5s;
         display: inline-block;
         &:hover,
         &:focus {
           color: #fff;
-          background: #00857C;
+          background: #00857c;
         }
       }
     }
@@ -856,6 +914,10 @@
     display: flex;
     justify-content: center;
     margin-bottom: 36px;
+    @include screen("mobile") {
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
     a {
       padding: 12px 30px;
       color: #fff;
@@ -865,12 +927,20 @@
       border-radius: 5px;
       margin: 0 3px;
       font-weight: bold;
-      transition: .5s all;
+      transition: 0.5s all;
+      @include screen("mobile") {
+        padding: 12px;
+        margin-bottom: 0.5rem;
+      }
       &.active,
       &:hover,
       &:focus {
         background: rgb(137, 48, 132);
-        background: linear-gradient(160deg, rgba(137, 48, 132, 1) 40%, rgba(174, 98, 170, 1) 100%);
+        background: linear-gradient(
+          160deg,
+          rgba(137, 48, 132, 1) 40%,
+          rgba(174, 98, 170, 1) 100%
+        );
       }
     }
   }
@@ -882,6 +952,12 @@
     padding: 18px 50px;
     border-radius: 50px;
     margin-bottom: 36px;
+    @include screen("mobile") {
+      border-radius: 12px;
+      padding: 18px;
+      display: block;
+      text-align: center;
+    }
     select {
       width: 100%;
       margin-bottom: 0;
@@ -892,14 +968,30 @@
       margin-bottom: 0;
       padding: 0.45rem 0.5rem;
     }
-    >div {
+    > div {
       padding: 0 4px;
     }
-    .search_county {}
-    .search_town {}
+    .search_county {
+      @include screen("mobile") {
+        width: calc(50% - 8px);
+        margin-bottom: 8px;
+        float: left;
+      }
+    }
+    .search_town {
+      @include screen("mobile") {
+        width: calc(50% - 8px);
+        margin-bottom: 8px;
+        float: right;
+      }
+    }
     .search_text {
       flex-grow: 1;
       flex-basis: auto;
+      @include screen("mobile") {
+        width: calc(100% - 8px);
+        margin-bottom: 8px;
+      }
     }
     .search_input {
       input {
@@ -920,11 +1012,11 @@
         box-sizing: border-box;
         margin-bottom: 20px;
         padding: 16px;
-        box-shadow: 0 0 5px rgba(0, 0, 0, .2);
-        @include screen('tablet') {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        @include screen("tablet") {
           width: 49%;
         }
-        @include screen('mobile') {
+        @include screen("mobile") {
           width: 100%;
         }
         &:last-child:nth-child(3n - 1) {
@@ -935,8 +1027,7 @@
         }
         .hospital_pic {
           width: 100%;
-          @include aspect-ratio(4,
-            3);
+          @include aspect-ratio(4, 3);
           margin-bottom: 8px;
           .hospital_category {
             position: absolute;
@@ -946,14 +1037,14 @@
             display: block;
             padding: 8px 12px;
             color: #fff;
-            font-size: .875rem;
+            font-size: 0.875rem;
             z-index: 9;
           }
           img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: .3s ease-out;
+            transition: 0.3s ease-out;
           }
         }
         .hospital_info {
@@ -964,7 +1055,7 @@
             margin-bottom: 12px;
           }
           p {
-            font-size: .875rem;
+            font-size: 0.875rem;
             color: #444;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -981,12 +1072,12 @@
             text-align: center;
             overflow: hidden;
             a {
-              font-size: .875rem;
+              font-size: 0.875rem;
               padding: 6px 30px;
               color: #fff;
               background: #666;
               display: inline-block;
-              transition: .5s all;
+              transition: 0.5s all;
               &:hover,
               &:focus {
                 background: #984696;
@@ -1004,22 +1095,27 @@
   justify-content: space-between;
   flex-wrap: wrap;
   padding-top: 1rem;
-  @include screen('mobile') {
+  @include screen("mobile") {
     flex-direction: column;
   }
   .update {
     text-align: right;
     font-style: normal;
-    font-size: .9375rem;
-    span {}
+    font-size: 0.9375rem;
+    span {
+    }
+    @include screen("mobile") {
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
   }
   .happiness_pic {
     width: 46%;
     text-align: center;
     color: #444;
-    @include screen('mobile') {
+    @include screen("mobile") {
       width: 100%;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
     .imgOuter {
       width: 100%;
@@ -1046,31 +1142,31 @@
     }
     .hospital_more {
       a {
-        padding: .8rem;
+        padding: 0.8rem;
         display: inline-block;
         background: #7c1e77;
         color: #fff;
         font-size: 1.125rem;
         min-width: 70%;
         border-radius: 9px;
-        margin-bottom: .5rem;
-        transition: .5s all;
+        margin-bottom: 0.5rem;
+        transition: 0.5s all;
         white-space: nowrap;
         &:hover,
         &:focus {
-          background: #00857C;
+          background: #00857c;
         }
       }
       span {
         display: block;
-        font-size: .875rem;
+        font-size: 0.875rem;
       }
     }
   }
   .hospital_info {
     width: 50%;
     margin-bottom: 2rem;
-    @include screen('mobile') {
+    @include screen("mobile") {
       width: 100%;
     }
     .hospital_category {
@@ -1078,7 +1174,7 @@
       display: inline-block;
       padding: 8px 12px;
       color: #fff;
-      font-size: .875rem;
+      font-size: 0.875rem;
       margin-bottom: 20px;
     }
     .hospital_name {
@@ -1135,7 +1231,7 @@
       position: absolute;
       right: 0;
       top: 18px;
-      @include screen('mobile') {
+      @include screen("mobile") {
         position: relative;
         top: auto;
         margin-bottom: 10px;
@@ -1158,7 +1254,7 @@
         position: relative;
         box-sizing: border-box;
         margin: 10px 0;
-        @include screen('mobile') {
+        @include screen("mobile") {
           width: 100%;
         }
         &::before {
@@ -1182,7 +1278,8 @@
           margin: 0;
           padding: 0;
           margin-bottom: 4px;
-          span {}
+          span {
+          }
         }
       }
       ul {
@@ -1197,10 +1294,11 @@
           background: url(../images/happiness/arrow4.png) no-repeat 0 0;
           padding-left: 40px;
           box-sizing: border-box;
-          @include screen('mobile') {
+          @include screen("mobile") {
             width: 100%;
           }
-          a {}
+          a {
+          }
         }
       }
     }
@@ -1240,19 +1338,20 @@
       font-size: 1.125rem;
       color: #595959;
       margin-bottom: 10px;
-      @include screen('mobile') {
+      @include screen("mobile") {
         flex-direction: column;
-        font-size: .9375rem;
+        font-size: 0.9375rem;
         text-align: center;
       }
-      span {}
+      span {
+      }
     }
     .happyChart {
       width: 48%;
-      box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
       margin-bottom: 2rem;
       border-radius: 5px;
-      @include screen('mobile') {
+      @include screen("mobile") {
         width: 100%;
       }
       // &.happyChart1 {
@@ -1265,7 +1364,8 @@
       //     padding-top: 0;
       //   }
       // }
-      .chart {}
+      .chart {
+      }
     }
   }
 }
@@ -1284,8 +1384,8 @@
       color: #444;
       font-weight: bold;
       font-size: 1.125rem;
-      @include screen('mobile') {
-        padding: 0.8rem .5rem;
+      @include screen("mobile") {
+        padding: 0.8rem 0.5rem;
         font-size: 1rem;
         text-align: center;
         margin: 0;
@@ -1302,8 +1402,8 @@
   }
   .memberTab_content {
     padding: 2rem;
-    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
-    @include screen('mobile') {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    @include screen("mobile") {
       padding: 1rem;
     }
     blockquote {
@@ -1316,11 +1416,11 @@
       padding: 20px 32px 10px 32px;
       box-sizing: border-box;
       margin: 0 0 2em 0;
-      @include screen('mobile') {
+      @include screen("mobile") {
         padding: 20px 16px 10px 16px;
       }
       p {
-        margin: 0 0 .5em 0;
+        margin: 0 0 0.5em 0;
       }
       ul {
         margin-top: 0;
@@ -1338,7 +1438,7 @@
       &:before {
         content: "";
         width: 8px;
-        height: 100&;
+        height: 100%;
         display: block;
         border-radius: 10px;
         margin-right: 8px;
@@ -1348,17 +1448,18 @@
     }
     .form_block {
       .form_grp {
-        .form_title {}
+        .form_title {
+        }
         .form_content {
           &.form_inline {
             display: flex;
             align-items: center;
-            @include screen('mobile') {
+            @include screen("mobile") {
               flex-direction: column;
             }
             input {
               width: auto;
-              @include screen('mobile') {
+              @include screen("mobile") {
                 width: 100%;
               }
             }
@@ -1373,7 +1474,7 @@
               display: flex;
               font-weight: bold;
               color: #20b198;
-              @include screen('mobile') {
+              @include screen("mobile") {
                 margin: 10px;
               }
               &:before {
@@ -1393,7 +1494,7 @@
         // 1st
         ul {
           @include li-reset;
-          >li {
+          > li {
             border: 1px solid #ccc;
             background: #f2f2f2;
             margin-bottom: 10px;
@@ -1432,7 +1533,7 @@
               border-radius: 0 0 10px 10px;
               border-top: 1px solid #ccc;
               .certificate_info {
-                >ul.certificate {
+                > ul.certificate {
                   @include li-reset;
                   display: flex;
                   flex-wrap: wrap;
@@ -1518,16 +1619,16 @@
         display: flex;
         justify-content: center;
         margin: 1rem 0;
-        @include screen('mobile') {
+        @include screen("mobile") {
           flex-direction: column;
           margin-bottom: 10px;
         }
-        >div {
+        > div {
           background: #f8e8f6;
           color: #444;
           text-align: center;
           padding: 1.5rem 2rem 2rem 2rem;
-          margin: .5rem;
+          margin: 0.5rem;
           border-radius: 5px;
           span {
             font-weight: bold;
