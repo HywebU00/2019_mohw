@@ -6395,7 +6395,7 @@ body.noscroll {
 .lp .list > ul > li,
 .lp .list ol > li {
   padding: 1em 0;
-  border-bottom: 1px solid #DDD;
+  border-bottom: 1px solid #ddd;
   position: relative;
 }
 .lp .list > ul > li .tag,
@@ -6444,7 +6444,7 @@ body.noscroll {
 .lp .list > ul > li time,
 .lp .list ol > li time {
   display: block;
-  color: #AAA;
+  color: #aaa;
   font-size: 0.938em;
 }
 .lp .album,
@@ -6512,7 +6512,7 @@ body.noscroll {
   width: 90%;
   margin: 2% auto;
   min-height: 320px;
-  border: 1px solid #DDD;
+  border: 1px solid #ddd;
   border-radius: 4px;
   background-clip: padding-box;
   padding: 10px;
@@ -6567,8 +6567,8 @@ body.noscroll {
 .lp .video ul li .imgOuter img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
 }
@@ -10179,6 +10179,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .lightbox_slider {
   background: #fff;
   clear: both;
+  padding-bottom: 2em;
 }
 .lightbox_slider h3 {
   font-size: 1.5em;
@@ -10235,7 +10236,8 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   width: 10px;
   height: 10px;
 }
-.lightbox_slider .slick-dots li button, .lightbox_slider .slick-dots li button:before {
+.lightbox_slider .slick-dots li button,
+.lightbox_slider .slick-dots li button:before {
   width: 10px;
   height: 10px;
 }
@@ -10414,7 +10416,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
           transform: rotate(45deg);
   position: absolute;
   top: 18px;
-  background: #DDD;
+  background: #ddd;
   left: 6px;
   -webkit-transition: 0.3s all ease-out;
   transition: 0.3s all ease-out;
@@ -10427,7 +10429,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
           transform: rotate(-45deg);
   position: absolute;
   top: 18px;
-  background: #DDD;
+  background: #ddd;
   left: 6px;
   -webkit-transition: 0.3s all ease-out;
   transition: 0.3s all ease-out;
@@ -10438,7 +10440,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   border: none;
 }
 .slick-lightbox-close:hover:before, .slick-lightbox-close:hover:after, .slick-lightbox-close:focus:before, .slick-lightbox-close:focus:after {
-  background: #FFF;
+  background: #fff;
 }
 
 .Syncing_slider {
@@ -10457,7 +10459,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   text-align: center;
   font-weight: bold;
   max-width: 100px;
-  color: #FFF;
+  color: #fff;
   padding: 0.2em 0.5em;
   margin: 0px auto;
   background: #984696;
@@ -10496,7 +10498,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   position: absolute;
   background: RGBA(0, 0, 0, 0.55);
   text-align: center;
-  color: #FFF;
+  color: #fff;
   padding: 0.5em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

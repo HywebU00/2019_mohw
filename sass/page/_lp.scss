@@ -8,14 +8,14 @@
       a {
         @include aSetting_nocolor;
         .entext {
-          font-size: .875rem;
+          font-size: 0.875rem;
         }
       }
       &.date {
         text-align: center;
         color: #666;
         white-space: nowrap;
-        @include screen('mobile') {
+        @include screen("mobile") {
           text-align: left;
         }
       }
@@ -23,26 +23,26 @@
         text-align: center;
         color: #666;
         white-space: nowrap;
-        @include screen('mobile') {
+        @include screen("mobile") {
           text-align: left;
         }
       }
     }
   }
   .list {
-    &>ul,
+    & > ul,
     ol {
       list-style-type: none;
       padding: 0;
       border-top: 2px solid $primaryColor;
-      &>li {
+      & > li {
         padding: 1em 0;
-        border-bottom: 1px solid #DDD;
+        border-bottom: 1px solid #ddd;
         position: relative;
         .tag {
           margin-left: 2em;
         }
-        &>a {
+        & > a {
           display: block;
           padding-left: 2.2em;
           position: relative;
@@ -52,7 +52,7 @@
             color: $aHover;
           }
           .entext {
-            font-size: .875rem;
+            font-size: 0.875rem;
           }
           .num {
             width: 1.5em;
@@ -67,15 +67,15 @@
         }
         span.dept {
           display: inline-block;
-          font-size: .938em;
+          font-size: 0.938em;
           @include screen("mobile") {
             display: block;
           }
         }
         time {
           display: block;
-          color: #AAA;
-          font-size: .938em;
+          color: #aaa;
+          font-size: 0.938em;
         }
       }
     }
@@ -97,7 +97,7 @@
         @include make-md-column(4);
         @include make-lg-column(4);
         @include gutter(10px);
-        margin-bottom: .5em;
+        margin-bottom: 0.5em;
         display: flex;
         align-items: stretch;
         a {
@@ -106,14 +106,14 @@
           width: 90%;
           margin: 2% auto;
           min-height: 320px;
-          border: 1px solid #DDD;
+          border: 1px solid #ddd;
           @include border-radius(4px);
           padding: 10px;
           @include aSetting_nocolor;
-          @include screen('notebook') {
+          @include screen("notebook") {
             min-height: 260px;
           }
-          @include screen('tablet') {
+          @include screen("tablet") {
             min-height: auto;
           }
           &:hover {
@@ -130,8 +130,8 @@
           img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            transition: .3s ease-out;
+            object-fit: contain;
+            transition: 0.3s ease-out;
           }
         }
         .videoOuter {
@@ -165,7 +165,7 @@
           p {
             margin: 0;
             &.entext {
-              font-size: .875rem;
+              font-size: 0.875rem;
               margin-top: 10px;
               overflow: hidden;
               // text-overflow: ellipsis;
@@ -176,7 +176,7 @@
           }
           time {
             color: #aaa;
-            font-size: .938em;
+            font-size: 0.938em;
             display: block;
             margin: 10px 0 0;
           }
