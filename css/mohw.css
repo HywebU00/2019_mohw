@@ -9567,6 +9567,13 @@ div.tag ul li a:hover, div.tag ul li a:focus {
     text-align: left;
   }
 }
+.happiness_content .update2 {
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 12px;
+  color: #984696;
+}
 .happiness_content .happiness_pic {
   width: 46%;
   text-align: center;
@@ -9701,6 +9708,25 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 @media screen and (max-width: 767px) {
   .happiness_content .content_block .update {
+    position: relative;
+    top: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+}
+.happiness_content .content_block .update2 {
+  position: absolute;
+  right: 0;
+  top: 12px;
+  font-weight: normal;
+  width: auto;
+  text-align: right;
+  color: #555;
+}
+@media screen and (max-width: 767px) {
+  .happiness_content .content_block .update2 {
     position: relative;
     top: auto;
     margin-bottom: 10px;
