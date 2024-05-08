@@ -10250,11 +10250,11 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   display: none;
 }
 .lightbox_slider .slick-dots {
-  bottom: -15px;
+  position: relative;
 }
 @media screen and (max-width: 767px) {
   .lightbox_slider .slick-dots {
-    bottom: 10px;
+    bottom: 0;
   }
 }
 .lightbox_slider .slick-dots li {

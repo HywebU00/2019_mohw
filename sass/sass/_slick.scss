@@ -67,9 +67,11 @@
   }
   // dots
   .slick-dots {
-    bottom: -15px;
+    // bottom: -15px;
+    position: relative;
     @include screen("mobile") {
-      bottom: 10px;
+      // bottom: 10px;
+      bottom: 0;
     }
     li {
       margin: 0 6px;
