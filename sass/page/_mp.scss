@@ -10,13 +10,13 @@
       width: 100% !important;
       height: 100%;
     }
-    @include screen('mobile') {
+    @include screen("mobile") {
       height: auto;
       width: 100%;
     }
   }
   img {
-    @include screen('mobile') {
+    @include screen("mobile") {
       height: auto;
       width: 100%;
     }
@@ -42,18 +42,18 @@
     }
   }
   .slick-next {
-    @include screen('mobile') {
+    @include screen("mobile") {
       right: -30px;
     }
   }
   .slick-prev {
-    @include screen('mobile') {
+    @include screen("mobile") {
       left: -30px;
     }
   }
   .slick-dots {
     bottom: 20px;
-    @include screen('mobile') {
+    @include screen("mobile") {
       bottom: 10px;
     }
     li {
@@ -66,7 +66,7 @@
         height: 10px;
       }
       &.slick-active button:before {
-        opacity: .7;
+        opacity: 0.7;
         background: #000;
       }
       button:hover:before,
@@ -81,7 +81,7 @@
 
 .wrapper {
   background: url(../images/hero_bg.jpg) no-repeat center top;
-  @include screen('mobile') {
+  @include screen("mobile") {
     background: #fefeff;
   }
 }
@@ -91,7 +91,7 @@
   height: 515px;
   position: relative;
   overflow: hidden;
-  @include screen('mobile') {
+  @include screen("mobile") {
     height: auto;
   }
   h2 {
@@ -99,7 +99,7 @@
     position: absolute;
     left: 70px;
     top: 125px;
-    @include screen('mobile') {
+    @include screen("mobile") {
       position: relative;
       left: auto;
       top: auto;
@@ -109,7 +109,7 @@
     img {
       max-width: 428px;
       max-height: 115px;
-      @include screen('mobile') {
+      @include screen("mobile") {
         width: 100%;
         height: auto;
       }
@@ -124,7 +124,7 @@
     right: 100px;
     top: 140px;
     z-index: 99;
-    @include screen('mobile') {
+    @include screen("mobile") {
       position: relative;
       right: auto;
       top: auto;
@@ -145,7 +145,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%
+        height: 100%;
       }
     }
     .close {
@@ -153,7 +153,8 @@
       height: 30px;
       display: block;
       position: absolute;
-      background: #000 url(../images/topic/topicclose.png) no-repeat center center;
+      background: #000 url(../images/topic/topicclose.png) no-repeat center
+        center;
       border: 6px solid #000;
       right: -40px;
       top: 0;
@@ -165,7 +166,7 @@
     bottom: 0;
     z-index: 99;
     width: 100%;
-    @include screen('mobile') {
+    @include screen("mobile") {
       position: relative;
       left: auto;
       top: auto;
@@ -176,23 +177,23 @@
     ul.topic_menu {
       @include li-reset;
       padding: 0 40px;
-      @include screen('mobile') {
+      @include screen("mobile") {
         padding: 0;
       }
       li.topic_title {
         float: left;
         width: 23%;
         margin: 0 1%;
-        @include screen('mobile') {
+        @include screen("mobile") {
           float: none;
           width: 100%;
           margin: 20px 0;
         }
-        >a {
+        > a {
           display: block;
           padding: 35px 0;
           position: relative;
-          @include screen('mobile') {
+          @include screen("mobile") {
             padding: 0 0 0 100px;
           }
           &:before {
@@ -201,7 +202,7 @@
             font-size: 3em;
             font-weight: bold;
             color: #e1e1e1;
-            @include screen('mobile') {
+            @include screen("mobile") {
               position: absolute;
               left: 0;
               top: 13px;
@@ -218,7 +219,7 @@
             @include gradient(transparent, #ddd, vertical);
             bottom: 0px;
             right: -5px;
-            @include screen('mobile') {
+            @include screen("mobile") {
               display: none;
             }
           }
@@ -239,7 +240,7 @@
             h4 {
               color: #984595;
             }
-            @include screen('mobile') {
+            @include screen("mobile") {
               h3 {
                 color: #333;
               }
@@ -265,7 +266,7 @@
           padding: 8% 8% 0 32%;
           box-sizing: border-box;
           display: none;
-          @include screen('mobile') {
+          @include screen("mobile") {
             position: relative;
             left: auto;
             bottom: auto;
@@ -282,7 +283,7 @@
             position: absolute;
             left: 0;
             bottom: 0;
-            @include screen('mobile') {
+            @include screen("mobile") {
               display: none;
             }
           }
@@ -292,7 +293,7 @@
             left: 6%;
             top: 28%;
             letter-spacing: 2px;
-            @include screen('mobile') {
+            @include screen("mobile") {
               display: none;
             }
             &:before {
@@ -302,7 +303,7 @@
               font-size: 13em;
               font-family: "Century Gothic";
               font-weight: bold;
-              opacity: .15;
+              opacity: 0.15;
               left: -20px;
             }
             h3 {
@@ -321,7 +322,7 @@
               margin-right: 4%;
               margin-bottom: 18px;
               float: left;
-              @include screen('mobile') {
+              @include screen("mobile") {
                 width: 46%;
                 margin: 2%;
               }
@@ -329,12 +330,12 @@
                 width: 100%;
                 min-height: 175px;
                 display: block;
-                border: 1px solid rgba(255, 255, 255, .5);
+                border: 1px solid rgba(255, 255, 255, 0.5);
                 color: #fff;
                 text-align: center;
                 padding: 15px;
                 box-sizing: border-box;
-                @include screen('mobile') {
+                @include screen("mobile") {
                   min-height: 150px;
                   padding: 5px;
                 }
@@ -349,10 +350,12 @@
                   }
                 }
                 &:hover {
-                  background: rgba(57, 15, 55, .3);
+                  background: rgba(57, 15, 55, 0.3);
                   .icon {
-                    -webkit-animation: flip-vertical-right 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-                    animation: flip-vertical-right 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+                    -webkit-animation: flip-vertical-right 0.4s
+                      cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+                    animation: flip-vertical-right 0.4s
+                      cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
                   }
                 }
               }
@@ -362,7 +365,7 @@
             position: absolute;
             top: 35px;
             right: 26px;
-            @include screen('mobile') {
+            @include screen("mobile") {
               display: none;
             }
             a {
@@ -374,7 +377,7 @@
           }
         }
         &:first-child {
-          >a {
+          > a {
             &:before {
               content: "01";
             }
@@ -392,7 +395,7 @@
           }
         }
         &:nth-child(2) {
-          >a {
+          > a {
             &:before {
               content: "02";
             }
@@ -410,11 +413,11 @@
           }
         }
         &:nth-child(3) {
-          >a {
+          > a {
             &:before {
               content: "03";
-              text-shadow: 0 0 3px rgba(0, 0, 0, .3);
-              @include screen('mobile') {
+              text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+              @include screen("mobile") {
                 text-shadow: 0 0 0 rgba(0, 0, 0, 0);
               }
             }
@@ -432,11 +435,11 @@
           }
         }
         &:nth-child(4) {
-          >a {
+          > a {
             &:before {
               content: "04";
-              text-shadow: 0 0 3px rgba(0, 0, 0, .3);
-              @include screen('mobile') {
+              text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+              @include screen("mobile") {
                 text-shadow: 0 0 0 rgba(0, 0, 0, 0);
               }
             }
@@ -485,12 +488,20 @@
     right: 60px;
     bottom: 0;
     z-index: 98;
-    @include screen('tablet') {
+    @include screen("tablet") {
       display: none;
     }
   }
 }
-
+.nurse_block {
+  a {
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}
 .slider_block {
   display: block;
   clear: both;
@@ -501,7 +512,7 @@
   background: #f5e9f5 url(../images/center_bg.jpg) center bottom no-repeat;
   position: relative;
   overflow: hidden;
-  @include screen('mobile') {
+  @include screen("mobile") {
     padding: 35px 30px;
     background-size: cover;
   }
@@ -511,7 +522,7 @@
     position: absolute;
     display: block;
     z-index: 96;
-    @include screen('mobile') {
+    @include screen("mobile") {
       display: none;
     }
   }
@@ -555,7 +566,7 @@
       padding: 10px 40px;
       border: 1px solid #fff;
       color: #fff;
-      transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
       &:before {
         content: "";
         width: 15px;
@@ -583,7 +594,7 @@
     @include gutter(0);
     margin-bottom: 30px;
     z-index: 97;
-    @include screen('mobile') {
+    @include screen("mobile") {
       margin-bottom: 0;
     }
     ul {
@@ -594,7 +605,7 @@
         margin-right: 6%;
         margin-bottom: 25px;
         vertical-align: top;
-        @include screen('mobile') {
+        @include screen("mobile") {
           width: 100%;
           margin-right: 0;
         }
@@ -612,7 +623,7 @@
           display: -webkit-inline-box;
           position: relative;
           padding-bottom: 3px;
-          &:after{
+          &:after {
             content: "";
             width: 100%;
             height: 1px;
@@ -621,7 +632,7 @@
             bottom: 0;
             left: 0;
           }
-          @include screen('mobile') {
+          @include screen("mobile") {
             height: auto;
           }
           a {
@@ -641,7 +652,7 @@
           overflow: hidden;
           text-overflow: ellipsis;
           display: -webkit-inline-box;
-          @include screen('mobile') {
+          @include screen("mobile") {
             height: auto;
           }
           a {
@@ -657,7 +668,7 @@
           font-family: "Century Gothic";
           letter-spacing: 1px;
           margin-top: 2px;
-          @include screen('mobile') {
+          @include screen("mobile") {
             color: $secondaryColor;
           }
         }
@@ -675,7 +686,7 @@
         }
         &:first-child {
           width: 60%;
-          @include screen('mobile') {
+          @include screen("mobile") {
             width: 100%;
           }
           .news_top {
@@ -683,7 +694,7 @@
             overflow: hidden;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
             max-height: 230px;
-            @include screen('mobile') {
+            @include screen("mobile") {
               height: auto;
             }
             a {
@@ -712,7 +723,7 @@
               img {
                 width: 100%;
                 height: 100%;
-                object-fit: cover
+                object-fit: cover;
               }
             }
           }
@@ -731,7 +742,7 @@
     @include gutter();
     padding-right: 0px;
     z-index: 97;
-    @include screen('mobile') {
+    @include screen("mobile") {
       padding-left: 0;
     }
     .event_pic {
@@ -741,7 +752,7 @@
       position: relative;
       overflow: hidden;
       background: #fff;
-      @include screen('mobile') {
+      @include screen("mobile") {
         min-height: auto;
         background: transparent;
         box-shadow: 0 0 0 rgba(0, 0, 0, 0);
@@ -751,7 +762,7 @@
         display: block;
         width: 100%;
         min-height: 470px;
-        @include screen('mobile') {
+        @include screen("mobile") {
           min-height: auto;
         }
       }
@@ -764,7 +775,7 @@
         right: 0;
         bottom: 0;
         object-fit: cover;
-        @include screen('mobile') {
+        @include screen("mobile") {
           display: none;
         }
       }
@@ -776,7 +787,7 @@
         bottom: 0;
         padding: 20px;
         z-index: 98;
-        @include screen('mobile') {
+        @include screen("mobile") {
           position: relative;
           background: transparent;
           padding: 20px 0;
@@ -862,7 +873,7 @@
           top: 12px;
           z-index: 99;
           border: 1px solid #fff;
-          background: rgba(0, 0, 0, .5);
+          background: rgba(0, 0, 0, 0.5);
           width: 80px;
           height: 80px;
           display: block;
@@ -915,7 +926,7 @@
             width: 100%;
             height: 100%;
             display: block;
-            background: rgba(0, 0, 0, .3);
+            background: rgba(0, 0, 0, 0.3);
             z-index: 98;
           }
           img {
@@ -985,7 +996,7 @@
     z-index: 99;
     h2 {
       color: #fff;
-      @include screen('mobile') {
+      @include screen("mobile") {
         color: #333;
       }
     }
@@ -993,11 +1004,11 @@
       @include li-reset;
       margin-bottom: 35px;
       overflow: hidden;
-      @include screen('mobile') {
+      @include screen("mobile") {
         margin-bottom: 20px;
       }
       li {
-        @include screen('mobile') {
+        @include screen("mobile") {
           margin-bottom: 20px;
         }
         &:first-child,
@@ -1029,7 +1040,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%
+        height: 100%;
       }
     }
   }
@@ -1047,10 +1058,10 @@
       height: auto;
       margin: 0;
       li {
-        display: block!important;
-        margin: 0 auto .15em;
-        width: 100%!important;
-        height: 28px!important;
+        display: block !important;
+        margin: 0 auto 0.15em;
+        width: 100% !important;
+        height: 28px !important;
         &:last-child {
           margin-bottom: 0;
         }
@@ -1073,7 +1084,8 @@
             box-shadow: 0 0 0 0;
             filter: grayscale(100%);
           }
-          &:focus {}
+          &:focus {
+          }
         }
       }
     }
@@ -1095,7 +1107,7 @@
       &:hover,
       &:focus {
         filter: invert(1);
-        opacity: .5;
+        opacity: 0.5;
       }
     }
   }
@@ -1123,7 +1135,7 @@
   padding: 35px 60px;
   overflow: hidden;
   background: #fff url(../images/dashboard_bg.jpg) center bottom no-repeat;
-  @include screen('mobile') {
+  @include screen("mobile") {
     padding: 35px 30px;
   }
   .share {
@@ -1142,7 +1154,7 @@
       border: 1px solid $primaryColor;
       color: $primaryColor;
       background: #fff;
-      transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
       &:before {
         content: "";
         width: 15px;
@@ -1168,7 +1180,7 @@
     overflow: hidden;
     color: #474747;
     margin: 30px 0 60px 0;
-    @include screen('tablet') {
+    @include screen("tablet") {
       height: auto;
       padding: 0;
       box-sizing: border-box;
@@ -1181,20 +1193,20 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      @include screen('mobile') {
+      @include screen("mobile") {
         padding: 0;
       }
       li {
         width: 19.5%;
         border-right: 1px solid #cfcfcf;
-        padding: 5px .05%;
+        padding: 5px 0.05%;
         margin-bottom: 1rem;
-        @include screen('tablet') {
+        @include screen("tablet") {
           width: 33%;
           border-right: 0;
           margin-bottom: 10px;
         }
-        @include screen('mobile') {
+        @include screen("mobile") {
           width: 49%;
           border-right: 0;
         }
@@ -1228,7 +1240,7 @@
           font-size: 0.875em;
           // letter-spacing: 1px;
           color: #666;
-          padding: 0 .5rem;
+          padding: 0 0.5rem;
         }
       }
     }
@@ -1240,13 +1252,13 @@
     @include make-md-column(6);
     @include make-lg-column(6);
     @include box-sizing();
-    @include screen('mobile') {
+    @include screen("mobile") {
       margin-bottom: 10px;
     }
   }
   .col1 {
     padding: 15px;
-    @include screen('mobile') {
+    @include screen("mobile") {
       margin-bottom: 10px;
     }
   }

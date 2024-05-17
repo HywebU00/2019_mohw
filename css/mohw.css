@@ -5449,6 +5449,12 @@ body.noscroll {
   }
 }
 
+.nurse_block a img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .slider_block {
   display: block;
   clear: both;
@@ -10183,6 +10189,985 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   font-size: 2rem;
   display: block;
   margin-top: 8px;
+}
+
+.nurses {
+  padding: 280px 3em 0 3em;
+  background: url(../images/inner_bg2.png) no-repeat center top, url(../images/nurse/nurse_bg.jpg) no-repeat right 250px;
+  background-color: #fff;
+}
+@media screen and (max-width: 767px) {
+  .nurses {
+    background: none;
+    padding: 5em 1em 0 1em;
+  }
+}
+.nurses .more {
+  margin: 0 auto 20px auto;
+  text-align: center;
+  display: block;
+  line-height: 42px;
+  position: relative;
+  z-index: 99;
+  white-space: nowrap;
+}
+.nurses .more a {
+  padding: 12px 26px;
+  color: #fff;
+  border-radius: 20px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff9734), to(#ff7b42));
+  background: linear-gradient(180deg, #ff9734 0%, #ff7b42 100%);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  font-size: 0.875rem;
+}
+.nurses .more a:after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: url(../images/nurse/arrow_more.png) center center no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+.nurses .more a:hover, .nurses .more a:focus {
+  background: #b6107e;
+  color: #fff;
+}
+
+.nurseNumber_sec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  margin-top: 60px;
+  padding-bottom: 30px;
+}
+@media screen and (max-width: 991px) {
+  .nurseNumber_sec {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+@media screen and (max-width: 767px) {
+  .nurseNumber_sec {
+    margin-top: 0;
+  }
+}
+.nurseNumber_sec h2.h2title {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  font-size: 1.875rem;
+  color: #333;
+  margin-right: 30px;
+  margin-top: 0;
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 991px) {
+  .nurseNumber_sec h2.h2title {
+    -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
+    margin-right: 0;
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+    color: #555;
+  }
+}
+.nurseNumber_sec h2.h2title .entitle {
+  margin-top: 0;
+  color: #4f4f4f;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+}
+@media screen and (max-width: 991px) {
+  .nurseNumber_sec h2.h2title .entitle {
+    color: #888;
+    font-size: 0.9375rem;
+  }
+}
+.nurseNumber_sec .update {
+  position: absolute;
+  right: 0;
+  top: 16px;
+  font-size: 0.875rem;
+}
+@media screen and (max-width: 767px) {
+  .nurseNumber_sec .update {
+    position: relative;
+    top: auto;
+    margin-bottom: 8px;
+  }
+}
+.nurseNumber_sec .number_block {
+  margin-top: 100px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+@media screen and (max-width: 991px) {
+  .nurseNumber_sec .number_block {
+    margin-top: 0;
+  }
+}
+.nurseNumber_sec .number_block .number_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 767px) {
+  .nurseNumber_sec .number_block .number_row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.nurseNumber_sec .number_block .number_row .block {
+  background: #fff;
+  border-radius: 9px;
+  -webkit-box-shadow: 0px 7px 28px 0px rgba(34, 34, 34, 0.08);
+          box-shadow: 0px 7px 28px 0px rgba(34, 34, 34, 0.08);
+  padding: 85px 20px 25px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  height: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .nurseNumber_sec .number_block .number_row .block {
+    padding: 60px 20px 25px 20px;
+    height: auto;
+  }
+}
+.nurseNumber_sec .number_block .number_row .block.block1 {
+  width: 26%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.nurseNumber_sec .number_block .number_row .block.block1.gender {
+  background: url(../images/nurse/gender_bg.png) no-repeat right top;
+}
+@media screen and (max-width: 767px) {
+  .nurseNumber_sec .number_block .number_row .block.block1 {
+    width: 100%;
+  }
+}
+.nurseNumber_sec .number_block .number_row .block.block2 {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.nurseNumber_sec .number_block .number_row .block.block3 {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.nurseNumber_sec .number_block .number_row .block .blockIcon {
+  position: absolute;
+  left: 20px;
+  top: 25px;
+}
+.nurseNumber_sec .number_block .number_row .block .blockIcon img {
+  max-height: 24px;
+  width: auto;
+}
+.nurseNumber_sec .number_block .number_row .block .blockTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #4f4f4f;
+}
+.nurseNumber_sec .number_block .number_row .block .blockTitle .entitle {
+  display: block;
+  font-size: 0.75rem;
+  line-height: 120%;
+  margin-top: 4px;
+}
+.nurseNumber_sec .number_block .number_row .block .number {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+.nurseNumber_sec .number_block .number_row .block .number span {
+  font-size: 1.75rem;
+  font-family: "Century Gothic";
+  margin-right: 4px;
+  color: #b6107e;
+}
+.nurseNumber_sec .number_block .number_row .block .number span em {
+  font-style: normal;
+  color: #381ddb;
+}
+.nurseNumber_sec .number_block .number_row .block .number span i {
+  font-style: normal;
+  color: #4f4f4f;
+  margin: 0 4px;
+}
+.nurseNumber_sec .number_block .chart_row {
+  margin: 30px 0;
+}
+.nurseNumber_sec .number_block .chart_row h3.h3title .entitle {
+  display: block;
+  font-size: 1rem;
+  color: #888;
+}
+.nurseNumber_sec .number_block .chart_row h3.h3title:after {
+  content: "";
+  width: 105px;
+  height: 4px;
+  background: #b6107e;
+  border-radius: 30px;
+  display: block;
+  margin-top: 4px;
+}
+.nurseNumber_sec .number_block .chart_row .chart {
+  background: #fff;
+  border-radius: 9px;
+  -webkit-box-shadow: 0px 7px 28px 0px rgba(34, 34, 34, 0.08);
+          box-shadow: 0px 7px 28px 0px rgba(34, 34, 34, 0.08);
+  padding: 1rem;
+}
+
+.circleChart .circle {
+  width: 90px;
+}
+.circleChart .circle .circular-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 100%;
+  /*   max-height: 100px; */
+  aspect-ratio: 1;
+}
+.circleChart .circle .circle-bg {
+  fill: none;
+  stroke: #ffe9e9;
+  stroke-width: 3.2;
+}
+.circleChart .circle .circle {
+  fill: none;
+  stroke-width: 3.2;
+  stroke-linecap: round;
+  -webkit-animation: progress 1s ease-out forwards;
+          animation: progress 1s ease-out forwards;
+}
+@-webkit-keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+.circleChart .circle .circular-chart.orange .circle {
+  stroke: #b6107e;
+}
+.circleChart .circle .percentage {
+  fill: #b6107e;
+  font-family: "Century Gothic";
+  font-weight: bold;
+  font-size: 0.7em;
+  text-anchor: middle;
+}
+
+.barChart .bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100px;
+  padding: 20px 0 0;
+}
+.barChart .bar .item {
+  width: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.barChart .bar .item:nth-child(2) .line {
+  background: #00a39a;
+}
+.barChart .bar .item:nth-child(3) .line {
+  background: #f07d25;
+}
+.barChart .bar .num {
+  height: 20px;
+  font-size: 0.625rem;
+  text-align: center;
+}
+.barChart .bar .lineBox {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+}
+.barChart .bar .lineBox .line {
+  width: 100%;
+  position: relative;
+  background: #913589;
+}
+.barChart .bar .lineBox .line span {
+  position: absolute;
+  bottom: calc(100% + 3px);
+  font-size: 0.75rem;
+  font-weight: bold;
+  line-height: 100%;
+  width: 100%;
+  text-align: center;
+  font-family: "Century Gothic";
+}
+
+.nursePlan_sec {
+  position: relative;
+  padding: 90px 0 30px 0;
+}
+@media screen and (max-width: 767px) {
+  .nursePlan_sec {
+    padding: 60px 0 30px 0;
+  }
+}
+.nursePlan_sec:after {
+  content: "";
+  min-height: 668px;
+  display: block;
+  background: url(../images/nurse/plan_bg.png) no-repeat center top;
+  position: absolute;
+  left: calc(-3em - 15px);
+  right: calc(-3em - 15px);
+  top: -1px;
+  bottom: 0;
+}
+.nursePlan_sec .h2title {
+  margin-top: 0;
+  color: #444;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (max-width: 991px) {
+  .nursePlan_sec .h2title {
+    color: #555;
+  }
+}
+.nursePlan_sec .h3title {
+  margin-top: 0;
+  color: #444;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 991px) {
+  .nursePlan_sec .h3title {
+    color: #555;
+  }
+}
+.nursePlan_sec .h3title .entitle {
+  font-size: 0.9375rem;
+  color: #888;
+  line-height: 140%;
+  display: block;
+  margin-top: 4px;
+}
+.nursePlan_sec .date {
+  text-align: center;
+  font-size: 0.875rem;
+  position: relative;
+  z-index: 1;
+}
+.nursePlan_sec .journey_block {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nursePlan_sec .journey_block .journey .journey_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 2rem;
+  gap: 30px;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .nursePlan_sec .journey_block .journey .journey_item {
+    gap: 20px;
+  }
+}
+.nursePlan_sec .journey_block .journey .journey_item:after {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background: #b6107e;
+  display: block;
+  position: absolute;
+  left: 50px;
+}
+.nursePlan_sec .journey_block .journey .journey_item .month {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #fff;
+  background: #b6107e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100px;
+  height: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  font-family: "Century Gothic";
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+@media screen and (max-width: 767px) {
+  .nursePlan_sec .journey_block .journey .journey_item .month {
+    width: 80px;
+    height: 80px;
+  }
+}
+.nursePlan_sec .journey_block .journey .journey_item .day {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.nursePlan_sec .journey_block .journey .journey_item .day .event {
+  margin-bottom: 1rem;
+}
+.nursePlan_sec .journey_block .journey .journey_item .day .event .date {
+  color: #959595;
+  padding: 6px 10px;
+  border-radius: 16px;
+  border: 1px solid #9e9e9e;
+  background: #fff;
+  line-height: 100%;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.nursePlan_sec .journey_block .journey .journey_item .day .event .eventTitle {
+  font-size: 1.375rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #444;
+  line-height: 140%;
+}
+.nursePlan_sec .journey_block .journey .journey_item .day .event .eventText {
+  color: #3b3b3b;
+}
+.nursePlan_sec .journey_block .journey .journey_item:last-child::after {
+  display: none;
+}
+.nursePlan_sec .policy_block {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.nursePlan_sec .policy_block .policy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 767px) {
+  .nursePlan_sec .policy_block .policy {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.nursePlan_sec .policy_block .policy .policy_item {
+  max-width: 210px;
+}
+@media screen and (max-width: 767px) {
+  .nursePlan_sec .policy_block .policy .policy_item {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+.nursePlan_sec .policy_block .policy .policy_item.workplace a {
+  background: url(../images/nurse/nurse1.png) no-repeat center 30px;
+  background-color: #fff;
+}
+@media screen and (max-width: 767px) {
+  .nursePlan_sec .policy_block .policy .policy_item.workplace a {
+    background: url(../images/nurse/nurse1.png) no-repeat 0 0;
+  }
+}
+.nursePlan_sec .policy_block .policy .policy_item.workplace a:hover, .nursePlan_sec .policy_block .policy .policy_item.workplace a:focus {
+  background-color: #ffdaf2;
+}
+.nursePlan_sec .policy_block .policy .policy_item.salary a {
+  background: url(../images/nurse/nurse2.png) no-repeat center 30px;
+}
+@media screen and (max-width: 767px) {
+  .nursePlan_sec .policy_block .policy .policy_item.salary a {
+    background: url(../images/nurse/nurse2.png) no-repeat 0 0;
+  }
+}
+.nursePlan_sec .policy_block .policy .policy_item.salary a:hover, .nursePlan_sec .policy_block .policy .policy_item.salary a:focus {
+  background-color: #fad5d3;
+}
+.nursePlan_sec .policy_block .policy .policy_item.cultivate a {
+  background: url(../images/nurse/nurse3.png) no-repeat center 30px;
+}
+@media screen and (max-width: 767px) {
+  .nursePlan_sec .policy_block .policy .policy_item.cultivate a {
+    background: url(../images/nurse/nurse3.png) no-repeat 0 0;
+  }
+}
+.nursePlan_sec .policy_block .policy .policy_item.cultivate a:hover, .nursePlan_sec .policy_block .policy .policy_item.cultivate a:focus {
+  background-color: #dfdbf9;
+}
+.nursePlan_sec .policy_block .policy .policy_item a {
+  padding: 240px 30px 30px 30px;
+  text-align: left;
+  display: block;
+  font-size: 1.5rem;
+  color: #444;
+  font-weight: bold;
+  border-radius: 9px;
+  -webkit-box-shadow: 0px 5px 28px 0px rgba(34, 34, 34, 0.1);
+          box-shadow: 0px 5px 28px 0px rgba(34, 34, 34, 0.1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media screen and (max-width: 767px) {
+  .nursePlan_sec .policy_block .policy .policy_item a {
+    padding: 30px 30px 30px 190px;
+    min-height: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-size: 80%;
+  }
+}
+.nursePlan_sec .policy_block .policy .policy_item a:hover, .nursePlan_sec .policy_block .policy .policy_item a:focus a {
+  -webkit-box-shadow: 0px 15px 40px 0px rgba(34, 34, 34, 0.2);
+          box-shadow: 0px 15px 40px 0px rgba(34, 34, 34, 0.2);
+}
+.nursePlan_sec .policy_block .policy .policy_item a .en {
+  display: block;
+  word-wrap: break-word;
+  font-size: 1.25rem;
+  color: #888;
+  margin-top: 8px;
+}
+@media screen and (max-width: 767px) {
+  .nursePlan_sec .policy_block .policy .policy_item a .en {
+    font-size: 1rem;
+  }
+}
+
+.nurseProject_sec {
+  position: relative;
+  height: 100%;
+  min-height: 682px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 80px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media screen and (max-width: 767px) {
+  .nurseProject_sec {
+    min-height: auto;
+    padding: 60px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .nurseProject_sec {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.nurseProject_sec:before {
+  content: "";
+  display: block;
+  min-height: 682px;
+  background: url(../images/nurse/result_bg1.png) no-repeat center bottom;
+  background-size: cover;
+  position: absolute;
+  left: calc(-3em - 15px);
+  right: calc(-3em - 15px);
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+}
+.nurseProject_sec::after {
+  content: "";
+  width: 42%;
+  max-width: 420px;
+  height: 100%;
+  display: block;
+  background: url(../images/nurse/result_bg2.png) no-repeat right top, -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.2))), -webkit-gradient(linear, left top, left bottom, from(rgba(107, 0, 214, 0.56)), color-stop(43.75%, #a251b6), to(#3c0456));
+  background: url(../images/nurse/result_bg2.png) no-repeat right top, linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(180deg, rgba(107, 0, 214, 0.56) 0%, #a251b6 43.75%, #3c0456 100%);
+  position: absolute;
+  left: calc(-3em - 15px);
+  top: 0;
+  z-index: 1;
+}
+@media screen and (max-width: 767px) {
+  .nurseProject_sec::after {
+    display: none;
+  }
+}
+.nurseProject_sec .leftBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 45px;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (max-width: 991px) {
+  .nurseProject_sec .leftBlock {
+    margin-right: 35px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .nurseProject_sec .leftBlock {
+    margin-right: 0;
+  }
+}
+.nurseProject_sec .leftBlock .h2title {
+  z-index: 3;
+  color: #fff;
+  font-size: 1.875rem;
+  margin: 0 0 30px 0;
+}
+@media screen and (max-width: 767px) {
+  .nurseProject_sec .leftBlock .h2title {
+    text-align: center;
+    margin: 0 0 16px 0;
+    color: #555;
+    font-size: 1.5rem;
+  }
+}
+.nurseProject_sec .leftBlock .h2title .entitle {
+  display: block;
+  font-size: 1.25rem;
+  color: #fff;
+}
+@media screen and (max-width: 767px) {
+  .nurseProject_sec .leftBlock .h2title .entitle {
+    color: #888;
+    font-size: 0.9375rem;
+  }
+}
+.nurseProject_sec .nurseProject {
+  z-index: 3;
+  max-width: calc(100% - 210px);
+  background: #fff;
+  -webkit-box-shadow: 0px 14px 70px 0px rgba(34, 34, 34, 0.15);
+          box-shadow: 0px 14px 70px 0px rgba(34, 34, 34, 0.15);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .nurseProject_sec .nurseProject {
+    max-width: 100%;
+  }
+}
+.nurseProject_sec .nurseProject .slick-track {
+  height: 100%;
+}
+.nurseProject_sec .nurseProject .projectResult {
+  width: 100%;
+  padding: 50px 50px 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media screen and (max-width: 767px) {
+  .nurseProject_sec .nurseProject .projectResult {
+    padding: 70px 50px 100px 50px;
+  }
+}
+.nurseProject_sec .nurseProject .projectResult.policy1 {
+  background: #fff url(../images/nurse/result_bga.png) no-repeat right top;
+}
+.nurseProject_sec .nurseProject .projectResult.policy1 .project_plan {
+  color: #b6107e;
+}
+.nurseProject_sec .nurseProject .projectResult.policy2 {
+  background: #fff url(../images/nurse/result_bgb.png) no-repeat right top;
+}
+.nurseProject_sec .nurseProject .projectResult.policy2 .project_plan {
+  color: #e52f24;
+}
+.nurseProject_sec .nurseProject .projectResult.policy3 {
+  background: #fff url(../images/nurse/result_bgc.png) no-repeat right top;
+}
+.nurseProject_sec .nurseProject .projectResult.policy3 .project_plan {
+  color: #5e1681;
+}
+.nurseProject_sec .nurseProject .projectResult .project_plan {
+  position: absolute;
+  right: 18px;
+  top: 25px;
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+.nurseProject_sec .nurseProject .projectResult .project_title {
+  font-size: 1.625rem;
+  color: #444;
+  font-weight: bold;
+  line-height: 120%;
+}
+.nurseProject_sec .nurseProject .projectResult .project_text {
+  margin-top: 1rem;
+}
+.nurseProject_sec .nurseProject .projectResult .project_text p {
+  margin-top: 0;
+}
+.nurseProject_sec .nurseProject .projectResult .project_text img {
+  width: 100%;
+}
+.nurseProject_sec .nurseProject .projectResult .more {
+  margin-bottom: 0;
+  text-align: right;
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+}
+.nurseProject_sec .nurseProject .projectResult .more a {
+  background: #b6107e;
+}
+.nurseProject_sec .nurseProject .projectResult .more a:hover, .nurseProject_sec .nurseProject .projectResult .more a:focus {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff9734), to(#ff7b42));
+  background: linear-gradient(180deg, #ff9734 0%, #ff7b42 100%);
+}
+.nurseProject_sec .nurseProject .slick-arrow {
+  top: auto;
+  bottom: -30px;
+  width: 47px !important;
+  height: 47px !important;
+}
+@media screen and (max-width: 767px) {
+  .nurseProject_sec .nurseProject .slick-arrow {
+    display: block;
+    bottom: auto;
+    top: 50%;
+  }
+}
+.nurseProject_sec .nurseProject .slick-arrow:before {
+  display: none;
+}
+.nurseProject_sec .nurseProject .slick-prev {
+  left: -210px;
+  background: url(../images/nurse/arrow_left.png) no-repeat 0 0;
+}
+@media screen and (max-width: 767px) {
+  .nurseProject_sec .nurseProject .slick-prev {
+    -webkit-filter: invert(1);
+            filter: invert(1);
+    left: 0;
+  }
+}
+.nurseProject_sec .nurseProject .slick-next {
+  right: auto;
+  left: -145px;
+  background: url(../images/nurse/arrow_right.png) no-repeat 0 0;
+}
+@media screen and (max-width: 767px) {
+  .nurseProject_sec .nurseProject .slick-next {
+    -webkit-filter: invert(1);
+            filter: invert(1);
+    left: auto;
+    right: 0;
+  }
+}
+
+.nurseNews_sec {
+  position: relative;
+  padding: 120px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.nurseNews_sec:before {
+  content: "";
+  display: block;
+  background: url(../images/nurse/news_bg.png) no-repeat left top;
+  position: absolute;
+  left: calc(-3em - 15px);
+  right: calc(-3em - 15px);
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.nurseNews_sec h2.h2title {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  font-size: 1.875rem;
+  color: #333;
+  margin-right: 70px;
+  margin-top: 0;
+  letter-spacing: 2px;
+  z-index: 2;
+}
+@media screen and (max-width: 991px) {
+  .nurseNews_sec h2.h2title {
+    -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
+    margin-right: 0;
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+    color: #555;
+  }
+}
+.nurseNews_sec h2.h2title .entitle {
+  margin-top: 0;
+  color: #4f4f4f;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+}
+@media screen and (max-width: 991px) {
+  .nurseNews_sec h2.h2title .entitle {
+    color: #888;
+    font-size: 0.9375rem;
+  }
+}
+.nurseNews_sec .nurseNews_block {
+  position: relative;
+  z-index: 2;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  min-width: 0;
+}
+.nurseNews_sec .nurseNews_block .news {
+  padding: 24px 24px 24px 130px;
+  position: relative;
+  -webkit-box-shadow: 0px 7px 28px 0px rgba(34, 34, 34, 0.1);
+          box-shadow: 0px 7px 28px 0px rgba(34, 34, 34, 0.1);
+  margin-bottom: 1rem;
+}
+.nurseNews_sec .nurseNews_block .news.policy1 {
+  background: url(../images/nurse/news_bg1.png) no-repeat left top, -webkit-gradient(linear, left top, right top, color-stop(30%, #fff), to(#ffeffa));
+  background: url(../images/nurse/news_bg1.png) no-repeat left top, linear-gradient(90deg, #fff 30%, #ffeffa 100%);
+}
+.nurseNews_sec .nurseNews_block .news.policy1 .news_plan {
+  color: #b6107e;
+}
+.nurseNews_sec .nurseNews_block .news.policy2 {
+  background: url(../images/nurse/news_bg2.png) no-repeat left top, -webkit-gradient(linear, left top, right top, color-stop(30%, #fff), to(#fff7f6));
+  background: url(../images/nurse/news_bg2.png) no-repeat left top, linear-gradient(90deg, #fff 30%, #fff7f6 100%);
+}
+.nurseNews_sec .nurseNews_block .news.policy2 .news_plan {
+  color: #e52f24;
+}
+.nurseNews_sec .nurseNews_block .news.policy3 {
+  background: url(../images/nurse/news_bg3.png) no-repeat left top, -webkit-gradient(linear, left top, right top, color-stop(30%, #fff), to(#faf8ff));
+  background: url(../images/nurse/news_bg3.png) no-repeat left top, linear-gradient(90deg, #fff 30%, #faf8ff 100%);
+}
+.nurseNews_sec .nurseNews_block .news.policy3 .news_plan {
+  color: #5e1681;
+}
+.nurseNews_sec .nurseNews_block .news .news_plan {
+  font-weight: bold;
+  position: absolute;
+  left: 24px;
+  top: 24px;
+  font-size: 1.125rem;
+}
+.nurseNews_sec .nurseNews_block .news .news_date {
+  color: #4f4f4f;
+  margin-bottom: 4px;
+}
+.nurseNews_sec .nurseNews_block .news .news_text a {
+  color: #444;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .slick-dots li button:hover:before, .slick-dots li button:focus:before {

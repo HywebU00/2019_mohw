@@ -31,6 +31,15 @@ $(function() {
       }
     }]
   });
+  $('.nurseProject').slick({
+    dots: false,
+    arrow: true,
+    infinite: true,
+    speed: 500,
+    autoplay: false,
+    fade: true,
+    cssEase: 'ease'
+  });
   $('.course>ul').slick({
     // centerMode: true,
     centerPadding: '60px',
@@ -1477,4 +1486,64 @@ $(".certificate_accordion").each(function() {
     $(this).click(accordion);
     $(this).keyup(accordion);
   });
+});
+// $(function() {
+//   $('.number_row .number span').each(function() {
+//     var $this = $(this),
+//       countTo = $this.attr('data-count');
+//     $({ countNum: $this.text() }).animate({
+//       countNum: countTo
+//     }, {
+//       duration: 8000,
+//       easing: 'linear',
+//       step: function() {
+//         $this.text(Math.floor(this.countNum));
+//       },
+//       complete: function() {
+//         $this.text(this.countNum);
+//         //alert('finished');
+//       }
+//     });
+//   });
+// });
+
+//數字倒數
+function animateNumber(element, start, stop, duration, dot) {
+  let startTime = null;
+  const isCountdown = start > stop;
+  let dotCheck = dot !== undefined ? dot : true;
+
+  function numberWithCommas(number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+  function animationStep(timestamp) {
+    if (!startTime) {
+      startTime = timestamp;
+    }
+    const elapsedTime = timestamp - startTime;
+    const progress = elapsedTime / duration;
+    let currentValue;
+    if (isCountdown) {
+      currentValue = Math.floor(start - (start - stop) * progress);
+    } else {
+      currentValue = Math.floor(start + (stop - start) * progress);
+    }
+    element.textContent = dotCheck
+      ? numberWithCommas(currentValue)
+      : currentValue;
+    if (progress < 1) {
+      requestAnimationFrame(animationStep);
+    } else {
+      element.textContent = dotCheck ? numberWithCommas(stop) : stop;
+    }
+  }
+  requestAnimationFrame(animationStep);
+}
+
+const countItem = document.querySelectorAll(".numberCount");
+
+countItem.forEach((item) => {
+  const value = item.getAttribute("data-people");
+  animateNumber(item.querySelector("span"), 0, value, 2000);
 });
