@@ -1367,6 +1367,7 @@ $(function() {
   });
   // happyChart6
 });*/
+
 $(document).ready(function() {
   var chart = {
     plotBackgroundColor: null,
@@ -1507,7 +1508,7 @@ $(".certificate_accordion").each(function() {
 //   });
 // });
 
-//數字倒數
+//counting number
 function animateNumber(element, start, stop, duration, dot) {
   let startTime = null;
   const isCountdown = start > stop;
@@ -1546,4 +1547,42 @@ const countItem = document.querySelectorAll(".numberCount");
 countItem.forEach((item) => {
   const value = item.getAttribute("data-people");
   animateNumber(item.querySelector("span"), 0, value, 2000);
+});
+//懶人包展開收合
+$(function() {
+  $('.dummies>ul>li').each(function() {
+    $(this).find('.dummiesContent').hide();
+    var _item = $(this).children('.dummiesTitle').children('a');
+    // var _scrollTop = $(this).offset().top - 55;
+    _item.each(function() {
+      function dummies(e) {
+        // $('html, body').stop(true, true).animate({ scrollTop: _scrollTop }, 800, 'easeOutExpo');
+        // $(this).parents('li').siblings().children('.dummiesTitle').children('a').removeClass('active');
+        $(this).toggleClass('active');
+        // $(this).parents('li').siblings().children('.dummiesContent').slideUp();
+        $(this).parent('.dummiesTitle').next('.dummiesContent').slideToggle();
+        e.preventDefault();
+      }
+      $(this).click(dummies);
+      $(this).keyup(dummies);
+    });
+  });
+});
+$('.dummiesPolicy .policy1 a').click(function(e) {
+  let _scrollTop = $(".dummies .policy01").offset().top - 100;
+      $('html, body').stop(true, true).animate({ scrollTop: _scrollTop }, 800, 'easeOutExpo');
+      e.preventDefault();
+
+});
+$('.dummiesPolicy .policy2 a').click(function(e) {
+  let _scrollTop = $(".dummies .policy07").offset().top - 100;
+      $('html, body').stop(true, true).animate({ scrollTop: _scrollTop }, 800, 'easeOutExpo');
+      e.preventDefault();
+
+});
+$('.dummiesPolicy .policy3 a').click(function(e) {
+  let _scrollTop = $(".dummies .policy10").offset().top - 100;
+      $('html, body').stop(true, true).animate({ scrollTop: _scrollTop }, 800, 'easeOutExpo');
+      e.preventDefault();
+
 });

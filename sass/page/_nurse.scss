@@ -1,5 +1,5 @@
 .nurses {
-  padding: 280px 3em 0 3em;
+  padding: 280px 3em 3em 3em;
   background: url(../images/inner_bg2.png) no-repeat center top,
     url(../images/nurse/nurse_bg.jpg) no-repeat right 250px;
   background-color: #fff;
@@ -52,7 +52,7 @@
   @include screen("mobile") {
     margin-top: 0;
   }
-  h2.h2title {
+  .h2title {
     writing-mode: vertical-rl;
     font-size: 1.875rem;
     color: #333;
@@ -656,7 +656,7 @@
         }
 
         img {
-          width: 100%;
+          max-width: 100%;
         }
       }
       .more {
@@ -712,6 +712,10 @@
   position: relative;
   padding: 120px 0;
   display: flex;
+  @include screen("tablet") {
+    flex-direction: column;
+    padding: 60px 0;
+  }
   &:before {
     content: "";
     display: block;
@@ -723,7 +727,7 @@
     bottom: 0;
     z-index: 1;
   }
-  h2.h2title {
+  .h2title {
     writing-mode: vertical-rl;
     font-size: 1.875rem;
     color: #333;
@@ -737,6 +741,7 @@
       margin-bottom: 16px;
       font-size: 1.5rem;
       color: #555;
+      text-align: center;
     }
     .entitle {
       margin-top: 0;
@@ -753,7 +758,6 @@
     position: relative;
     z-index: 2;
     flex-grow: 1;
-    min-width: 0;
     .news {
       padding: 24px 24px 24px 130px;
       position: relative;
@@ -765,6 +769,12 @@
         .news_plan {
           color: #b6107e;
         }
+        &:hover,
+        &:focus {
+          .news_text a {
+            color: #b6107e;
+          }
+        }
       }
       &.policy2 {
         background: url(../images/nurse/news_bg2.png) no-repeat left top,
@@ -772,12 +782,24 @@
         .news_plan {
           color: #e52f24;
         }
+        &:hover,
+        &:focus {
+          .news_text a {
+            color: #e52f24;
+          }
+        }
       }
       &.policy3 {
         background: url(../images/nurse/news_bg3.png) no-repeat left top,
           linear-gradient(90deg, #fff 30%, #faf8ff 100%);
         .news_plan {
           color: #5e1681;
+        }
+        &:hover,
+        &:focus {
+          .news_text a {
+            color: #5e1681;
+          }
         }
       }
       .news_plan {
@@ -794,10 +816,407 @@
       .news_text {
         a {
           color: #444;
-          display: block;
-          white-space: nowrap;
           overflow: hidden;
-          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          font-weight: bold;
+          @include screen("mobile") {
+            -webkit-line-clamp: 2;
+          }
+        }
+      }
+    }
+  }
+  .more {
+    text-align: right;
+  }
+}
+.nurseBottom_sec {
+  margin-left: calc(-3em - 15px);
+  margin-right: calc(-3em - 15px);
+  display: flex;
+  @include screen("mobile") {
+    flex-direction: column;
+  }
+  .h2title {
+    margin-top: 0;
+    color: #fff;
+    font-size: 1.875rem;
+    margin-bottom: 56px;
+    @include screen("mobile") {
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    .entitle {
+      display: inline-block;
+      color: #fff;
+      font-size: 1.25rem;
+      @include screen("mobile") {
+        font-size: 0.9375rem;
+        display: block;
+      }
+    }
+  }
+  .nurseBlog_block {
+    min-width: 580px;
+    box-sizing: border-box;
+    padding: 50px 4em;
+    background: url(../images/nurse/blog_bg.png) no-repeat left top,
+      linear-gradient(180deg, #b6107e 0%, #703075 100%);
+    @include screen("tablet") {
+      padding: 50px 3em;
+      min-width: 400px;
+    }
+    @include screen("mobile") {
+      padding: 50px 4em;
+    }
+    .nurseBlog {
+      position: relative;
+      margin-bottom: 1rem;
+      box-shadow: 0px 14px 70px 0px rgba(34, 34, 34, 0.15);
+
+      a {
+      }
+      .blog_pic {
+        img {
+          display: block;
+          aspect-ratio: 426 / 290;
+          width: 100%;
+        }
+      }
+      .blog_text {
+        position: absolute;
+        padding: 16px;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        box-sizing: border-box;
+        background: rgba(0, 0, 0, 0.7);
+        color: #fff;
+      }
+    }
+    .more {
+      text-align: left;
+      margin-bottom: 0;
+      @include screen("mobile") {
+        text-align: center;
+      }
+    }
+  }
+  .nurseQA_block {
+    flex-grow: 1;
+    padding: 50px 3em;
+    box-sizing: border-box;
+    background: url(../images/nurse/qa_bg.png) no-repeat left bottom,
+      linear-gradient(180deg, #fff 0%, #f9f7f7 20.11%, #fff 100%);
+    background-size: 100%;
+    @include screen("mobile") {
+      padding: 50px 4em;
+    }
+    .h2title {
+      position: relative;
+      color: #333;
+
+      .entitle {
+        color: #4f4f4f;
+      }
+      &:after {
+        content: "";
+        width: 90px;
+        height: 4px;
+        background: #b6107e;
+        border-radius: 30px;
+        display: block;
+        margin-top: 4px;
+        @include screen("mobile") {
+          display: none;
+        }
+      }
+    }
+    .nurseQA {
+      color: #444;
+      margin-bottom: 2rem;
+      > div {
+        min-height: 52px;
+        padding-left: 48px;
+      }
+      .question {
+        background: url(../images/nurse/q.png) no-repeat left top;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 120%;
+        margin-bottom: 2rem;
+      }
+      .answer {
+        background: url(../images/nurse/a.png) no-repeat left top;
+        font-size: 1.25rem;
+        line-height: 140%;
+      }
+    }
+  }
+}
+.nursePublish {
+  margin-left: calc(-3em - 15px);
+  margin-right: calc(-3em - 15px);
+  text-align: center;
+  line-height: 54px;
+  height: 54px;
+  margin-bottom: -3rem;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.93) 5%,
+    rgba(255, 238, 249, 0.67) 20%,
+    rgba(209, 189, 202, 0.71) 78%
+  );
+  @include screen("mobile") {
+    margin-bottom: 0;
+  }
+}
+.forDummies {
+  .h2title {
+    color: #222;
+    font-size: 1.875rem;
+    margin-bottom: 2rem;
+  }
+  p {
+    margin-top: 0;
+    line-height: 160%;
+  }
+  .dummiesPolicy {
+    display: flex;
+    justify-content: center;
+    gap: 75px;
+    margin-bottom: 3rem;
+    @include screen("mobile") {
+      gap: 1rem;
+    }
+    .policy {
+      padding-top: 120px;
+      .title {
+        a {
+          display: block;
+          padding: 10px 36px;
+          border-radius: 25px;
+          font-size: 1.25rem;
+          color: #fff;
+          line-height: 100%;
+          text-align: center;
+          @include screen("mobile") {
+            padding: 10px 24px;
+            border-radius: 30px;
+          }
+        }
+      }
+      &.policy1 {
+        background: url(../images/nurse/nurse1.png) no-repeat center top;
+        background-size: 125px auto;
+        .title {
+          a {
+            background: linear-gradient(
+              180deg,
+              #b6107e 0%,
+              rgba(182, 16, 126, 0.7) 100%
+            );
+            &:hover,
+            &:focus {
+              background: linear-gradient(
+                180deg,
+                rgba(182, 16, 126, 0.7) 0%,
+                #b6107e 100%
+              );
+            }
+          }
+        }
+      }
+      &.policy2 {
+        background: url(../images/nurse/nurse2.png) no-repeat center top;
+        background-size: 125px auto;
+        .title {
+          a {
+            background: linear-gradient(
+              180deg,
+              #e52f24 0%,
+              rgba(229, 47, 36, 0.7) 100%
+            );
+            &:hover,
+            &:focus {
+              background: linear-gradient(
+                180deg,
+                rgba(229, 47, 36, 0.7) 0%,
+                #e52f24 100%
+              );
+            }
+          }
+        }
+      }
+      &.policy3 {
+        background: url(../images/nurse/nurse3.png) no-repeat center top;
+        background-size: 125px auto;
+        .title {
+          a {
+            background: linear-gradient(
+              180deg,
+              #5e1681 0%,
+              rgba(162, 81, 182, 0.8) 100%
+            );
+            &:hover,
+            &:focus {
+              background: linear-gradient(
+                180deg,
+                rgba(162, 81, 182, 0.8) 0%,
+                #5e1681 100%
+              );
+            }
+          }
+        }
+      }
+      .title {
+      }
+    }
+  }
+}
+.dummies {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      border-radius: 0px 34px 0px 34px;
+      box-shadow: 0px 10px 40px 0px rgba(34, 34, 34, 0.1);
+      background: url(../images/nurse/dummies_bg1.png) no-repeat left top,
+        linear-gradient(90deg, #fff 20%, rgba(255, 242, 242, 0.77) 100%);
+      margin-bottom: 2rem;
+      @include screen("mobile") {
+        background: url(../images/nurse/dummies_bg1.png) no-repeat -62px top,
+          linear-gradient(90deg, #fff 20%, rgba(255, 242, 242, 0.77) 100%);
+      }
+      .dummiesTitle {
+        a {
+          display: flex;
+          align-items: center;
+          padding-right: 60px;
+          position: relative;
+          text-decoration: none;
+          color: #333;
+          &:focus {
+            box-shadow: none;
+          }
+          &:after {
+            content: "";
+            width: 12px;
+            height: 12px;
+            display: block;
+            border-right: 4px solid #b6107e;
+            border-bottom: 4px solid #b6107e;
+            transform: rotate(45deg);
+            right: 24px;
+            position: absolute;
+            transition: 0.5s all;
+          }
+          .titleNo {
+            font-size: 3.5rem;
+            line-height: 100%;
+            position: relative;
+            width: 142px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px 0;
+            margin-right: 20px;
+            font-family: "Century Gothic";
+            color: #b6107e;
+            @include screen("tablet") {
+              font-size: 3rem;
+            }
+            @include screen("mobile") {
+              font-size: 2rem;
+              width: 80px;
+            }
+            span {
+              font-size: 1.25rem;
+              position: absolute;
+              left: 30px;
+              top: 70px;
+              display: none;
+              @include screen("mobile") {
+                left: 20px;
+                top: 70px;
+                width: 2em;
+                line-height: 130%;
+              }
+            }
+          }
+          .titleText {
+            font-size: 1.875rem;
+            line-height: 120%;
+            flex: 1 1 auto;
+            font-weight: bold;
+            @include screen("tablet") {
+              font-size: 1.5rem;
+            }
+            @include screen("mobile") {
+              font-size: 1.25rem;
+            }
+          }
+          &.active {
+            &:after {
+              transform: rotate(-135deg);
+            }
+            .titleNo span {
+              display: block;
+            }
+          }
+        }
+      }
+      &.policy2 {
+        background: url(../images/nurse/dummies_bg2.png) no-repeat left top,
+          linear-gradient(90deg, #fff 19.79%, rgba(255, 242, 242, 0.77) 100%);
+        @include screen("mobile") {
+          background: url(../images/nurse/dummies_bg2.png) no-repeat -62px top,
+            linear-gradient(90deg, #fff 19.79%, rgba(255, 242, 242, 0.77) 100%);
+        }
+        .dummiesTitle {
+          a {
+            .titleNo {
+              color: #e52f24;
+            }
+            &:after {
+              border-right: 4px solid #e52f24;
+              border-bottom: 4px solid #e52f24;
+            }
+          }
+        }
+      }
+      &.policy3 {
+        background: url(../images/nurse/dummies_bg3.png) no-repeat left top,
+          linear-gradient(90deg, #fff 19.79%, #f7f4ff 88.02%);
+        @include screen("mobile") {
+          background: url(../images/nurse/dummies_bg3.png) no-repeat -62px top,
+            linear-gradient(90deg, #fff 19.79%, #f7f4ff 88.02%);
+        }
+        .dummiesTitle {
+          a {
+            .titleNo {
+              color: #5e1681;
+            }
+            &:after {
+              border-right: 4px solid #5e1681;
+              border-bottom: 4px solid #5e1681;
+            }
+          }
+        }
+      }
+      .dummiesContent {
+        padding: 0 1.5rem 1rem 162px;
+        @include screen("mobile") {
+          padding: 0 1.5rem 1rem 100px;
+        }
+        p {
+          margin-top: 0;
+        }
+        img {
+          max-width: 100%;
         }
       }
     }
