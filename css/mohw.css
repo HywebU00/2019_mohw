@@ -2933,7 +2933,7 @@ img.img-responsive {
   border-left: 0;
 }
 .header .navigation li .search .keywordHot ul a {
-  color: #FFF;
+  color: #fff;
 }
 .header .navigation li .search .keywordHot ul a:hover, .header .navigation li .search .keywordHot ul a:focus {
   text-decoration: underline;
@@ -3029,7 +3029,7 @@ img.img-responsive {
   margin-right: 0.6em;
 }
 .search.m_search .keywordHot a {
-  color: #FFF;
+  color: #fff;
 }
 .search.m_search .keywordHot a:hover, .search.m_search .keywordHot a:focus {
   color: #984696;
@@ -3037,6 +3037,7 @@ img.img-responsive {
 
 .header.fixed {
   position: fixed;
+  visibility: visible !important;
   width: 100%;
   right: 0;
   top: 0;
@@ -3051,7 +3052,7 @@ img.img-responsive {
   }
 }
 .header.fixed .menu > ul > li > a {
-  color: #FFF;
+  color: #fff;
 }
 
 .language {
