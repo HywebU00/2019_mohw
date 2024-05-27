@@ -11,7 +11,7 @@ $(function() {
     var _window = $(window),
     ww = _window.outerWidth(),
     wh = _window.height(),
-    hh=0
+    hh = 0,
     _body = $('body'),
     wwNormal = 1400,
     wwMedium = 992,
