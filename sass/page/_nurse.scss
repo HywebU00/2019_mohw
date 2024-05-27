@@ -1423,6 +1423,9 @@ $nurse3: #5e1681;
               font-size: 0.9375rem;
               span {
                 margin-right: 1rem;
+                @include screen("mobile") {
+                  display: block;
+                }
               }
             }
             .listText {
@@ -1619,6 +1622,9 @@ $nurse3: #5e1681;
           font-size: 0.9375rem;
           span {
             margin-right: 1rem;
+            @include screen("mobile") {
+              display: block;
+            }
           }
         }
         .listText {

@@ -11779,6 +11779,11 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .relatedTab .tabSet .tabContent .relatedList ul li .listDate span {
   margin-right: 1rem;
 }
+@media screen and (max-width: 767px) {
+  .relatedTab .tabSet .tabContent .relatedList ul li .listDate span {
+    display: block;
+  }
+}
 .relatedTab .tabSet .tabContent .relatedList ul li .listText {
   color: #666;
   line-height: 160%;
@@ -11962,6 +11967,11 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .achievement_block .achievementList ul li .listDate span {
   margin-right: 1rem;
+}
+@media screen and (max-width: 767px) {
+  .achievement_block .achievementList ul li .listDate span {
+    display: block;
+  }
 }
 .achievement_block .achievementList ul li .listText {
   color: #666;
