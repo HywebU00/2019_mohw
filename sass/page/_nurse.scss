@@ -1,11 +1,20 @@
+$nurse1: #b6107e;
+$nurse2: #e52f24;
+$nurse3: #5e1681;
 .nurses {
-  padding: 280px 3em 3em 3em;
-  background: url(../images/inner_bg2.png) no-repeat center top,
+  background: url(../images/inner_bg2.png) no-repeat center top 84px,
     url(../images/nurse/nurse_bg.jpg) no-repeat right 250px;
   background-color: #fff;
   @include screen("mobile") {
     background: none;
-    padding: 5em 1em 0 1em;
+    // padding: 4em 1em 0 1em;
+  }
+  .subtitle {
+    color: #444;
+    margin-top: 8px;
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: 140%;
   }
   .more {
     margin: 0 auto 20px auto;
@@ -33,7 +42,10 @@
       }
       &:hover,
       &:focus {
-        background: #b6107e;
+        background: linear-gradient(180deg, #ff7b42 0%, #ff9734 100%);
+        // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+          rgba(0, 0, 0, 0.23) 0px 6px 6px;
         color: #fff;
       }
     }
@@ -64,16 +76,17 @@
       margin-right: 0;
       margin-bottom: 16px;
       font-size: 1.5rem;
-      color: #555;
     }
 
     .entitle {
       margin-top: 0;
-      color: #4f4f4f;
+      color: #4c4c4c;
       font-size: 1.25rem;
       letter-spacing: 1px;
+      display: block;
+      margin-right: 8px;
       @include screen("tablet") {
-        color: #888;
+        // color: #888;
         font-size: 0.9375rem;
       }
     }
@@ -126,6 +139,7 @@
           }
           @include screen("mobile") {
             width: 100%;
+            flex-direction: row;
           }
         }
         &.block2 {
@@ -149,12 +163,13 @@
         .blockTitle {
           font-size: 1.25rem;
           font-weight: bold;
-          color: #4f4f4f;
+          color: #333;
           .entitle {
             display: block;
             font-size: 0.75rem;
             line-height: 120%;
             margin-top: 4px;
+            color: #4f4f4f;
           }
         }
         .number {
@@ -164,7 +179,7 @@
             font-size: 1.75rem;
             font-family: "Century Gothic";
             margin-right: 4px;
-            color: #b6107e;
+            color: $nurse1;
             em {
               font-style: normal;
               color: #381ddb;
@@ -190,7 +205,7 @@
           content: "";
           width: 105px;
           height: 4px;
-          background: #b6107e;
+          background: $nurse1;
           border-radius: 30px;
           display: block;
           margin-top: 4px;
@@ -234,11 +249,11 @@
     }
 
     .circular-chart.orange .circle {
-      stroke: #b6107e;
+      stroke: $nurse1;
     }
 
     .percentage {
-      fill: #b6107e;
+      fill: $nurse1;
       font-family: "Century Gothic";
       font-weight: bold;
       font-size: 0.7em;
@@ -311,15 +326,16 @@
   }
   .h2title {
     margin-top: 0;
-    color: #444;
+    color: #333;
     text-align: center;
     margin-bottom: 2rem;
     position: relative;
     z-index: 1;
     @include screen("tablet") {
-      color: #555;
+      // color: #555;
     }
     .entitle {
+      color: #4c4c4c;
     }
   }
   .h3title {
@@ -331,11 +347,11 @@
     z-index: 1;
     font-size: 1.5rem;
     @include screen("tablet") {
-      color: #555;
+      // color: #555;
     }
     .entitle {
       font-size: 0.9375rem;
-      color: #888;
+      color: #4c4c4c;
       line-height: 140%;
       display: block;
       margin-top: 4px;
@@ -367,7 +383,7 @@
           content: "";
           width: 2px;
           height: 100%;
-          background: #b6107e;
+          background: $nurse1;
           display: block;
           position: absolute;
           left: 50px;
@@ -376,7 +392,7 @@
           font-size: 1.125rem;
           font-weight: bold;
           color: #fff;
-          background: #b6107e;
+          background: $nurse1;
           display: flex;
           width: 100px;
           height: 100px;
@@ -494,8 +510,9 @@
             background-size: 80%;
           }
           &:hover,
-          &:focus a {
+          &:focus {
             box-shadow: 0px 15px 40px 0px rgba(34, 34, 34, 0.2);
+            transform: translateY(-5px);
           }
           .en {
             display: block;
@@ -589,8 +606,9 @@
         display: block;
         font-size: 1.25rem;
         color: #fff;
+        margin-top: 8px;
         @include screen("mobile") {
-          color: #888;
+          color: #4c4c4c;
           font-size: 0.9375rem;
         }
       }
@@ -621,19 +639,19 @@
       &.policy1 {
         background: #fff url(../images/nurse/result_bga.png) no-repeat right top;
         .project_plan {
-          color: #b6107e;
+          color: $nurse1;
         }
       }
       &.policy2 {
         background: #fff url(../images/nurse/result_bgb.png) no-repeat right top;
         .project_plan {
-          color: #e52f24;
+          color: $nurse2;
         }
       }
       &.policy3 {
         background: #fff url(../images/nurse/result_bgc.png) no-repeat right top;
         .project_plan {
-          color: #5e1681;
+          color: $nurse3;
         }
       }
       .project_plan {
@@ -665,13 +683,13 @@
         position: absolute;
         right: 50px;
         bottom: 50px;
-        a {
-          background: #b6107e;
-          &:hover,
-          &:focus {
-            background: linear-gradient(180deg, #ff9734 0%, #ff7b42 100%);
-          }
-        }
+        // a {
+        //   background: $nurse1;
+        //   &:hover,
+        //   &:focus {
+        //     background: linear-gradient(180deg, #ff9734 0%, #ff7b42 100%);
+        //   }
+        // }
       }
     }
     .slick-arrow {
@@ -740,16 +758,14 @@
       margin-right: 0;
       margin-bottom: 16px;
       font-size: 1.5rem;
-      color: #555;
       text-align: center;
     }
     .entitle {
       margin-top: 0;
-      color: #4f4f4f;
+      color: #4c4c4c;
       font-size: 1.25rem;
       letter-spacing: 1px;
       @include screen("tablet") {
-        color: #888;
         font-size: 0.9375rem;
       }
     }
@@ -767,12 +783,12 @@
         background: url(../images/nurse/news_bg1.png) no-repeat left top,
           linear-gradient(90deg, #fff 30%, #ffeffa 100%);
         .news_plan {
-          color: #b6107e;
+          color: $nurse1;
         }
         &:hover,
         &:focus {
           .news_text a {
-            color: #b6107e;
+            color: $nurse1;
           }
         }
       }
@@ -780,12 +796,12 @@
         background: url(../images/nurse/news_bg2.png) no-repeat left top,
           linear-gradient(90deg, #fff 30%, #fff7f6 100%);
         .news_plan {
-          color: #e52f24;
+          color: $nurse2;
         }
         &:hover,
         &:focus {
           .news_text a {
-            color: #e52f24;
+            color: $nurse2;
           }
         }
       }
@@ -793,12 +809,12 @@
         background: url(../images/nurse/news_bg3.png) no-repeat left top,
           linear-gradient(90deg, #fff 30%, #faf8ff 100%);
         .news_plan {
-          color: #5e1681;
+          color: $nurse3;
         }
         &:hover,
         &:focus {
           .news_text a {
-            color: #5e1681;
+            color: $nurse3;
           }
         }
       }
@@ -864,7 +880,7 @@
     box-sizing: border-box;
     padding: 50px 4em;
     background: url(../images/nurse/blog_bg.png) no-repeat left top,
-      linear-gradient(180deg, #b6107e 0%, #703075 100%);
+      linear-gradient(180deg, $nurse1 0%, #703075 100%);
     @include screen("tablet") {
       padding: 50px 3em;
       min-width: 400px;
@@ -876,25 +892,32 @@
       position: relative;
       margin-bottom: 1rem;
       box-shadow: 0px 14px 70px 0px rgba(34, 34, 34, 0.15);
-
       a {
-      }
-      .blog_pic {
-        img {
-          display: block;
-          aspect-ratio: 426 / 290;
-          width: 100%;
+        .blog_pic {
+          overflow: hidden;
+          img {
+            display: block;
+            aspect-ratio: 426 / 290;
+            width: 100%;
+            transition: all 0.5s;
+          }
         }
-      }
-      .blog_text {
-        position: absolute;
-        padding: 16px;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        box-sizing: border-box;
-        background: rgba(0, 0, 0, 0.7);
-        color: #fff;
+        .blog_text {
+          position: absolute;
+          padding: 16px;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          box-sizing: border-box;
+          background: rgba(0, 0, 0, 0.7);
+          color: #fff;
+        }
+        &:hover,
+        &:focus {
+          .blog_pic img {
+            transform: scale(1.05);
+          }
+        }
       }
     }
     .more {
@@ -918,15 +941,14 @@
     .h2title {
       position: relative;
       color: #333;
-
       .entitle {
-        color: #4f4f4f;
+        color: #4c4c4c;
       }
       &:after {
         content: "";
         width: 90px;
         height: 4px;
-        background: #b6107e;
+        background: $nurse1;
         border-radius: 30px;
         display: block;
         margin-top: 4px;
@@ -976,7 +998,6 @@
 }
 .forDummies {
   .h2title {
-    color: #222;
     font-size: 1.875rem;
     margin-bottom: 2rem;
   }
@@ -1016,15 +1037,15 @@
           a {
             background: linear-gradient(
               180deg,
-              #b6107e 0%,
-              rgba(182, 16, 126, 0.7) 100%
+              $nurse1 0%,
+              rgba($nurse1, 0.7) 100%
             );
             &:hover,
             &:focus {
               background: linear-gradient(
                 180deg,
-                rgba(182, 16, 126, 0.7) 0%,
-                #b6107e 100%
+                rgba($nurse1, 0.7) 0%,
+                $nurse1 100%
               );
             }
           }
@@ -1037,15 +1058,15 @@
           a {
             background: linear-gradient(
               180deg,
-              #e52f24 0%,
-              rgba(229, 47, 36, 0.7) 100%
+              $nurse2 0%,
+              rgba($nurse2, 0.7) 100%
             );
             &:hover,
             &:focus {
               background: linear-gradient(
                 180deg,
-                rgba(229, 47, 36, 0.7) 0%,
-                #e52f24 100%
+                rgba($nurse2, 0.7) 0%,
+                $nurse2 100%
               );
             }
           }
@@ -1058,15 +1079,15 @@
           a {
             background: linear-gradient(
               180deg,
-              #5e1681 0%,
-              rgba(162, 81, 182, 0.8) 100%
+              $nurse3 0%,
+              rgba($nurse3, 0.7) 100%
             );
             &:hover,
             &:focus {
               background: linear-gradient(
                 180deg,
-                rgba(162, 81, 182, 0.8) 0%,
-                #5e1681 100%
+                rgba($nurse3, 0.7) 0%,
+                $nurse3 100%
               );
             }
           }
@@ -1103,13 +1124,16 @@
           &:focus {
             box-shadow: none;
           }
+          &:hover {
+            color: $nurse1;
+          }
           &:after {
             content: "";
             width: 12px;
             height: 12px;
             display: block;
-            border-right: 4px solid #b6107e;
-            border-bottom: 4px solid #b6107e;
+            border-right: 4px solid $nurse1;
+            border-bottom: 4px solid $nurse1;
             transform: rotate(45deg);
             right: 24px;
             position: absolute;
@@ -1125,7 +1149,7 @@
             padding: 20px 0;
             margin-right: 20px;
             font-family: "Century Gothic";
-            color: #b6107e;
+            color: $nurse1;
             @include screen("tablet") {
               font-size: 3rem;
             }
@@ -1160,8 +1184,11 @@
             }
           }
           &.active {
+            color: $nurse1;
             &:after {
               transform: rotate(-135deg);
+            }
+            .titleText {
             }
             .titleNo span {
               display: block;
@@ -1179,11 +1206,15 @@
         .dummiesTitle {
           a {
             .titleNo {
-              color: #e52f24;
+              color: $nurse2;
             }
             &:after {
-              border-right: 4px solid #e52f24;
-              border-bottom: 4px solid #e52f24;
+              border-right: 4px solid $nurse2;
+              border-bottom: 4px solid $nurse2;
+            }
+            &:hover,
+            &.active {
+              color: $nurse2;
             }
           }
         }
@@ -1198,11 +1229,15 @@
         .dummiesTitle {
           a {
             .titleNo {
-              color: #5e1681;
+              color: $nurse3;
             }
             &:after {
-              border-right: 4px solid #5e1681;
-              border-bottom: 4px solid #5e1681;
+              border-right: 4px solid $nurse3;
+              border-bottom: 4px solid $nurse3;
+            }
+            &:hover,
+            &.active {
+              color: $nurse3;
             }
           }
         }
@@ -1212,12 +1247,466 @@
         @include screen("mobile") {
           padding: 0 1.5rem 1rem 100px;
         }
-        p {
-          margin-top: 0;
+        .dummiesContent_text {
+          p {
+            margin-top: 0;
+          }
+          img {
+            max-width: 100%;
+          }
         }
-        img {
-          max-width: 100%;
+        .more {
+          text-align: right;
         }
+      }
+    }
+  }
+}
+.policyClass {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-size: 1.125rem;
+  color: #fff;
+  line-height: 100%;
+  text-align: center;
+
+  &.policy1 {
+    background: linear-gradient(180deg, $nurse1 0%, rgba($nurse1, 0.7) 100%);
+  }
+  &.policy2 {
+    background: linear-gradient(180deg, $nurse2 0%, rgba($nurse2, 0.7) 100%);
+  }
+  &.policy3 {
+    background: linear-gradient(180deg, $nurse3 0%, rgba($nurse3, 0.7) 100%);
+  }
+  & + h1,
+  & + h2 {
+    margin: 1rem 0 0 0;
+    font-size: 1.875rem;
+  }
+}
+.policyClassContent {
+  margin: 1rem 0 1.5rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+  a {
+    position: relative;
+    display: inline-block;
+    &.policy1 {
+      color: $nurse1;
+      &:after {
+        background: $nurse1;
+      }
+    }
+    &.policy2 {
+      color: $nurse2;
+      &:after {
+        background: $nurse2;
+      }
+    }
+    &.policy3 {
+      color: $nurse3;
+      &:after {
+        background: $nurse3;
+      }
+    }
+    &:after {
+      content: "";
+      height: 4px;
+      border-radius: 30px;
+      display: block;
+      margin-top: 4px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -8px;
+    }
+
+    &:hover {
+      &:after {
+        animation: line 1s linear infinite;
+      }
+      + span {
+        opacity: 1;
+      }
+    }
+    @keyframes line {
+      0% {
+        right: 100%;
+      }
+      100% {
+        right: 0;
+      }
+    }
+  }
+  span {
+    background: #333;
+    color: #fff;
+    font-size: 0.875rem;
+    padding: 8px;
+    display: inline-block;
+    border-radius: 4px;
+    margin-left: 20px;
+    top: -4px;
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.5s;
+    &:before {
+      content: "";
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 8px 10px 8px 0;
+      border-color: transparent #333 transparent transparent;
+      transform: rotate(0deg);
+      position: absolute;
+      left: -10px;
+      top: 50%;
+      margin-top: -8px;
+    }
+  }
+  & + h1,
+  & + h2 {
+    margin: 1rem 0 0 0;
+    font-size: 1.875rem;
+  }
+}
+.relatedTab {
+  .tabSet {
+    .tabItem {
+    }
+    .tabContent {
+      .relatedList {
+        ul {
+          li {
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #ccc;
+            &:last-child {
+              border-bottom: none;
+              padding-bottom: 0;
+              margin-bottom: 0;
+            }
+            .listPic {
+              float: left;
+              aspect-ratio: 400 / 267;
+              width: 220px;
+              margin-right: 1rem;
+              @include screen("mobile") {
+                width: 100%;
+                float: none;
+              }
+              img {
+                width: 100%;
+              }
+            }
+            .listTitle {
+              color: #333;
+              font-size: 1.25rem;
+              font-weight: bold;
+              margin-bottom: 8px;
+            }
+            .listDate {
+              color: #666;
+              margin-bottom: 8px;
+              font-size: 0.9375rem;
+              span {
+                margin-right: 1rem;
+              }
+            }
+            .listText {
+              color: #666;
+              line-height: 160%;
+            }
+            .more {
+              text-align: right;
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.achievement_block {
+  margin-top: 2rem;
+  .achievement_category {
+    margin: 18px 2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 1.25rem;
+    color: #fff;
+    a {
+      color: #fff;
+      display: block;
+      flex-grow: 1;
+      text-align: center;
+      height: 50px;
+      line-height: 50px;
+      border-radius: 50px;
+    }
+    .policy {
+      background: linear-gradient(180deg, #4c4c4c 0%, #a5a5a5 100%);
+      &:hover,
+      &:focus {
+        background: linear-gradient(180deg, #a5a5a5 0%, #4c4c4c 100%);
+      }
+      &.policy1 {
+        background: linear-gradient(
+          180deg,
+          $nurse1 0%,
+          rgba($nurse1, 0.7) 100%
+        );
+        &:hover,
+        &:focus {
+          background: linear-gradient(
+            180deg,
+            rgba($nurse1, 0.7) 0%,
+            $nurse1 100%
+          );
+        }
+      }
+      &.policy2 {
+        background: linear-gradient(
+          180deg,
+          $nurse2 0%,
+          rgba($nurse2, 0.7) 100%
+        );
+        &:hover,
+        &:focus {
+          background: linear-gradient(
+            180deg,
+            rgba($nurse2, 0.7) 0%,
+            $nurse2 100%
+          );
+        }
+      }
+      &.policy3 {
+        background: linear-gradient(
+          180deg,
+          $nurse3 0%,
+          rgba($nurse3, 0.7) 100%
+        );
+        &:hover,
+        &:focus {
+          background: linear-gradient(
+            180deg,
+            rgba($nurse3, 0.7) 0%,
+            $nurse3 100%
+          );
+        }
+      }
+    }
+  }
+  .achievementList {
+    padding: 36px;
+    background: #fff;
+    box-shadow: 0px 7px 28px 0px rgba(34, 34, 34, 0.1);
+    ul {
+      @include li-reset;
+      li {
+        padding-bottom: 1rem;
+        margin-bottom: 1.5rem;
+        border-bottom: 1px solid #ccc;
+        &:last-child {
+          border-bottom: none;
+          padding-bottom: 0;
+          margin-bottom: 0;
+        }
+        .listPolicy {
+          font-size: 1.125rem;
+          margin-bottom: 24px;
+          font-weight: bold;
+          color: #333;
+          .policy {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 25px;
+            color: #fff;
+            line-height: 100%;
+            text-align: center;
+            margin-right: 12px;
+            font-weight: normal;
+            &.policy1 {
+              background: linear-gradient(
+                180deg,
+                $nurse1 0%,
+                rgba($nurse1, 0.7) 100%
+              );
+            }
+            &.policy2 {
+              background: linear-gradient(
+                180deg,
+                $nurse2 0%,
+                rgba($nurse2, 0.7) 100%
+              );
+            }
+            &.policy3 {
+              background: linear-gradient(
+                180deg,
+                $nurse3 0%,
+                rgba($nurse3, 0.7) 100%
+              );
+            }
+          }
+        }
+        .listPic {
+          float: left;
+          aspect-ratio: 400 / 267;
+          width: 220px;
+          margin-right: 1rem;
+          @include screen("mobile") {
+            width: 100%;
+            float: none;
+          }
+          img {
+            width: 100%;
+          }
+        }
+        .listTitle {
+          color: #333;
+          font-size: 1.25rem;
+          font-weight: bold;
+          margin-bottom: 8px;
+        }
+        .listDate {
+          color: #666;
+          margin-bottom: 8px;
+          font-size: 0.9375rem;
+          span {
+            margin-right: 1rem;
+          }
+        }
+        .listText {
+          color: #666;
+          line-height: 160%;
+        }
+        .more {
+          text-align: right;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+.sp {
+  .advSearch {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #fff;
+    box-shadow: 0px 7px 28px 0px rgba(34, 34, 34, 0.1);
+    form {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      @include screen("mobile") {
+        flex-wrap: wrap;
+      }
+      select {
+        width: 200px;
+        @include screen("mobile") {
+          width: calc(50% - 4px);
+        }
+      }
+      input[type="text"] {
+      }
+      input[type="button"] {
+        margin-top: 0;
+        line-height: 110%;
+        @include screen("mobile") {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+  .journey {
+    .journey_item {
+      display: flex;
+      padding-bottom: 2rem;
+      gap: 30px;
+      position: relative;
+      @include screen("mobile") {
+        gap: 20px;
+      }
+      &:after {
+        content: "";
+        width: 2px;
+        height: 100%;
+        background: $nurse1;
+        display: block;
+        position: absolute;
+        left: 50px;
+      }
+      .month {
+        font-size: 1.125rem;
+        font-weight: bold;
+        color: #fff;
+        background: $nurse1;
+        display: flex;
+        width: 100px;
+        height: 100px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-family: "Century Gothic";
+        flex-shrink: 0;
+        position: relative;
+        z-index: 2;
+        @include screen("mobile") {
+          width: 80px;
+          height: 80px;
+        }
+      }
+      .day {
+        flex-grow: 1;
+        .event {
+          margin-bottom: 1rem;
+          .date {
+            color: #959595;
+            padding: 6px 10px;
+            border-radius: 16px;
+            border: 1px solid #9e9e9e;
+            background: #fff;
+            line-height: 100%;
+            display: inline-block;
+            margin-bottom: 10px;
+          }
+          .eventTitle {
+            font-size: 1.375rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #444;
+            line-height: 140%;
+          }
+          .eventPic {
+            float: left;
+            aspect-ratio: 400 / 267;
+            width: 220px;
+            margin-right: 1rem;
+            @include screen("mobile") {
+              width: 100%;
+              float: none;
+            }
+            img {
+              width: 100%;
+            }
+          }
+          .eventText {
+            color: #3b3b3b;
+          }
+          .more {
+            text-align: right;
+            margin-bottom: 0;
+            margin-top: 10px;
+          }
+        }
+      }
+      &:last-child::after {
+        display: none;
       }
     }
   }

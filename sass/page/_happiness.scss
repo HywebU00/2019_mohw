@@ -1,12 +1,12 @@
 .happiness {
-  background: #fff url(../images/happiness/inner_bg.png) no-repeat center 0;
+  background: #fff url(../images/happiness/inner_bg.png) no-repeat center 84px;
   @include screen("mobile") {
     background: none;
     padding: 5em 1em 0 1em;
   }
   .toptitle {
     position: absolute;
-    top: 50px;
+    top: 134px;
     left: 0;
     right: 0;
     width: 100%;
@@ -39,7 +39,7 @@
   }
   .toptitle2 {
     position: absolute;
-    top: 50px;
+    top: 134px;
     left: 0;
     right: 0;
     width: 100%;

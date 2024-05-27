@@ -4,12 +4,13 @@ h1.title {
   line-height: 1.25em;
   margin: 2.5em 0 0 0;
   font-size: 1.5em;
-  @include screen('mobile') {
-    margin: .4em 0 1em 0;
+  color: #333;
+  @include screen("mobile") {
+    margin: 0.4em 0 1em 0;
   }
-  .entitle{
-    font-size: .9375rem;
-    color: #888;
+  .entitle {
+    font-size: 0.9375rem;
+    color: #4c4c4c;
     line-height: 140%;
     display: block;
     margin-top: 4px;
@@ -18,14 +19,26 @@ h1.title {
 
 .cp {
   &.small_size {
-    font-size: .938em;
+    font-size: 0.938em;
   }
   &.large_size {
     font-size: 1.125em;
   }
-
+  .center {
+    text-align: center;
+  }
+  .left {
+    text-align: left;
+  }
+  .right {
+    text-align: right;
+  }
   table {
-    background: #FFF;
+    background: #fff;
+    caption {
+      color: #444;
+      font-weight: bold;
+    }
   }
   img {
     &.float_left {
@@ -33,7 +46,7 @@ h1.title {
       margin: 0px 1em 1em 0;
       width: auto;
       max-width: 55%;
-      @include screen('mobile') {
+      @include screen("mobile") {
         float: none;
         max-width: 100%;
         margin: 0px auto;
@@ -44,7 +57,7 @@ h1.title {
       margin: 0px 0 1em 1em;
       width: auto;
       max-width: 55%;
-      @include screen('mobile') {
+      @include screen("mobile") {
         float: none;
         max-width: 100%;
         margin: 0px auto;
@@ -58,30 +71,30 @@ h1.title {
     font-size: 0.938em;
     line-height: 1em;
     list-style: none;
-    margin: .7em 0 .7em 0;
+    margin: 0.7em 0 0.7em 0;
     @include box-sizing;
-    padding: .8em .8em .3em .8em;
-    background: #F2F2F2;
+    padding: 0.8em 0.8em 0.3em 0.8em;
+    background: #f2f2f2;
     @extend %clearfix;
     li {
       width: 32%;
-      margin-bottom: .5em;
+      margin-bottom: 0.5em;
       display: inline-block;
       vertical-align: top;
-      @include screen('tablet') {
+      @include screen("tablet") {
         width: 48%;
-        margin-bottom: .2em;
+        margin-bottom: 0.2em;
         font-size: 0.875em;
       }
-      @include screen('mobile') {
+      @include screen("mobile") {
         width: 100%;
         display: block;
         font-size: 0.938em;
-        margin-bottom: .5em;
+        margin-bottom: 0.5em;
       }
       i {
-        margin-right: .5em;
-        opacity: .4;
+        margin-right: 0.5em;
+        opacity: 0.4;
       }
     }
   }
@@ -90,22 +103,22 @@ h1.title {
   }
 }
 
-h1+.function_panel {
+h1 + .function_panel {
   margin-top: -0.2em;
 }
 
 // 文章標籤
 div.tag {
   @extend %clearfix;
-  padding: .5em 0;
-  margin-bottom: .5em;
+  padding: 0.5em 0;
+  margin-bottom: 0.5em;
   &:before {
     display: inline-block;
     content: "";
     width: 16px;
     height: 16px;
     position: relative;
-    top: .2em;
+    top: 0.2em;
     background: url(../images/basic/icon_tag.png) no-repeat center center;
     background-size: 16px;
   }
@@ -114,14 +127,14 @@ div.tag {
     @include li-reset;
     li {
       display: inline-block;
-      margin: 0 .2em .2em 0;
+      margin: 0 0.2em 0.2em 0;
       a {
         display: block;
-        font-size: .813em;
+        font-size: 0.813em;
         @include aSetting_nocolor;
         border-radius: 4px;
-        border: 1px solid #DDD;
-        padding: .2em .5em;
+        border: 1px solid #ddd;
+        padding: 0.2em 0.5em;
       }
     }
   }
@@ -150,11 +163,11 @@ div.tag {
   li {
     position: relative;
     margin-bottom: 10px;
-    border-bottom: 1px solid #EEE;
+    border-bottom: 1px solid #eee;
     .update,
     .file_view {
-      font-size: .813em;
-      color: #AAA;
+      font-size: 0.813em;
+      color: #aaa;
       width: 100px;
       float: right;
       margin-top: 5px;
@@ -164,7 +177,7 @@ div.tag {
         width: auto;
         margin-top: 0;
       }
-      @include screen('xs_mobile') {
+      @include screen("xs_mobile") {
         display: none;
       }
     }
@@ -175,7 +188,7 @@ div.tag {
       }
     }
     a {
-      padding: .2em 0px .2em 65px;
+      padding: 0.2em 0px 0.2em 65px;
       position: relative;
       height: auto;
       line-height: 1.45em;
@@ -195,15 +208,15 @@ div.tag {
         counter-increment: counter;
         content: counters(counter, ".") " . ";
       }
-      @include screen('mobile') {
+      @include screen("mobile") {
         margin-right: 0px;
         width: 85%;
       }
       .kb {
-        font-size: .75em;
+        font-size: 0.75em;
         color: #666;
         display: inline-block;
-        margin: 0px .5em;
+        margin: 0px 0.5em;
       }
       &:after {
         content: "";
@@ -276,9 +289,9 @@ div.tag {
   li {
     position: relative;
     margin-bottom: 10px;
-    border-bottom: 1px solid #EEE;
+    border-bottom: 1px solid #eee;
     a {
-      padding: .2em 0px .2em 35px;
+      padding: 0.2em 0px 0.2em 35px;
       position: relative;
       height: auto;
       line-height: 1.45em;
@@ -302,8 +315,8 @@ div.tag {
   line-height: 1em;
   list-style: none;
   box-sizing: border-box;
-  padding: .8em;
-  background: #F2F2F2;
+  padding: 0.8em;
+  background: #f2f2f2;
   overflow: hidden;
   ul {
     float: right;
@@ -313,7 +326,7 @@ div.tag {
   }
   li {
     display: inline-block;
-    margin-left: .5em;
+    margin-left: 0.5em;
     a.like {
       display: inline-block;
       vertical-align: sub;
@@ -334,7 +347,7 @@ div.tag {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 2rem;
-  @include screen('tablet') {
+  @include screen("tablet") {
     display: block;
   }
   h3 {
@@ -346,7 +359,7 @@ div.tag {
   }
   .chart_text {
     flex: 1 1 48%;
-    @include screen('tablet') {
+    @include screen("tablet") {
       width: 100%;
     }
     h4 {
@@ -361,14 +374,14 @@ div.tag {
   .chart {
     padding: 20px;
     box-sizing: border-box;
-    box-shadow: 0 0 15px rgba(0, 0, 0, .15);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
     margin-bottom: 2rem;
     flex: 0 1 100%;
     &.col2 {
       flex: 0 0 50%;
       margin-left: 2%;
       margin-top: 1.5rem;
-      @include screen('tablet') {
+      @include screen("tablet") {
         width: 100%;
         margin-left: 0;
       }
@@ -396,7 +409,7 @@ div.tag {
 .taiwan_title {
   clear: both;
   width: 100%;
-  font-size: .9375rem;
+  font-size: 0.9375rem;
   line-height: 160%;
   padding-left: 20px;
   background: url(../images/map_arrow.png) no-repeat left 6px;
@@ -418,7 +431,7 @@ div.tag {
     height: 600px;
     margin: 1em 1em 1em 0;
     position: relative;
-    @include screen('mobile') {
+    @include screen("mobile") {
       display: none;
     }
     .el {
@@ -451,7 +464,7 @@ div.tag {
         z-index: 2;
       }
       &:after {
-        content: '';
+        content: "";
         position: absolute;
         background: rgba(0, 0, 0, 0.75);
         text-align: center;
@@ -494,7 +507,7 @@ div.tag {
         fill: #784f9e;
       }
       &:after {
-        content: '基隆市';
+        content: "基隆市";
         margin-top: -40px;
         margin-left: 0;
       }
@@ -523,7 +536,7 @@ div.tag {
       //   top: 60%;
       // }
       &:after {
-        content: '宜蘭縣';
+        content: "宜蘭縣";
         left: 90%;
       }
       // &:hover,
@@ -549,7 +562,7 @@ div.tag {
       //   top: 10%;
       // }
       &:after {
-        content: '臺北市';
+        content: "臺北市";
       }
       // &:hover,
       // &:focus,
@@ -576,7 +589,7 @@ div.tag {
       //   bottom: 30%;
       // }
       &:after {
-        content: '新北市';
+        content: "新北市";
         left: 0;
         top: 10%;
       }
@@ -603,7 +616,7 @@ div.tag {
       //   top: -20%;
       // }
       &:after {
-        content: '桃園市';
+        content: "桃園市";
         top: 15%;
         left: 0;
       }
@@ -630,7 +643,7 @@ div.tag {
       //   top: 40%;
       // }
       &:after {
-        content: '新竹縣';
+        content: "新竹縣";
         top: 15%;
         left: -45%;
       }
@@ -653,7 +666,7 @@ div.tag {
         fill: #784f9e;
       }
       &:after {
-        content: '新竹市';
+        content: "新竹市";
         left: 0;
         margin-left: -55px;
       }
@@ -679,7 +692,7 @@ div.tag {
       //   top: 20%;
       // }
       &:after {
-        content: '苗栗縣';
+        content: "苗栗縣";
         left: 0;
       }
       // &:hover,
@@ -704,7 +717,7 @@ div.tag {
       //   top: 20%;
       // }
       &:after {
-        content: '臺中市';
+        content: "臺中市";
         left: -10%;
       }
       // &:hover,
@@ -729,7 +742,7 @@ div.tag {
       //   top: 20%;
       // }
       &:after {
-        content: '彰化縣';
+        content: "彰化縣";
         left: -10%;
       }
       // &:hover,
@@ -754,7 +767,7 @@ div.tag {
       //   left: 30%;
       // }
       &:after {
-        content: '南投縣';
+        content: "南投縣";
       }
       // &:hover,
       // &:focus,
@@ -778,7 +791,7 @@ div.tag {
       //   top: 20%;
       // }
       &:after {
-        content: '雲林縣';
+        content: "雲林縣";
         left: -10%;
       }
       // &:hover,
@@ -804,7 +817,7 @@ div.tag {
       //   top: 30%;
       // }
       &:after {
-        content: '嘉義縣';
+        content: "嘉義縣";
         left: -10%;
       }
       // &:hover,
@@ -826,7 +839,7 @@ div.tag {
       }
       z-index: 3;
       &:after {
-        content: '嘉義市';
+        content: "嘉義市";
       }
       // &:hover,
       // &:focus,
@@ -851,7 +864,7 @@ div.tag {
       //   left: 30%;
       // }
       &:after {
-        content: '臺南市';
+        content: "臺南市";
         left: 0;
         top: 60%;
       }
@@ -878,7 +891,7 @@ div.tag {
       //   top: 30%;
       // }
       &:after {
-        content: '高雄市';
+        content: "高雄市";
         left: -8%;
         top: 80%;
       }
@@ -905,7 +918,7 @@ div.tag {
       //   top: 60%;
       // }
       &:after {
-        content: '屏東縣';
+        content: "屏東縣";
         left: 10%;
         top: 60%;
       }
@@ -932,13 +945,14 @@ div.tag {
       //   top: 60%;
       // }
       &:after {
-        content: '花蓮縣';
+        content: "花蓮縣";
         left: 80%;
       }
       &:hover,
       &:focus,
       &.active {
-        background: url(../images/map/map_hwalien_hover.svg) no-repeat center center;
+        background: url(../images/map/map_hwalien_hover.svg) no-repeat center
+          center;
         background-size: contain;
       }
     }
@@ -958,7 +972,7 @@ div.tag {
       //   top: 60%;
       // }
       &:after {
-        content: '臺東縣';
+        content: "臺東縣";
         left: 70%;
       }
       // &:hover,
@@ -977,13 +991,14 @@ div.tag {
       border: 1px solid #ddd;
       background: #f1f1f1;
       border-radius: 0.2em;
-      background: url(../images/map/map_lienchian.png) no-repeat center center #fff;
+      background: url(../images/map/map_lienchian.png) no-repeat center center
+        #fff;
       background-size: contain;
       &.active {
         transform: translate(20px, -15px);
       }
       &:after {
-        content: '連江縣';
+        content: "連江縣";
         display: block;
         right: 4px;
         bottom: 4px;
@@ -1003,7 +1018,8 @@ div.tag {
       &:hover,
       &:focus,
       &.active {
-        background: url(../images/map/map_lienchian_hover.png) no-repeat center center;
+        background: url(../images/map/map_lienchian_hover.png) no-repeat center
+          center;
         background-size: contain;
       }
     }
@@ -1022,7 +1038,7 @@ div.tag {
         transform: translate(20px, -15px);
       }
       &:after {
-        content: '金門縣';
+        content: "金門縣";
         display: block;
         right: 4px;
         bottom: 4px;
@@ -1042,7 +1058,8 @@ div.tag {
       &:hover,
       &:focus,
       &.active {
-        background: url(../images/map/map_kinmen_hover.png) no-repeat center center;
+        background: url(../images/map/map_kinmen_hover.png) no-repeat center
+          center;
         background-size: contain;
       }
     }
@@ -1066,7 +1083,7 @@ div.tag {
       //   right: 5%;
       // }
       &:after {
-        content: '澎湖縣';
+        content: "澎湖縣";
         display: block;
         right: 4px;
         bottom: 4px;
@@ -1075,7 +1092,8 @@ div.tag {
       &:hover,
       &:focus,
       &.active {
-        background: url(../images/map/map_penghu_hover.png) no-repeat center center;
+        background: url(../images/map/map_penghu_hover.png) no-repeat center
+          center;
         background-size: contain;
       }
     }
@@ -1085,7 +1103,7 @@ div.tag {
     border-radius: 9px;
     padding: 1rem 1rem 4px 1rem;
     flex: 1 1 auto;
-    @include screen('mobile') {
+    @include screen("mobile") {
       background: #781d7a;
       color: #fff;
     }
@@ -1102,19 +1120,19 @@ div.tag {
         }
         &:last-child:nth-child(4n - 1) {
           margin-right: calc(23% + 8% / 3);
-          @include screen('mobile') {
+          @include screen("mobile") {
             margin-right: 0;
           }
         }
         &:last-child:nth-child(4n - 2) {
-          margin-right: calc(46% + 8% / 3*2);
-          @include screen('mobile') {
+          margin-right: calc(46% + 8% / 3 * 2);
+          @include screen("mobile") {
             margin-right: 0;
           }
         }
         &:last-child:nth-child(4n - 3) {
           margin-right: calc(69% + 8%);
-          @include screen('mobile') {
+          @include screen("mobile") {
             margin-right: 0;
           }
         }
@@ -1146,7 +1164,7 @@ div.tag {
   margin: 0 auto;
   box-sizing: border-box;
   margin-top: 2rem;
-  @include screen('mobile') {
+  @include screen("mobile") {
     width: 100%;
   }
   form {
@@ -1155,25 +1173,25 @@ div.tag {
     width: 100%;
   }
   select {
-    margin: 0 .2rem;
+    margin: 0 0.2rem;
     width: 20%;
   }
   input {
-    margin: 0 .2rem;
+    margin: 0 0.2rem;
     width: 55%;
   }
   button {
-    margin: 0 .2rem;
+    margin: 0 0.2rem;
     width: 5%;
     padding: 0.5em 1em !important;
   }
 }
 
 .date {
-  font-size: .9375rem;
+  font-size: 0.9375rem;
   margin-bottom: 1rem;
   i {
-    opacity: .8;
+    opacity: 0.8;
   }
 }
 
@@ -1184,7 +1202,7 @@ div.tag {
   .tabItem {
     font-size: 1.25rem;
     border-bottom: 1px solid #222;
-    @include screen('mobile') {
+    @include screen("mobile") {
       border-bottom: 0;
     }
     a {
@@ -1192,7 +1210,7 @@ div.tag {
       color: #444;
       position: relative;
       overflow: inherit;
-      @include screen('mobile') {
+      @include screen("mobile") {
         background: #444;
         color: #fff;
       }
@@ -1208,7 +1226,7 @@ div.tag {
       &:hover,
       &:focus {
         background: #eee2f0;
-        @include screen('mobile') {
+        @include screen("mobile") {
           background: #781d7a;
           color: #fff;
         }
@@ -1218,7 +1236,7 @@ div.tag {
       a {
         background: transparent;
         color: #444;
-        @include screen('mobile') {
+        @include screen("mobile") {
           background: #781d7a;
           color: #fff;
         }
@@ -1231,7 +1249,7 @@ div.tag {
           left: 15%;
           background: #781d7a;
           display: block;
-          @include screen('mobile') {
+          @include screen("mobile") {
             display: none;
           }
         }
@@ -1244,23 +1262,23 @@ div.tag {
   }
   .tabContent {
     padding: 30px 0 0 0;
-    @include screen('mobile') {
+    @include screen("mobile") {
       padding: 15px 0 0 0;
     }
     .map_tag {
       margin-bottom: 30px;
-      @include screen('mobile') {
+      @include screen("mobile") {
         margin-bottom: 20px;
       }
       ul {
         display: flex;
         justify-content: center;
-        @include screen('mobile') {
+        @include screen("mobile") {
           flex-wrap: wrap;
         }
         li {
           margin: 0 1%;
-          @include screen('mobile') {
+          @include screen("mobile") {
             margin-bottom: 10px;
           }
           a {
@@ -1269,7 +1287,7 @@ div.tag {
             background: #eee;
             line-height: 48px;
             display: block;
-            @include screen('mobile') {
+            @include screen("mobile") {
               padding: 0 1rem;
             }
             &:hover,
@@ -1320,17 +1338,17 @@ div.tag {
           margin-bottom: 2rem;
           border-bottom: 0;
           white-space: initial;
-          @include screen('mobile') {
+          @include screen("mobile") {
             overflow: inherit;
           }
           .ins_block {
             padding: 20px;
             position: relative;
-            box-shadow: 0 0 8px 0 rgba(0, 0, 0, .15);
+            box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
             .ins_info {
               display: flex;
               align-items: flex-start;
-              @include screen('mobile') {
+              @include screen("mobile") {
                 display: block;
                 position: relative;
               }
@@ -1341,7 +1359,7 @@ div.tag {
                 color: #fff;
                 width: 8rem;
                 text-align: center;
-                @include screen('mobile') {
+                @include screen("mobile") {
                   width: auto;
                   padding: 0 1rem;
                   margin-bottom: 0.5rem;
@@ -1353,7 +1371,7 @@ div.tag {
                 padding: 4px 1rem;
                 color: #222;
                 font-weight: bold;
-                @include screen('mobile') {
+                @include screen("mobile") {
                   width: 100%;
                   padding: 0;
                   margin-bottom: 0.5rem;
@@ -1365,7 +1383,7 @@ div.tag {
                 line-height: 2rem;
                 width: 6rem;
                 text-align: center;
-                @include screen('mobile') {
+                @include screen("mobile") {
                   position: absolute;
                   right: 0;
                   top: 0;
@@ -1385,45 +1403,45 @@ div.tag {
               flex: 1 1 100%;
               justify-content: space-between;
               display: flex;
-              margin-top: .5rem;
-              margin-bottom: .5rem;
-              @include screen('mobile') {
+              margin-top: 0.5rem;
+              margin-bottom: 0.5rem;
+              @include screen("mobile") {
                 display: block;
                 margin-bottom: 0;
               }
               &:last-child {
                 margin-bottom: 0;
-                @include screen('mobile') {
+                @include screen("mobile") {
                   margin-top: 0;
                 }
               }
               .block {
                 margin-bottom: 0;
                 flex: 0 0 25%;
-                @include screen('mobile') {
+                @include screen("mobile") {
                   width: 100%;
                 }
                 &:nth-child(2) {
                   flex: 2 1 50%;
                   padding: 0 1rem;
-                  @include screen('mobile') {
+                  @include screen("mobile") {
                     width: 100%;
                     padding: 0;
                   }
                 }
                 .title {
-                  font-size: .875rem;
+                  font-size: 0.875rem;
                   color: #888;
                   margin-bottom: 4px;
-                  @include screen('mobile') {
+                  @include screen("mobile") {
                     display: inline-block;
-                    margin-right: .5rem;
+                    margin-right: 0.5rem;
                     font-size: 1rem;
                   }
                 }
                 .content {
                   color: #222;
-                  @include screen('mobile') {
+                  @include screen("mobile") {
                     display: inline-block;
                   }
                 }

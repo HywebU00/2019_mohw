@@ -1,6 +1,9 @@
 //header
 .header {
-  position: relative;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
   z-index: 99;
   height: 84px;
   @extend %clearfix;
@@ -424,15 +427,17 @@
 // header fix
 .header.fixed {
   position: fixed;
-  visibility: visible !important;
+  // visibility: visible !important;
   width: 100%;
   right: 0;
   top: 0;
   box-shadow: rgba(0, 0, 0, 0.5) 0 0 25px;
-  background: #eeeded;
+  // background: #eeeded;
+  background: #fff;
   z-index: 999;
   @include screen("mobile") {
-    background: #eeeded;
+    // background: #eeeded;
+    background: #fff;
   }
   .menu {
     > ul {

@@ -82,7 +82,7 @@ $(function() {
     _sidebarCtrl.click(function(e) {
         showSidebar();
         e.preventDefault();
-    }); 
+    });
     // 關閉動作
     _sidebarClose.click(function() {
         hideSidebar();
@@ -459,13 +459,13 @@ $(function() {
             if (ww >= wwSmall) {
                 _tabContent.css('top', tabItemHeight);
                 _tab.height(tabContentHeight + tabItemHeight);
-                tabItemWidth = (tabwidth - (tabItemLength - 1) * tiGap) / tabItemLength;
+                // tabItemWidth = (tabwidth - (tabItemLength - 1) * tiGap) / tabItemLength - 8;
                 _tabItem.width(tabItemWidth).css('margin-left', tiGap);
                 _tabItem.first().css('margin-left', 0);
-                _tabItem.last().css({ 'position': 'absolute', 'top': 0, 'right': 0 }).width(tabItemWidth);
+                // _tabItem.last().css({ 'position': 'absolute', 'top': 0, 'right': 0 }).width(tabItemWidth);
             } else {
                 _tab.css('height', 'auto');
-                _tabItem.width(tabwidth);
+                // _tabItem.width(tabwidth);
                 _tabItem.css('margin-left', 0).last().css('position', 'relative');
             }
             _tabItemA.focus(tabs);
@@ -494,6 +494,7 @@ $(function() {
     }
     $('.tabs>.tabItem:first-child>a').trigger('click');
     tabSet();
+
     /*-----------------------------------*/
     ///////////////置頂go to top////////////
     /*-----------------------------------*/
@@ -564,7 +565,7 @@ $(function() {
     // /*------------------------------------*/
     $('.cp table').each(function(index, el) {
         //判斷沒有table_list
-        if ($(this).parents('.table_list').length == 0 || $(this).parents('.fix_th_table').length == 0) {
+        if ($(this).parents('.table_list,.nurse_table').length == 0 || $(this).parents('.fix_th_table').length == 0) {
             $(this).wrap('<div class="table_wrapper"></div>')
         }
     });

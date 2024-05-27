@@ -81,9 +81,13 @@
 
 .wrapper {
   background: url(../images/hero_bg.jpg) no-repeat center top;
+  position: relative;
   @include screen("mobile") {
     background: #fefeff;
   }
+  // &.mp {
+  //   padding-top: 84px;
+  // }
 }
 
 .hero_block {

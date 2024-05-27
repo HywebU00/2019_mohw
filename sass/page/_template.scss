@@ -16,8 +16,8 @@ body {
   // width: 100%;
   max-width: 1000px;
   margin: 0px auto;
-  @include screen('mobile') {
-    background: #FFF;
+  @include screen("mobile") {
+    background: #fff;
     overflow: hidden;
     overflow-y: auto;
   }
@@ -33,18 +33,21 @@ body {
 .main {
   position: relative;
   margin: 0 auto;
-  padding: 0; // max-width: $container-max;
+  padding: 84px 0 0 0; // max-width: $container-max;
   // 可先設定一個中央區塊最大寬，限制accesskey對齊
-  @include screen('mobile') {
+  @include screen("mobile") {
     padding-top: 55px;
   } // 內頁標題設定
-  h2 {
+  h2.title {
     line-height: 1.25em;
-    margin: .4em 0;
+    // margin: 0.4em 0;
+    margin: 2.5em 0 0;
     font-size: 1.5em;
+    color: #333;
     .entitle {
-      font-size: .9375rem;
-      color: #888;
+      font-size: 0.9375rem;
+      // color: #888;
+      color: #4c4c4c;
       line-height: 140%;
       display: block;
       margin-top: 4px;
@@ -55,13 +58,13 @@ body {
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
-  padding: 280px 3em 3em 3em;
-  background: #fff url(../images/inner_bg.png) no-repeat center top;
-  @include screen('mobile') {
+  padding: 380px 3em 3em 3em;
+  background: #fff url(../images/inner_bg.png) no-repeat center top 84px;
+  @include screen("mobile") {
     background: none;
-    padding: 5em 1em 0 1em;
+    padding: 4em 1em 1em 1em;
   }
-  >.container {
+  > .container {
     @include gutter(); //gutter 代表左右要留白
   }
 }
@@ -93,7 +96,7 @@ body {
     top: 875px;
     bottom: 0;
     background: url(../images/bg_article_lp.png) repeat-y 0 0;
-    @include screen('mobile') {
+    @include screen("mobile") {
       background-size: 100% auto;
       top: 180px;
     }
@@ -102,7 +105,7 @@ body {
     margin-top: 120px;
     position: relative;
     z-index: 2;
-    @include screen('mobile') {
+    @include screen("mobile") {
       margin: 0.4em 0;
     }
   }
@@ -122,7 +125,7 @@ body {
       right: 180px;
       top: -200px;
       z-index: -1;
-      @include screen('mobile') {
+      @include screen("mobile") {
         display: none;
       }
     }
@@ -131,14 +134,14 @@ body {
       height: 3px;
       background: $primaryColor;
       margin-bottom: 80px;
-      @include screen('mobile') {
+      @include screen("mobile") {
         margin-bottom: 40px;
       }
     }
     .article_list {
       position: relative;
       margin-bottom: 150px;
-      @include screen('mobile') {
+      @include screen("mobile") {
         margin-bottom: 30px;
       }
       .article_list_title {
@@ -169,7 +172,7 @@ body {
         height: 284px;
         position: absolute;
         z-index: 3;
-        @include screen('mobile') {
+        @include screen("mobile") {
           position: relative;
           width: 100%;
           height: auto;
@@ -178,15 +181,15 @@ body {
         img {
           width: 100%;
           height: auto;
-          @include screen('mobile') {
+          @include screen("mobile") {
             width: 100%;
             height: auto;
           }
         }
-        +ul {
+        + ul {
           margin-left: 38%;
           margin-top: 65px;
-          @include screen('mobile') {
+          @include screen("mobile") {
             margin-left: 0;
             margin-top: 20px;
           }
@@ -206,7 +209,7 @@ body {
     top: 420px;
     bottom: 0;
     background: url(../images/bg_article_cp.png) repeat-y 0 0;
-    @include screen('mobile') {
+    @include screen("mobile") {
       background-size: 100% auto;
     }
   }
@@ -219,7 +222,7 @@ body {
     margin-top: 200px;
     position: relative;
     z-index: 2;
-    @include screen('mobile') {
+    @include screen("mobile") {
       margin: 0.4em 0;
     }
   }
@@ -236,7 +239,7 @@ body {
       right: -63px;
       top: -320px;
       z-index: -1;
-      @include screen('mobile') {
+      @include screen("mobile") {
         display: none;
       }
     }
@@ -244,13 +247,13 @@ body {
       padding: 40px 30px 20px 30px;
       margin: 40px 0;
       background: rgba(255, 255, 255, 0.85);
-      box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-      @include screen('mobile') {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      @include screen("mobile") {
         margin: 0 0 40px 0;
       }
       .article_author {
         float: right;
-        padding: .5rem 1rem;
+        padding: 0.5rem 1rem;
         color: #fff;
         font-weight: bold;
         background: $primaryColor;
@@ -265,13 +268,13 @@ body {
       padding: 40px 30px 20px 30px;
       margin: 40px 0;
       background: rgba(255, 255, 255, 0.85);
-      box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-      @include screen('mobile') {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      @include screen("mobile") {
         margin: 0 0 40px 0;
       }
       .article_judge {
         float: left;
-        padding: .5rem 1rem;
+        padding: 0.5rem 1rem;
         color: #fff;
         font-weight: bold;
         background: $primaryColor;
