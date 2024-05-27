@@ -228,8 +228,9 @@ $(function() {
     var stickyMenuTop = $('.header').offset().top;
     $(window).bind("load scroll resize", function(e) {
         ww = _window.outerWidth();
+        hh = Math.floor($('.header').outerHeight(true));
         if (ww >= wwSmall && $(this).scrollTop() > stickyMenuTop) {
-            hh = Math.floor($('.header').outerHeight(true));
+
             // menuH = Math.floor(_menu.outerHeight(true));
             $('.header').addClass('fixed');
             // $('.header').css('margin-top', hh);
