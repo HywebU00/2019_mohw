@@ -1,21 +1,21 @@
 @charset "utf-8";
 // 文章標題
-h1.title {
-  line-height: 1.25em;
-  margin: 2.5em 0 0 0;
-  font-size: 1.5em;
-  color: #333;
-  @include screen("mobile") {
-    margin: 0.4em 0 1em 0;
-  }
-  .entitle {
-    font-size: 0.9375rem;
-    color: #4c4c4c;
-    line-height: 140%;
-    display: block;
-    margin-top: 4px;
-  }
-}
+// h1.title {
+//   line-height: 1.25em;
+//   margin: 2.5em 0 0 0;
+//   font-size: 1.5em;
+//   color: #333;
+//   @include screen("mobile") {
+//     margin: 0.4em 0 1em 0;
+//   }
+//   .entitle {
+//     font-size: 0.9375rem;
+//     color: #4c4c4c;
+//     line-height: 140%;
+//     display: block;
+//     margin-top: 4px;
+//   }
+// }
 
 .cp {
   &.small_size {

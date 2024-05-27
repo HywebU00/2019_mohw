@@ -4638,12 +4638,14 @@ body.noscroll {
     padding-top: 55px;
   }
 }
+.main h1.title,
 .main h2.title {
   line-height: 1.25em;
-  margin: 2.5em 0 0;
+  margin: 2.5em 0 2rem;
   font-size: 1.5em;
   color: #333;
 }
+.main h1.title .entitle,
 .main h2.title .entitle {
   font-size: 0.9375rem;
   color: #4c4c4c;
@@ -6707,25 +6709,6 @@ body.noscroll {
 }
 .np li a:hover, .np li a:focus {
   border: 2px solid #984696;
-}
-
-h1.title {
-  line-height: 1.25em;
-  margin: 2.5em 0 0 0;
-  font-size: 1.5em;
-  color: #333;
-}
-@media screen and (max-width: 767px) {
-  h1.title {
-    margin: 0.4em 0 1em 0;
-  }
-}
-h1.title .entitle {
-  font-size: 0.9375rem;
-  color: #4c4c4c;
-  line-height: 140%;
-  display: block;
-  margin-top: 4px;
 }
 
 .cp.small_size {
@@ -10220,7 +10203,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   }
 }
 .nurses .subtitle {
-  color: #444;
+  color: #666;
   margin-top: 8px;
   font-weight: bold;
   font-size: 1.25rem;
@@ -10311,11 +10294,11 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .nurseNumber_sec .h2title .entitle {
   margin-top: 0;
+  margin-right: 8px;
   color: #4c4c4c;
   font-size: 1.25rem;
   letter-spacing: 1px;
   display: block;
-  margin-right: 8px;
 }
 @media screen and (max-width: 991px) {
   .nurseNumber_sec .h2title .entitle {
@@ -10613,9 +10596,9 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .nursePlan_sec .h2title {
   margin-top: 0;
+  margin-bottom: 2rem;
   color: #333;
   text-align: center;
-  margin-bottom: 2rem;
   position: relative;
   z-index: 1;
 }
@@ -10624,9 +10607,9 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .nursePlan_sec .h3title {
   margin-top: 0;
+  margin-bottom: 2rem;
   color: #444;
   text-align: center;
-  margin-bottom: 2rem;
   position: relative;
   z-index: 1;
   font-size: 1.5rem;
@@ -11384,14 +11367,10 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 @media screen and (max-width: 767px) {
   .nursePublish {
-    margin-bottom: 0;
+    margin-bottom: -1rem;
   }
 }
 
-.forDummies .h2title {
-  font-size: 1.875rem;
-  margin-bottom: 2rem;
-}
 .forDummies p {
   margin-top: 0;
   line-height: 160%;
@@ -11649,6 +11628,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   color: #fff;
   line-height: 100%;
   text-align: center;
+  margin-top: -0.5rem;
 }
 .policyClass.policy1 {
   background: -webkit-gradient(linear, left top, left bottom, from(#b6107e), to(rgba(182, 16, 126, 0.7)));
@@ -11662,9 +11642,8 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   background: -webkit-gradient(linear, left top, left bottom, from(#5e1681), to(rgba(94, 22, 129, 0.7)));
   background: linear-gradient(180deg, #5e1681 0%, rgba(94, 22, 129, 0.7) 100%);
 }
-.policyClass + h1, .policyClass + h2 {
+.policyClass + h1.title, .policyClass + h2.title {
   margin: 1rem 0 0 0;
-  font-size: 1.875rem;
 }
 
 .policyClassContent {
@@ -11757,9 +11736,8 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   top: 50%;
   margin-top: -8px;
 }
-.policyClassContent + h1, .policyClassContent + h2 {
+.policyClassContent + h1.title, .policyClassContent + h2.title {
   margin: 1rem 0 0 0;
-  font-size: 1.875rem;
 }
 
 .relatedTab .tabSet .tabContent .relatedList ul li {
@@ -11825,6 +11803,12 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   font-size: 1.25rem;
   color: #fff;
 }
+@media screen and (max-width: 767px) {
+  .achievement_block .achievement_category {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
 .achievement_block .achievement_category a {
   color: #fff;
   display: block;
@@ -11835,6 +11819,11 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   height: 50px;
   line-height: 50px;
   border-radius: 50px;
+}
+@media screen and (max-width: 767px) {
+  .achievement_block .achievement_category a {
+    width: calc(50% - 6px);
+  }
 }
 .achievement_block .achievement_category .policy {
   background: -webkit-gradient(linear, left top, left bottom, from(#4c4c4c), to(#a5a5a5));
@@ -11895,6 +11884,17 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   font-weight: bold;
   color: #333;
 }
+@media screen and (max-width: 767px) {
+  .achievement_block .achievementList ul li .listPolicy {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .achievement_block .achievementList ul li .listPolicy span + span {
+    display: block;
+    margin-top: 8px;
+  }
+}
 .achievement_block .achievementList ul li .listPolicy .policy {
   display: inline-block;
   padding: 10px 24px;
@@ -11909,28 +11909,45 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   background: -webkit-gradient(linear, left top, left bottom, from(#b6107e), to(rgba(182, 16, 126, 0.7)));
   background: linear-gradient(180deg, #b6107e 0%, rgba(182, 16, 126, 0.7) 100%);
 }
+@media screen and (max-width: 767px) {
+  .achievement_block .achievementList ul li .listPolicy .policy.policy1 + span {
+    color: #b6107e;
+  }
+}
 .achievement_block .achievementList ul li .listPolicy .policy.policy2 {
   background: -webkit-gradient(linear, left top, left bottom, from(#e52f24), to(rgba(229, 47, 36, 0.7)));
   background: linear-gradient(180deg, #e52f24 0%, rgba(229, 47, 36, 0.7) 100%);
+}
+@media screen and (max-width: 767px) {
+  .achievement_block .achievementList ul li .listPolicy .policy.policy2 + span {
+    color: #e52f24;
+  }
 }
 .achievement_block .achievementList ul li .listPolicy .policy.policy3 {
   background: -webkit-gradient(linear, left top, left bottom, from(#5e1681), to(rgba(94, 22, 129, 0.7)));
   background: linear-gradient(180deg, #5e1681 0%, rgba(94, 22, 129, 0.7) 100%);
 }
+@media screen and (max-width: 767px) {
+  .achievement_block .achievementList ul li .listPolicy .policy.policy3 + span {
+    color: #5e1681;
+  }
+}
 .achievement_block .achievementList ul li .listPic {
   float: left;
   aspect-ratio: 400/267;
   width: 220px;
-  margin-right: 1rem;
+  margin: 0 1rem 0.5rem 0;
 }
 @media screen and (max-width: 767px) {
   .achievement_block .achievementList ul li .listPic {
     width: 100%;
     float: none;
+    margin: 0 0 1rem 0;
   }
 }
 .achievement_block .achievementList ul li .listPic img {
   width: 100%;
+  display: block;
 }
 .achievement_block .achievementList ul li .listTitle {
   color: #333;
@@ -12016,6 +12033,11 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   display: block;
   position: absolute;
   left: 50px;
+}
+@media screen and (max-width: 767px) {
+  .sp .journey .journey_item:after {
+    left: 40px;
+  }
 }
 .sp .journey .journey_item .month {
   font-size: 1.125rem;

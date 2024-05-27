@@ -38,10 +38,11 @@ body {
   @include screen("mobile") {
     padding-top: 55px;
   } // 內頁標題設定
+  h1.title,
   h2.title {
     line-height: 1.25em;
     // margin: 0.4em 0;
-    margin: 2.5em 0 0;
+    margin: 2.5em 0 2rem;
     font-size: 1.5em;
     color: #333;
     .entitle {

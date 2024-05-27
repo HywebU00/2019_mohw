@@ -10,7 +10,7 @@ $nurse3: #5e1681;
     // padding: 4em 1em 0 1em;
   }
   .subtitle {
-    color: #444;
+    color: #666;
     margin-top: 8px;
     font-weight: bold;
     font-size: 1.25rem;
@@ -80,11 +80,11 @@ $nurse3: #5e1681;
 
     .entitle {
       margin-top: 0;
+      margin-right: 8px;
       color: #4c4c4c;
       font-size: 1.25rem;
       letter-spacing: 1px;
       display: block;
-      margin-right: 8px;
       @include screen("tablet") {
         // color: #888;
         font-size: 0.9375rem;
@@ -326,9 +326,9 @@ $nurse3: #5e1681;
   }
   .h2title {
     margin-top: 0;
+    margin-bottom: 2rem;
     color: #333;
     text-align: center;
-    margin-bottom: 2rem;
     position: relative;
     z-index: 1;
     @include screen("tablet") {
@@ -340,9 +340,9 @@ $nurse3: #5e1681;
   }
   .h3title {
     margin-top: 0;
+    margin-bottom: 2rem;
     color: #444;
     text-align: center;
-    margin-bottom: 2rem;
     position: relative;
     z-index: 1;
     font-size: 1.5rem;
@@ -993,14 +993,22 @@ $nurse3: #5e1681;
     rgba(209, 189, 202, 0.71) 78%
   );
   @include screen("mobile") {
-    margin-bottom: 0;
+    margin-bottom: -1rem;
   }
 }
 .forDummies {
-  .h2title {
-    font-size: 1.875rem;
-    margin-bottom: 2rem;
-  }
+  // .h2title {
+  //   font-size: 1.875rem;
+  //   margin-bottom: 2rem;
+  //   line-height: 140%;
+  //   .entitle {
+  //     font-size: 0.9375rem;
+  //     color: #4c4c4c;
+  //     line-height: 140%;
+  //     display: block;
+  //     margin-top: 4px;
+  //   }
+  // }
   p {
     margin-top: 0;
     line-height: 160%;
@@ -1270,6 +1278,7 @@ $nurse3: #5e1681;
   color: #fff;
   line-height: 100%;
   text-align: center;
+  margin-top: -0.5rem;
 
   &.policy1 {
     background: linear-gradient(180deg, $nurse1 0%, rgba($nurse1, 0.7) 100%);
@@ -1280,10 +1289,10 @@ $nurse3: #5e1681;
   &.policy3 {
     background: linear-gradient(180deg, $nurse3 0%, rgba($nurse3, 0.7) 100%);
   }
-  & + h1,
-  & + h2 {
+  & + h1.title,
+  & + h2.title {
     margin: 1rem 0 0 0;
-    font-size: 1.875rem;
+    // font-size: 1.875rem;
   }
 }
 .policyClassContent {
@@ -1367,10 +1376,10 @@ $nurse3: #5e1681;
       margin-top: -8px;
     }
   }
-  & + h1,
-  & + h2 {
+  & + h1.title,
+  & + h2.title {
     margin: 1rem 0 0 0;
-    font-size: 1.875rem;
+    // font-size: 1.875rem;
   }
 }
 .relatedTab {
@@ -1439,6 +1448,9 @@ $nurse3: #5e1681;
     gap: 12px;
     font-size: 1.25rem;
     color: #fff;
+    @include screen("mobile") {
+      flex-wrap: wrap;
+    }
     a {
       color: #fff;
       display: block;
@@ -1447,6 +1459,9 @@ $nurse3: #5e1681;
       height: 50px;
       line-height: 50px;
       border-radius: 50px;
+      @include screen("mobile") {
+        width: calc(50% - 6px);
+      }
     }
     .policy {
       background: linear-gradient(180deg, #4c4c4c 0%, #a5a5a5 100%);
@@ -1521,6 +1536,15 @@ $nurse3: #5e1681;
           margin-bottom: 24px;
           font-weight: bold;
           color: #333;
+          @include screen("mobile") {
+            margin-bottom: 1rem;
+          }
+          span + span {
+            @include screen("mobile") {
+              display: block;
+              margin-top: 8px;
+            }
+          }
           .policy {
             display: inline-block;
             padding: 10px 24px;
@@ -1536,6 +1560,11 @@ $nurse3: #5e1681;
                 $nurse1 0%,
                 rgba($nurse1, 0.7) 100%
               );
+              + span {
+                @include screen("mobile") {
+                  color: $nurse1;
+                }
+              }
             }
             &.policy2 {
               background: linear-gradient(
@@ -1543,6 +1572,11 @@ $nurse3: #5e1681;
                 $nurse2 0%,
                 rgba($nurse2, 0.7) 100%
               );
+              + span {
+                @include screen("mobile") {
+                  color: $nurse2;
+                }
+              }
             }
             &.policy3 {
               background: linear-gradient(
@@ -1550,6 +1584,11 @@ $nurse3: #5e1681;
                 $nurse3 0%,
                 rgba($nurse3, 0.7) 100%
               );
+              + span {
+                @include screen("mobile") {
+                  color: $nurse3;
+                }
+              }
             }
           }
         }
@@ -1557,13 +1596,15 @@ $nurse3: #5e1681;
           float: left;
           aspect-ratio: 400 / 267;
           width: 220px;
-          margin-right: 1rem;
+          margin: 0 1rem 0.5rem 0;
           @include screen("mobile") {
             width: 100%;
             float: none;
+            margin: 0 0 1rem 0;
           }
           img {
             width: 100%;
+            display: block;
           }
         }
         .listTitle {
@@ -1640,6 +1681,9 @@ $nurse3: #5e1681;
         display: block;
         position: absolute;
         left: 50px;
+        @include screen("mobile") {
+          left: 40px;
+        }
       }
       .month {
         font-size: 1.125rem;
