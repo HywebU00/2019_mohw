@@ -11,6 +11,7 @@ $(function() {
     var _window = $(window),
     ww = _window.outerWidth(),
     wh = _window.height(),
+    hh=0
     _body = $('body'),
     wwNormal = 1400,
     wwMedium = 992,
@@ -475,6 +476,7 @@ $(function() {
                 var _tabItemNow = $(this).parent(),
                 tvp = _tab.offset().top,
                 tabIndex = _tabItemNow.index() / 2,
+                // hh = Math.floor($('.header').outerHeight(true));
                 scollDistance = tvp + tabItemHeight * tabIndex - hh;
                 _tabItem.removeClass('active');
                 _tabItemNow.addClass('active');
