@@ -1,14 +1,60 @@
-.fp{
-	margin: 1em auto;
-	@include box-sizing;
-	padding:1em;
-	.login{
-		input{
-			padding: 1rem 2rem;
-			margin-bottom: 1rem;
-		}
-		a{
-			text-decoration: underline;
-		}
-	}
+.fp {
+  margin: 1em auto;
+  @include box-sizing;
+}
+
+.loginTab {
+  .tabSet {
+    .tabItem {
+      font-size: 1em;
+      margin: 0 6px;
+      a {
+        padding: 12px 30px;
+        background: #767676;
+        &:before {
+        }
+      }
+      &.active {
+        a {
+          background: #984696;
+          &:before {
+            border-width: 8px 10px 0 10px;
+            border-color: #984696 transparent transparent transparent;
+            bottom: -8px;
+            margin-left: -10px;
+          }
+        }
+      }
+    }
+    .tabContent {
+      .form_grid {
+        .form_grp {
+          p {
+            margin: 0;
+            a {
+              text-decoration: underline;
+              margin: 0 2px;
+            }
+          }
+        }
+        .btn_grp {
+          margin-bottom: 0;
+          padding-bottom: 0;
+          input {
+            // padding: 1rem 2rem;
+            // margin-bottom: 1rem;
+          }
+          a {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    ~ p {
+      text-align: center;
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
 }

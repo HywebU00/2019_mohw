@@ -907,6 +907,39 @@
       }
     }
   }
+  .happiness_link2 {
+    margin-bottom: 14px;
+    a {
+      font-size: 1.25rem;
+      letter-spacing: 1px;
+      display: block;
+      padding: 24px;
+      border-radius: 9px;
+      color: #fff;
+      background: #ff9734;
+      // background: linear-gradient(90deg, #ff9734 0%, #ff7b42 100%);
+      transition: all 0.5s;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        display: block;
+        background: url("../images/happiness/icon_linkout.svg") no-repeat center
+          center;
+        background-size: 100%;
+        right: 24px;
+        top: 50%;
+        margin-top: -12px;
+      }
+      &:hover,
+      &:focus {
+        background: #ff7b42;
+        // background: linear-gradient(90deg, #ff7b42 0%, #ff9734 100%);
+      }
+    }
+  }
 }
 
 .happiness_hospital {
@@ -1454,6 +1487,40 @@
       //   color: #984696;
       //   font-weight: bold;
       // }
+      .linkOut {
+        margin-bottom: 14px;
+        text-align: center;
+        a {
+          font-size: 1.125rem;
+          letter-spacing: 1px;
+          display: inline-block;
+          padding: 10px 54px 10px 24px;
+          border-radius: 5px;
+          color: #fff;
+          background: #ff9734;
+          // background: linear-gradient(90deg, #ff9734 0%, #ff7b42 100%);
+          transition: all 0.5s;
+          position: relative;
+          &:after {
+            content: "";
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            display: block;
+            background: url("../images/happiness/icon_linkout.svg") no-repeat
+              center center;
+            background-size: 100%;
+            right: 24px;
+            top: 50%;
+            margin-top: -12px;
+          }
+          &:hover,
+          &:focus {
+            background: #ff7b42;
+            // background: linear-gradient(90deg, #ff7b42 0%, #ff9734 100%);
+          }
+        }
+      }
     }
     h3 {
       color: #984696;

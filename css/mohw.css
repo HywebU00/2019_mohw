@@ -8013,13 +8013,43 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   margin: 1em auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 1em;
 }
-.fp .login input {
-  padding: 1rem 2rem;
-  margin-bottom: 1rem;
+
+.loginTab .tabSet .tabItem {
+  font-size: 1em;
+  margin: 0 6px;
 }
-.fp .login a {
+.loginTab .tabSet .tabItem a {
+  padding: 12px 30px;
+  background: #767676;
+}
+.loginTab .tabSet .tabItem.active a {
+  background: #984696;
+}
+.loginTab .tabSet .tabItem.active a:before {
+  border-width: 8px 10px 0 10px;
+  border-color: #984696 transparent transparent transparent;
+  bottom: -8px;
+  margin-left: -10px;
+}
+.loginTab .tabSet .tabContent .form_grid .form_grp p {
+  margin: 0;
+}
+.loginTab .tabSet .tabContent .form_grid .form_grp p a {
+  text-decoration: underline;
+  margin: 0 2px;
+}
+.loginTab .tabSet .tabContent .form_grid .btn_grp {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.loginTab .tabSet .tabContent .form_grid .btn_grp a {
+  text-decoration: underline;
+}
+.loginTab .tabSet ~ p {
+  text-align: center;
+}
+.loginTab .tabSet ~ p a {
   text-decoration: underline;
 }
 
@@ -9327,6 +9357,36 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   color: #fff;
   background: #00857c;
 }
+.happiness_right .happiness_link2 {
+  margin-bottom: 14px;
+}
+.happiness_right .happiness_link2 a {
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  display: block;
+  padding: 24px;
+  border-radius: 9px;
+  color: #fff;
+  background: #ff9734;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  position: relative;
+}
+.happiness_right .happiness_link2 a:after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  display: block;
+  background: url("../images/happiness/icon_linkout.svg") no-repeat center center;
+  background-size: 100%;
+  right: 24px;
+  top: 50%;
+  margin-top: -12px;
+}
+.happiness_right .happiness_link2 a:hover, .happiness_right .happiness_link2 a:focus {
+  background: #ff7b42;
+}
 
 .happiness_hospital .hospital_filter {
   display: -webkit-box;
@@ -9957,6 +10017,37 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .member_resume .memberTab_content blockquote ul {
   margin-top: 0;
+}
+.member_resume .memberTab_content blockquote .linkOut {
+  margin-bottom: 14px;
+  text-align: center;
+}
+.member_resume .memberTab_content blockquote .linkOut a {
+  font-size: 1.125rem;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 54px 10px 24px;
+  border-radius: 5px;
+  color: #fff;
+  background: #ff9734;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  position: relative;
+}
+.member_resume .memberTab_content blockquote .linkOut a:after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  display: block;
+  background: url("../images/happiness/icon_linkout.svg") no-repeat center center;
+  background-size: 100%;
+  right: 24px;
+  top: 50%;
+  margin-top: -12px;
+}
+.member_resume .memberTab_content blockquote .linkOut a:hover, .member_resume .memberTab_content blockquote .linkOut a:focus {
+  background: #ff7b42;
 }
 .member_resume .memberTab_content h3 {
   color: #984696;
