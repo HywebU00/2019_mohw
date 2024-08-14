@@ -1210,6 +1210,7 @@ div.tag {
       color: #444;
       position: relative;
       overflow: inherit;
+      padding: 16px 0 14px;
       @include screen("mobile") {
         background: #444;
         color: #fff;

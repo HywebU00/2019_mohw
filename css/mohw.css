@@ -7704,6 +7704,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   color: #444;
   position: relative;
   overflow: inherit;
+  padding: 16px 0 14px;
 }
 @media screen and (max-width: 767px) {
   .map_tab .tabItem a {
