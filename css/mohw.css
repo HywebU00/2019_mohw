@@ -1460,10 +1460,7 @@ img.img_circle {
 }
 .tabs > .tabItem > a {
   display: block;
-  padding: 16px 80px 14px;
   text-align: center;
-  background-color: #4d3c9b;
-  color: #fff;
   font-weight: bold;
   text-decoration: none;
   border-radius: 4px 4px 0 0;
@@ -1476,33 +1473,12 @@ img.img_circle {
     border-radius: 0;
   }
 }
-.tabs > .tabItem > a:hover {
-  background: #b6107e;
-}
 .tabs > .tabItem.active > a {
-  background-color: #b6107e;
-  color: #fff;
   position: relative;
 }
 .tabs > .tabItem.active > a:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
-}
-.tabs > .tabItem.active > a:before {
-  content: "";
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 12px 13px 0 13px;
-  border-color: #b6107e transparent transparent transparent;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  display: block;
-  position: absolute;
-  left: 50%;
-  margin-left: -7px;
-  bottom: -12px;
-  z-index: 1;
 }
 @media screen and (max-width: 767px) {
   .tabs > .tabItem.active > a {
@@ -1522,7 +1498,6 @@ img.img_circle {
   clear: both;
   padding: 30px 36px;
   display: none;
-  background: #f2f2f2;
 }
 @media screen and (max-width: 767px) {
   .tabContent {
@@ -11831,6 +11806,60 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   margin: 1rem 0 0 0;
 }
 
+.relatedTab .tabSet .tabItem > a {
+  display: block;
+  padding: 16px 80px 14px;
+  text-align: center;
+  background-color: #4d3c9b;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px 4px 0 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media screen and (max-width: 767px) {
+  .relatedTab .tabSet .tabItem > a {
+    width: 100% !important;
+    border-radius: 0;
+  }
+}
+.relatedTab .tabSet .tabItem > a:hover {
+  background: #b6107e;
+}
+.relatedTab .tabSet .tabItem.active > a {
+  background-color: #b6107e;
+  color: #fff;
+  position: relative;
+}
+.relatedTab .tabSet .tabItem.active > a:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.relatedTab .tabSet .tabItem.active > a:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 12px 13px 0 13px;
+  border-color: #b6107e transparent transparent transparent;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -7px;
+  bottom: -12px;
+  z-index: 1;
+}
+@media screen and (max-width: 767px) {
+  .relatedTab .tabSet .tabItem.active > a {
+    border-color: #bbb;
+  }
+}
+.relatedTab .tabSet .tabContent {
+  background: #f2f2f2;
+}
 .relatedTab .tabSet .tabContent .relatedList ul li {
   padding-bottom: 1rem;
   margin-bottom: 1.5rem;
