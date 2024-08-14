@@ -460,13 +460,13 @@ $(function() {
             if (ww >= wwSmall) {
                 _tabContent.css('top', tabItemHeight);
                 _tab.height(tabContentHeight + tabItemHeight);
-                // tabItemWidth = (tabwidth - (tabItemLength - 1) * tiGap) / tabItemLength - 8;
+                tabItemWidth = (tabwidth - (tabItemLength - 1) * tiGap) / tabItemLength;
                 _tabItem.width(tabItemWidth).css('margin-left', tiGap);
                 _tabItem.first().css('margin-left', 0);
-                // _tabItem.last().css({ 'position': 'absolute', 'top': 0, 'right': 0 }).width(tabItemWidth);
+                _tabItem.last().css({ 'position': 'absolute', 'top': 0, 'right': 0 }).width(tabItemWidth);
             } else {
                 _tab.css('height', 'auto');
-                // _tabItem.width(tabwidth);
+                _tabItem.width(tabwidth);
                 _tabItem.css('margin-left', 0).last().css('position', 'relative');
             }
             _tabItemA.focus(tabs);
@@ -476,7 +476,6 @@ $(function() {
                 var _tabItemNow = $(this).parent(),
                 tvp = _tab.offset().top,
                 tabIndex = _tabItemNow.index() / 2,
-                // hh = Math.floor($('.header').outerHeight(true));
                 scollDistance = tvp + tabItemHeight * tabIndex - hh;
                 _tabItem.removeClass('active');
                 _tabItemNow.addClass('active');
