@@ -12,10 +12,10 @@
   position: relative;
   & > .tabItem {
     float: left;
-    margin: 0 8px;
+    margin: 0;
     padding: 0;
-    @include box-sizing;
-    font-size: 1.25em;
+    // @include box-sizing;
+    font-size: 1em;
     line-height: 1;
 
     @include screen("mobile") {
@@ -32,7 +32,7 @@
       font-weight: bold;
       text-decoration: none;
       // @include text-overflow;
-      border-radius: 4px 4px 0 0;
+      // border-radius: 4px 4px 0 0;
       @include box-sizing;
       @include screen("mobile") {
         width: 100% !important;

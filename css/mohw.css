@@ -1445,11 +1445,9 @@ img.img_circle {
 }
 .tabs > .tabItem {
   float: left;
-  margin: 0 8px;
+  margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-size: 1.25em;
+  font-size: 1em;
   line-height: 1;
 }
 @media screen and (max-width: 767px) {
@@ -1463,7 +1461,6 @@ img.img_circle {
   text-align: center;
   font-weight: bold;
   text-decoration: none;
-  border-radius: 4px 4px 0 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -11807,6 +11804,9 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   margin: 1rem 0 0 0;
 }
 
+.relatedTab .tabSet .tabItem {
+  margin-right: 4px;
+}
 .relatedTab .tabSet .tabItem > a {
   display: block;
   padding: 16px 80px 14px;
@@ -11816,6 +11816,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   font-weight: bold;
   text-decoration: none;
   border-radius: 4px 4px 0 0;
+  font-size: 1.125rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }

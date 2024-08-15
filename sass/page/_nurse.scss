@@ -1385,6 +1385,7 @@ $nurse3: #5e1681;
 .relatedTab {
   .tabSet {
     .tabItem {
+      margin-right: 4px;
       & > a {
         display: block;
         padding: 16px 80px 14px;
@@ -1394,6 +1395,7 @@ $nurse3: #5e1681;
         font-weight: bold;
         text-decoration: none;
         border-radius: 4px 4px 0 0;
+        font-size: 1.125rem;
         @include box-sizing;
         @include screen("mobile") {
           width: 100% !important;

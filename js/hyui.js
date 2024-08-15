@@ -435,17 +435,81 @@ $(function() {
     /*-----------------------------------*/
     ////////////////多組Tab////////////////
     /*-----------------------------------*/
+    // var resizeTimer1;
+    // _window.resize(function() {
+    //     clearTimeout(resizeTimer1);
+    //     resizeTimer1 = setTimeout(function() {
+    //         ww = _window.outerWidth();
+    //         tabSet();
+    //     }, 50);
+    // });
+
+    // function tabSet() {
+    //     $('.tabs').each(function() {
+    //         var _tab = $(this),
+    //         _tabItem = _tab.find('.tabItem'),
+    //         _tabItemA = _tabItem.children('a'),
+    //         _tabContent = _tab.find('.tabContent'),
+    //         tabwidth = _tab.width(),
+    //         tabItemHeight = _tabItem.outerHeight(),
+    //         tabContentHeight = _tab.find('.active').next().innerHeight(),
+    //         tiGap = 0,
+    //         tabItemLength = _tabItem.length,
+    //         tabItemWidth;
+    //         _tab.find('.active').next('.tabContent').show();
+    //         if (ww >= wwSmall) {
+    //             _tabContent.css('top', tabItemHeight);
+    //             _tab.height(tabContentHeight + tabItemHeight);
+    //             tabItemWidth = (tabwidth - (tabItemLength - 1) * tiGap) / tabItemLength;
+    //             _tabItem.width(tabItemWidth).css('margin-left', tiGap);
+    //             _tabItem.first().css('margin-left', 0);
+    //             _tabItem.last().css({ 'position': 'absolute', 'top': 0, 'right': 0 }).width(tabItemWidth);
+    //         } else {
+    //             _tab.css('height', 'auto');
+    //             _tabItem.width(tabwidth);
+    //             _tabItem.css('margin-left', 0).last().css('position', 'relative');
+    //         }
+    //         _tabItemA.focus(tabs);
+    //         _tabItemA.click(tabs);
+
+    //         function tabs(e) {
+    //             var _tabItemNow = $(this).parent(),
+    //             tvp = _tab.offset().top,
+    //             tabIndex = _tabItemNow.index() / 2,
+    //             scollDistance = tvp + tabItemHeight * tabIndex - hh;
+    //             _tabItem.removeClass('active');
+    //             _tabItemNow.addClass('active');
+    //             if (ww <= wwSmall) {
+    //                 _tabItem.not('.active').next().slideUp();
+    //                 _tabItemNow.next().slideDown();
+    //                 $("html,body").stop(true, false).animate({ scrollTop: scollDistance });
+    //             } else {
+    //                 _tabItem.not('.active').next().hide();
+    //                 _tabItemNow.next().show();
+    //                 tabContentHeight = _tabItemNow.next().innerHeight();
+    //                 _tab.height(tabContentHeight + tabItemHeight);
+    //             }
+    //             e.preventDefault();
+    //         }
+    //     });
+    // }
+    // $('.tabs>.tabItem:first-child>a').trigger('click');
+    // tabSet();
+
+    /*-----------------------------------*/
+    ////////////////多組Tab2////////////////
+    /*-----------------------------------*/
     var resizeTimer1;
     _window.resize(function() {
         clearTimeout(resizeTimer1);
         resizeTimer1 = setTimeout(function() {
             ww = _window.outerWidth();
-            tabSet();
+            tabSetMap();
         }, 50);
     });
 
-    function tabSet() {
-        $('.tabs').each(function() {
+    function tabSetMap() {
+        $('.map_tab').each(function() {
             var _tab = $(this),
             _tabItem = _tab.find('.tabItem'),
             _tabItemA = _tabItem.children('a'),
@@ -493,8 +557,73 @@ $(function() {
             }
         });
     }
-    $('.tabs>.tabItem:first-child>a').trigger('click');
-    tabSet();
+    $('.map_tab .tabs>.tabItem:first-child>a').trigger('click');
+    tabSetMap();
+
+    /*-----------------------------------*/
+    ////////////////多組Tab3////////////////
+    /*-----------------------------------*/
+    var resizeTimer1;
+    _window.resize(function() {
+        clearTimeout(resizeTimer1);
+        resizeTimer1 = setTimeout(function() {
+            ww = _window.outerWidth();
+            tabSetRelated();
+        }, 50);
+    });
+
+    function tabSetRelated() {
+        $('.related_tab').each(function() {
+            var _tab = $(this),
+            _tabItem = _tab.find('.tabItem'),
+            _tabItemA = _tabItem.children('a'),
+            _tabContent = _tab.find('.tabContent'),
+            tabwidth = _tab.width(),
+            tabItemHeight = _tabItem.outerHeight(),
+            tabContentHeight = _tab.find('.active').next().innerHeight(),
+            tiGap = 0,
+            tabItemLength = _tabItem.length,
+            tabItemWidth;
+            _tab.find('.active').next('.tabContent').show();
+            if (ww >= wwSmall) {
+                _tabContent.css('top', tabItemHeight);
+                _tab.height(tabContentHeight + tabItemHeight);
+                // tabItemWidth = (tabwidth - (tabItemLength - 1) * tiGap) / tabItemLength;
+                tabItemWidth =_tabItem.width();
+                // _tabItem.width(tabItemWidth).css('margin-left', tiGap);
+                _tabItem.first().css('margin-left', 0);
+                // _tabItem.last().css({ 'position': 'absolute', 'top': 0, 'right': 0 }).width(tabItemWidth);
+            } else {
+                _tab.css('height', 'auto');
+                // _tabItem.width(tabwidth);
+                _tabItem.css('margin-left', 0).last().css('position', 'relative');
+            }
+            _tabItemA.focus(tabs);
+            _tabItemA.click(tabs);
+
+            function tabs(e) {
+                var _tabItemNow = $(this).parent(),
+                tvp = _tab.offset().top,
+                tabIndex = _tabItemNow.index() / 2,
+                scollDistance = tvp + tabItemHeight * tabIndex - hh;
+                _tabItem.removeClass('active');
+                _tabItemNow.addClass('active');
+                if (ww <= wwSmall) {
+                    _tabItem.not('.active').next().slideUp();
+                    _tabItemNow.next().slideDown();
+                    $("html,body").stop(true, false).animate({ scrollTop: scollDistance });
+                } else {
+                    _tabItem.not('.active').next().hide();
+                    _tabItemNow.next().show();
+                    tabContentHeight = _tabItemNow.next().innerHeight();
+                    _tab.height(tabContentHeight + tabItemHeight);
+                }
+                e.preventDefault();
+            }
+        });
+    }
+    $('.related_tab .tabs>.tabItem:first-child>a').trigger('click');
+    tabSetRelated();
 
     /*-----------------------------------*/
     ///////////////置頂go to top////////////
