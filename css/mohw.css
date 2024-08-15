@@ -7645,6 +7645,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 @media screen and (max-width: 767px) {
   .map_search {
@@ -7755,6 +7756,11 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .map_tab .tabItem.active a:hover, .map_tab .tabItem.active a:focus {
   background: #eee2f0;
 }
+@media screen and (max-width: 767px) {
+  .map_tab .tabItem.active a:hover, .map_tab .tabItem.active a:focus {
+    color: #444;
+  }
+}
 .map_tab .tabContent {
   padding: 30px 0 0 0;
 }
@@ -7799,6 +7805,8 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   background: #eee;
   line-height: 48px;
   display: block;
+  font-size: 1rem;
+  color: #555;
 }
 @media screen and (max-width: 767px) {
   .map_tab .tabContent .map_tag ul li a {

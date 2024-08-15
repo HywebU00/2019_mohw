@@ -563,10 +563,10 @@ $(function() {
     /*-----------------------------------*/
     ////////////////多組Tab3////////////////
     /*-----------------------------------*/
-    var resizeTimer1;
+    var resizeTimer2;
     _window.resize(function() {
-        clearTimeout(resizeTimer1);
-        resizeTimer1 = setTimeout(function() {
+        clearTimeout(resizeTimer2);
+        resizeTimer2 = setTimeout(function() {
             ww = _window.outerWidth();
             tabSetRelated();
         }, 50);
