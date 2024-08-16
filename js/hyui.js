@@ -639,7 +639,7 @@ $(function() {
     });
 
     function tabSetLogin() {
-        $('.login_Tab').each(function() {
+        $('.login_tab').each(function() {
             var _tab = $(this),
             _tabItem = _tab.find('.tabItem'),
             _tabItemA = _tabItem.children('a'),
@@ -688,7 +688,7 @@ $(function() {
             }
         });
     }
-    $('.login_Tab .tabs>.tabItem:first-child>a').trigger('click');
+    $('.login_tab .tabs>.tabItem:first-child>a').trigger('click');
     tabSetLogin();
 
     /*-----------------------------------*/
