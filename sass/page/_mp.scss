@@ -805,6 +805,9 @@
     margin-bottom: 38px;
     position: relative;
     z-index: 999;
+    @include screen("mobile") {
+      padding-bottom: 40px;
+    }
     .slick-list {
       &:before {
         content: "";
@@ -839,6 +842,12 @@
       transform: translate(0, 0);
       background: url(../images/prev.png) center center no-repeat;
       background-size: 30px 30px;
+      @include screen("mobile") {
+        right: auto;
+        left: 50%;
+        transform: translate(-120%, 0);
+        bottom: -60px;
+      }
       &:hover,
       &:focus {
         background: #873783 url(../images/prev.png) center center no-repeat;
@@ -856,6 +865,12 @@
       transform: translate(0, 0);
       background: url(../images/next.png) center center no-repeat;
       background-size: 30px 30px;
+      @include screen("mobile") {
+        right: auto;
+        right: 50%;
+        transform: translate(120%, 0);
+        bottom: -60px;
+      }
       &:hover,
       &:focus {
         background: #873783 url(../images/next.png) center center no-repeat;
@@ -865,6 +880,9 @@
       margin: 0 -60px;
       padding: 0;
       list-style: none;
+      @include screen("mobile") {
+        margin: 0;
+      }
       li {
         position: relative;
         width: 100%;

@@ -135,7 +135,8 @@ $nurse3: #5e1681;
           flex-direction: column;
           justify-content: space-between;
           &.gender {
-            background: url(../images/nurse/gender_bg.png) no-repeat right top;
+            background: #fff url(../images/nurse/gender_bg.png) no-repeat right
+              top;
           }
           @include screen("mobile") {
             width: 100%;
@@ -145,6 +146,19 @@ $nurse3: #5e1681;
         &.block2 {
           flex-grow: 1;
           justify-content: space-between;
+          column-gap: 10px;
+          @include screen("mobile") {
+            flex-wrap: wrap;
+            row-gap: 10px;
+            column-gap: 0;
+            .blockTitle {
+              width: 100%;
+            }
+          }
+          .legend {
+            font-size: 0.75rem;
+            white-space: nowrap;
+          }
         }
         &.block3 {
           flex-grow: 1;
@@ -220,6 +234,7 @@ $nurse3: #5e1681;
     }
   }
 }
+
 .circleChart {
   .circle {
     width: 90px;
@@ -261,14 +276,16 @@ $nurse3: #5e1681;
     }
   }
 }
+
 .barChart {
   .bar {
     display: flex;
-    height: 100px;
+    height: 140px;
     padding: 20px 0 0;
+    margin-top: -55px;
     .item {
       // width: calc(100% / 3);
-      width: 30px;
+      width: 44px;
       display: flex;
       flex-direction: column;
       &:nth-child(2) .line {

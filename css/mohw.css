@@ -5808,6 +5808,11 @@ body.noscroll {
   position: relative;
   z-index: 999;
 }
+@media screen and (max-width: 767px) {
+  .center_block .course {
+    padding-bottom: 40px;
+  }
+}
 .center_block .course .slick-list:before {
   content: "";
   width: 50px;
@@ -5842,6 +5847,15 @@ body.noscroll {
   background: url(../images/prev.png) center center no-repeat;
   background-size: 30px 30px;
 }
+@media screen and (max-width: 767px) {
+  .center_block .course .slick-prev {
+    right: auto;
+    left: 50%;
+    -webkit-transform: translate(-120%, 0);
+            transform: translate(-120%, 0);
+    bottom: -60px;
+  }
+}
 .center_block .course .slick-prev:hover, .center_block .course .slick-prev:focus {
   background: #873783 url(../images/prev.png) center center no-repeat;
 }
@@ -5859,6 +5873,15 @@ body.noscroll {
   background: url(../images/next.png) center center no-repeat;
   background-size: 30px 30px;
 }
+@media screen and (max-width: 767px) {
+  .center_block .course .slick-next {
+    right: auto;
+    right: 50%;
+    -webkit-transform: translate(120%, 0);
+            transform: translate(120%, 0);
+    bottom: -60px;
+  }
+}
 .center_block .course .slick-next:hover, .center_block .course .slick-next:focus {
   background: #873783 url(../images/next.png) center center no-repeat;
 }
@@ -5866,6 +5889,11 @@ body.noscroll {
   margin: 0 -60px;
   padding: 0;
   list-style: none;
+}
+@media screen and (max-width: 767px) {
+  .center_block .course ul {
+    margin: 0;
+  }
 }
 .center_block .course ul li {
   position: relative;
@@ -8049,6 +8077,10 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .loginTab .login_tab ~ p a {
   text-decoration: underline;
+}
+
+.textBlock {
+  line-height: 160%;
 }
 
 .qp {
@@ -10465,7 +10497,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
           justify-content: space-between;
 }
 .nurseNumber_sec .number_block .number_row .block.block1.gender {
-  background: url(../images/nurse/gender_bg.png) no-repeat right top;
+  background: #fff url(../images/nurse/gender_bg.png) no-repeat right top;
 }
 @media screen and (max-width: 767px) {
   .nurseNumber_sec .number_block .number_row .block.block1 {
@@ -10483,6 +10515,26 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+}
+@media screen and (max-width: 767px) {
+  .nurseNumber_sec .number_block .number_row .block.block2 {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    row-gap: 10px;
+    -webkit-column-gap: 0;
+       -moz-column-gap: 0;
+            column-gap: 0;
+  }
+  .nurseNumber_sec .number_block .number_row .block.block2 .blockTitle {
+    width: 100%;
+  }
+}
+.nurseNumber_sec .number_block .number_row .block.block2 .legend {
+  font-size: 0.75rem;
+  white-space: nowrap;
 }
 .nurseNumber_sec .number_block .number_row .block.block3 {
   -webkit-box-flex: 1;
@@ -10608,11 +10660,12 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100px;
+  height: 140px;
   padding: 20px 0 0;
+  margin-top: -55px;
 }
 .barChart .bar .item {
-  width: 30px;
+  width: 44px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
