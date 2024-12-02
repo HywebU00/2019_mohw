@@ -146,6 +146,26 @@ $nurse3: #5e1681;
         &.block2 {
           flex-grow: 1;
           justify-content: space-between;
+        }
+        &.block3 {
+          flex-grow: 1;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 37%;
+          @include screen("mobile") {
+            flex-direction: row;
+            width: 100%;
+          }
+          .update {
+            font-size: 0.75rem;
+            position: absolute;
+            right: 20px;
+            top: 25px;
+          }
+        }
+        &.block4 {
+          flex-grow: 1;
+          justify-content: space-between;
           column-gap: 10px;
           @include screen("mobile") {
             flex-wrap: wrap;
@@ -159,11 +179,6 @@ $nurse3: #5e1681;
             font-size: 0.75rem;
             white-space: nowrap;
           }
-        }
-        &.block3 {
-          flex-grow: 1;
-          flex-direction: column;
-          justify-content: space-between;
         }
         .blockIcon {
           position: absolute;
@@ -189,6 +204,7 @@ $nurse3: #5e1681;
         .number {
           font-weight: bold;
           margin-top: 1rem;
+          white-space: nowrap;
           span {
             font-size: 1.75rem;
             font-family: "Century Gothic";

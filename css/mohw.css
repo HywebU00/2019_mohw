@@ -10515,26 +10515,6 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-column-gap: 10px;
-     -moz-column-gap: 10px;
-          column-gap: 10px;
-}
-@media screen and (max-width: 767px) {
-  .nurseNumber_sec .number_block .number_row .block.block2 {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    row-gap: 10px;
-    -webkit-column-gap: 0;
-       -moz-column-gap: 0;
-            column-gap: 0;
-  }
-  .nurseNumber_sec .number_block .number_row .block.block2 .blockTitle {
-    width: 100%;
-  }
-}
-.nurseNumber_sec .number_block .number_row .block.block2 .legend {
-  font-size: 0.75rem;
-  white-space: nowrap;
 }
 .nurseNumber_sec .number_block .number_row .block.block3 {
   -webkit-box-flex: 1;
@@ -10547,6 +10527,50 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 37%;
+}
+@media screen and (max-width: 767px) {
+  .nurseNumber_sec .number_block .number_row .block.block3 {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+  }
+}
+.nurseNumber_sec .number_block .number_row .block.block3 .update {
+  font-size: 0.75rem;
+  position: absolute;
+  right: 20px;
+  top: 25px;
+}
+.nurseNumber_sec .number_block .number_row .block.block4 {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+}
+@media screen and (max-width: 767px) {
+  .nurseNumber_sec .number_block .number_row .block.block4 {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    row-gap: 10px;
+    -webkit-column-gap: 0;
+       -moz-column-gap: 0;
+            column-gap: 0;
+  }
+  .nurseNumber_sec .number_block .number_row .block.block4 .blockTitle {
+    width: 100%;
+  }
+}
+.nurseNumber_sec .number_block .number_row .block.block4 .legend {
+  font-size: 0.75rem;
+  white-space: nowrap;
 }
 .nurseNumber_sec .number_block .number_row .block .blockIcon {
   position: absolute;
@@ -10572,6 +10596,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .nurseNumber_sec .number_block .number_row .block .number {
   font-weight: bold;
   margin-top: 1rem;
+  white-space: nowrap;
 }
 .nurseNumber_sec .number_block .number_row .block .number span {
   font-size: 1.75rem;
