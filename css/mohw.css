@@ -10527,7 +10527,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 37%;
+  width: 50%;
 }
 @media screen and (max-width: 767px) {
   .nurseNumber_sec .number_block .number_row .block.block3 {
@@ -10564,6 +10564,11 @@ div.tag ul li a:hover, div.tag ul li a:focus {
        -moz-column-gap: 0;
             column-gap: 0;
   }
+}
+.nurseNumber_sec .number_block .number_row .block.block4 .blockTitle {
+  width: 160px;
+}
+@media screen and (max-width: 767px) {
   .nurseNumber_sec .number_block .number_row .block.block4 .blockTitle {
     width: 100%;
   }
@@ -10571,6 +10576,8 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .nurseNumber_sec .number_block .number_row .block.block4 .legend {
   font-size: 0.75rem;
   white-space: nowrap;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 .nurseNumber_sec .number_block .number_row .block .blockIcon {
   position: absolute;
@@ -10592,6 +10599,11 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   line-height: 120%;
   margin-top: 4px;
   color: #4f4f4f;
+}
+.nurseNumber_sec .number_block .number_row .block .blockTitle .category {
+  margin: 4px 0 0 0;
+  color: #913589;
+  font-size: 1rem;
 }
 .nurseNumber_sec .number_block .number_row .block .number {
   font-weight: bold;
@@ -10689,8 +10701,13 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   padding: 20px 0 0;
   margin-top: -55px;
 }
+@media screen and (max-width: 767px) {
+  .barChart .bar {
+    margin-top: -30px;
+  }
+}
 .barChart .bar .item {
-  width: 44px;
+  width: 38px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10704,6 +10721,15 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .barChart .bar .item:nth-child(3) .line {
   background: #f07d25;
+}
+.barChart .bar .item:nth-child(4) .line {
+  background: #d1309b;
+}
+.barChart .bar .item:nth-child(5) .line {
+  background: #6330d1;
+}
+.barChart .bar .item:nth-child(6) .line {
+  background: #487ccf;
 }
 .barChart .bar .num {
   height: 20px;
