@@ -10750,6 +10750,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
       -ms-flex-align: end;
           align-items: flex-end;
   position: relative;
+  border-bottom: 1px solid #444;
 }
 .barChart .bar .lineBox .line {
   width: 100%;
