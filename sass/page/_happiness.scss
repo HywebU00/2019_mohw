@@ -913,13 +913,22 @@
       font-size: 1.25rem;
       letter-spacing: 1px;
       display: block;
-      padding: 24px;
+      padding: 24px 58px 24px 24px;
       border-radius: 9px;
       color: #fff;
       background: #ff9734;
       // background: linear-gradient(90deg, #ff9734 0%, #ff7b42 100%);
       transition: all 0.5s;
       position: relative;
+      span {
+        font-size: 0.9375rem;
+        letter-spacing: 0;
+        display: block;
+        margin-top: 6px;
+        font-weight: normal;
+        padding-top: 6px;
+        border-top: 1px solid #fff;
+      }
       &:after {
         content: "";
         position: absolute;
@@ -1556,6 +1565,8 @@
             }
             input[type="button"] {
               margin-left: 8px;
+              padding: 0.45em 0.5em;
+              margin-top: 0;
             }
             span {
               margin: 0 4px;

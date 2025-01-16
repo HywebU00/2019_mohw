@@ -1,16 +1,20 @@
 //參照雅瓊範例
-@mixin formStyle($f_color:$color-word, $f_border:$color-gray, $f_radius:3px) {
+@mixin formStyle(
+  $f_color: $color-word,
+  $f_border: $color-gray,
+  $f_radius: 3px
+) {
   color: $f_color;
   font-size: 1em;
   border: 1px solid $f_border;
-  padding: .5em;
+  padding: 0.5em;
   background: #fff;
   vertical-align: middle;
-  margin-bottom: .3em;
+  margin-bottom: 0.3em;
   @include box-sizing();
   @include border-radius($f_radius);
-  @include transition(border, .2s, ease-out);
-  @include transition(box-shadow, .2s, ease-out);
+  @include transition(border, 0.2s, ease-out);
+  @include transition(box-shadow, 0.2s, ease-out);
 }
 
 select::-ms-expand {
@@ -18,11 +22,11 @@ select::-ms-expand {
 }
 
 .form_grid {
-  margin: .5em 0;
+  margin: 0.5em 0;
   .form_grp {
-    border-bottom: 1px solid #DDD;
+    border-bottom: 1px solid #ddd;
     overflow: hidden;
-    padding: .5em 0;
+    padding: 0.5em 0;
   }
   .form_title {
     @include make-xs-column(12);
@@ -48,7 +52,7 @@ form {
   .radio_grp,
   .btn_grp,
   .upload_grp {
-    margin-bottom: .2em;
+    margin-bottom: 0.2em;
   }
   .check_grp,
   .radio_grp {
@@ -61,7 +65,7 @@ form {
         display: inline-flex;
         align-items: center;
         white-space: nowrap;
-        margin: .2em .5em 0 0;
+        margin: 0.2em 0.5em 0 0;
       }
     }
   }
@@ -71,7 +75,7 @@ form {
     &.form_inline {
       label {
         display: inline-block;
-        margin-right: .5em;
+        margin-right: 0.5em;
       }
       input,
       textarea,
@@ -85,9 +89,9 @@ form {
     label {
       display: inline-block;
       vertical-align: middle;
-      margin-right: .5em;
-      &~input,
-      &~textarea {
+      margin-right: 0.5em;
+      & ~ input,
+      & ~ textarea {
         display: inline-block;
         width: auto;
         vertical-align: middle;
@@ -106,10 +110,11 @@ form {
     .btn_grp,
     .upload_grp {
       display: inline-block;
-      margin-right: .5em;
+      margin-right: 0.5em;
     }
     .check_grp,
-    .radio_grp {}
+    .radio_grp {
+    }
     .btn_grp {
       .btn,
       input[type="submit"],
@@ -117,7 +122,7 @@ form {
       input[type="button"],
       input[type="search"] {
         margin-top: -3px;
-        padding: .45em 1em;
+        padding: 0.45em 1em;
       }
     }
     select,
@@ -132,8 +137,8 @@ label,
 legend {
   // white-space: nowrap;
   display: inline-block;
-  margin: 0 0 .5em 0;
-  @include screen('xs_mobile') {
+  margin: 0 0 0.5em 0;
+  @include screen("xs_mobile") {
     display: block;
   }
   &.inline {
@@ -191,11 +196,10 @@ input[type="file"] {
 }
 
 button,
-input[type="button"],
-{
+input[type="button"] {
   @extend %btn;
   // @include btn_setting($form-focus, #FFF);
-  @include btn_setting($form-focus, #FFF);
+  @include btn_setting($form-focus, #fff);
   min-width: 5em;
   margin: 0.25em 0.1em;
   width: auto;
@@ -206,23 +210,23 @@ input[type="button"],
     @include btn_setting(#444, #222);
     &:hover,
     &:focus {
-      background: #444!important;
-      border: 1px solid #aaa!important;
-      color: #222!important;
+      background: #444 !important;
+      border: 1px solid #aaa !important;
+      color: #222 !important;
     }
   }
 }
 
 input[type="submit"] {
   @extend %btn;
-  @include btn_setting($form-focus, #FFF);
+  @include btn_setting($form-focus, #fff);
 }
 
 textarea {
   @include formStyle();
   height: 5em;
   overflow-y: scroll;
-  @include screen('xs_mobile') {
+  @include screen("xs_mobile") {
     width: 100%;
   }
 }
@@ -239,15 +243,17 @@ select:focus {
 }
 
 //
-input[type="file"] {}
+input[type="file"] {
+}
 
 //---------------------------------------------下拉選單--------//
 select {
   line-height: 2.4em;
   height: 2.4em;
-  padding: 0 24px 0 .5em;
+  padding: 0 24px 0 0.5em;
   border: 1px solid $color-gray;
-  background: #fff url(../images/basic/icon_select_arrow.svg) no-repeat right center;
+  background: #fff url(../images/basic/icon_select_arrow.svg) no-repeat right
+    center;
   background-size: 20px;
   option {
     outline: none;
@@ -262,7 +268,7 @@ select {
 //---------------------------------------------reset--------//
 input[type="reset"] {
   @extend %btn;
-  @include btn_setting(darken($color-gray, 20), #FFF);
+  @include btn_setting(darken($color-gray, 20), #fff);
   text-shadow: none;
 }
 
@@ -310,7 +316,7 @@ input[disable] {
   background: lighten($color-gray, 15);
   color: darken($color-gray, 10);
   border-color: darken($color-gray, 10);
-  &~label {
+  & ~ label {
     color: darken($color-gray, 10);
   }
   &:hover,
@@ -335,8 +341,8 @@ input[disable] {
     top: 1px;
     right: 3px;
     @extend %btn;
-    @include btn_setting($form-focus, #FFF);
-    padding: .2em 1em !important;
+    @include btn_setting($form-focus, #fff);
+    padding: 0.2em 1em !important;
     @include border-radius(4px);
     &:hover,
     &:focus {
@@ -362,17 +368,17 @@ img.captcha {
   display: inline-block;
   vertical-align: middle;
   max-height: 2.4em;
-  margin-bottom: .5em;
-  &+input {
+  margin-bottom: 0.5em;
+  & + input {
     display: inline-block;
     width: auto;
     vertical-align: middle;
   }
-  ~img {
+  ~ img {
     display: inline-block;
     vertical-align: middle;
     max-height: 2.4em;
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
   }
 }
 
@@ -390,13 +396,179 @@ input[type="submit"]:disabled,
 input[type="submit"][disabled],
 .btn-purple:disabled,
 .btn-purple[disabled] {
-  background: #f2f2f2!important;
-  border: 1px solid #bbb!important;
-  color: #999!important;
+  background: #f2f2f2 !important;
+  border: 1px solid #bbb !important;
+  color: #999 !important;
   &:hover,
   &:focus {
-    background: #f2f2f2!important;
-    border: 1px solid #bbb!important;
-    color: #999!important;
+    background: #f2f2f2 !important;
+    border: 1px solid #bbb !important;
+    color: #999 !important;
+  }
+}
+.labelEffect {
+  // margin-left: 1%;
+  & + .labelEffect {
+  }
+  &.input-i {
+    .btn-icon {
+      padding: 0.15em 1.6em;
+    }
+  }
+  @include screen("mobile") {
+    margin-left: 0;
+  }
+  &.password_toggle,
+  &.hasBtn {
+    input[type="text"],
+    input[type="password"] {
+      padding-right: 3em;
+      // letter-spacing: .1em;
+    }
+  }
+  display: flex;
+  flex: 1 1 46%;
+  position: relative;
+  // margin-bottom: .2em;
+  // border-bottom: 1px solid #DEDEDE;
+  // padding-bottom: .2em;
+  & > label {
+    width: 100%;
+    color: #666;
+    align-items: flex-start;
+    font-size: 1em;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 0px;
+    bottom: 0;
+    height: 100%;
+    padding: 0.6em 0.5em 0.1em;
+    transition: 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      width: 0%;
+      left: 50%;
+      position: absolute;
+      bottom: -2px;
+      height: 2px;
+      background: lighten($form-focus, 0);
+      transition: 0.2s ease all;
+    }
+  }
+  input,
+  textarea,
+  select {
+    flex: 1 1 70%;
+    border-radius: 0.2em;
+    &:focus,
+    &.used {
+      & ~ label {
+        bottom: 0;
+        font-size: 0.813em;
+        color: darken($primaryColor, 10);
+        padding: 0;
+        pointer-events: none;
+        height: calc(100% + 1.95em);
+        &:before {
+          width: 50%;
+          left: 0%;
+        }
+        &:after {
+          width: 50%;
+          right: 50%;
+        }
+      }
+    }
+    &.used {
+      & ~ label {
+        &:before {
+          width: 0%;
+          left: 50%;
+        }
+        &:after {
+          width: 0%;
+          left: 50%;
+        }
+      }
+    }
+  }
+  [class^="btn"],
+  .additonal {
+    flex: 0 1 10%;
+    min-width: 0em;
+    margin: 0em 0 0 0.5em;
+    padding: 0.2em 0.25em;
+    font-size: 0.938em;
+  }
+  .btn-icon {
+    flex: 0 1 3em;
+    // flex: 0 1 10%;
+    min-width: 0em;
+    margin: 0;
+    // padding: .15em 1.6em;
+    font-size: 0.938em;
+    right: 0.3em;
+    height: 38px;
+    background: none;
+    border: transparent;
+    position: absolute;
+    box-shadow: none;
+    padding: 0.2em 0.5em !important;
+    opacity: 0.8;
+    i {
+      font-size: 1.25em;
+      border-right: none;
+      top: 0;
+    }
+  }
+  .additional {
+    white-space: nowrap;
+    font-size: 0.875rem;
+    color: #666;
+    padding: 0 0.5em;
+    display: flex;
+    align-items: center;
+    img {
+      max-height: 3em;
+    }
+    label {
+      input {
+        flex: 0 1 1.2em !important;
+      }
+    }
+    .btn_circle {
+      padding: 0;
+      width: 2.5em;
+      height: 2.5em;
+      border-radius: 50%;
+      min-width: 2.5em;
+      background: #fff;
+      position: relative;
+      border: 1px solid #ddd;
+      &:hover,
+      &:focus {
+        border: 1px solid $form-focus;
+        background: #fff;
+        box-shadow: none;
+        background: $form-focus;
+        &:before {
+          border: 2px solid #fff;
+          border-left: none;
+          border-top: none;
+        }
+        i {
+          filter: invert(100%);
+          span {
+            filter: invert(100%);
+          }
+        }
+        span {
+          filter: invert(100%);
+        }
+      }
+    }
   }
 }

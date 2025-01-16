@@ -1675,7 +1675,7 @@ select::-ms-expand {
   margin: 0.5em 0;
 }
 .form_grid .form_grp {
-  border-bottom: 1px solid #DDD;
+  border-bottom: 1px solid #ddd;
   overflow: hidden;
   padding: 0.5em 0;
 }
@@ -1897,7 +1897,7 @@ button,
 input[type=button] {
   background: #984696;
   border: 1px solid #753674;
-  color: #FFF;
+  color: #fff;
   -webkit-box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
           box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 3px;
@@ -1970,7 +1970,7 @@ input[type=button][disabled]:focus {
 input[type=submit] {
   background: #984696;
   border: 1px solid #753674;
-  color: #FFF;
+  color: #fff;
   -webkit-box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
           box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 3px;
@@ -2049,7 +2049,7 @@ select:-moz-focusring {
 input[type=reset] {
   background: #999999;
   border: 1px solid gray;
-  color: #FFF;
+  color: #fff;
   -webkit-box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
           box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 3px;
@@ -2145,7 +2145,7 @@ input[disable]:focus {
   right: 3px;
   background: #984696;
   border: 1px solid #753674;
-  color: #FFF;
+  color: #fff;
   -webkit-box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
           box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 3px;
@@ -2236,6 +2236,192 @@ input[type=submit][disabled]:focus,
   background: #f2f2f2 !important;
   border: 1px solid #bbb !important;
   color: #999 !important;
+}
+
+.labelEffect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 46%;
+          flex: 1 1 46%;
+  position: relative;
+}
+.labelEffect.input-i .btn-icon {
+  padding: 0.15em 1.6em;
+}
+@media screen and (max-width: 767px) {
+  .labelEffect {
+    margin-left: 0;
+  }
+}
+.labelEffect.password_toggle input[type=text],
+.labelEffect.password_toggle input[type=password], .labelEffect.hasBtn input[type=text],
+.labelEffect.hasBtn input[type=password] {
+  padding-right: 3em;
+}
+.labelEffect > label {
+  width: 100%;
+  color: #666;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 1em;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 0px;
+  bottom: 0;
+  height: 100%;
+  padding: 0.6em 0.5em 0.1em;
+  -webkit-transition: 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.labelEffect > label:before, .labelEffect > label:after {
+  content: "";
+  display: block;
+  width: 0%;
+  left: 50%;
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  background: #984696;
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+}
+.labelEffect input,
+.labelEffect textarea,
+.labelEffect select {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 70%;
+          flex: 1 1 70%;
+  border-radius: 0.2em;
+}
+.labelEffect input:focus ~ label, .labelEffect input.used ~ label,
+.labelEffect textarea:focus ~ label,
+.labelEffect textarea.used ~ label,
+.labelEffect select:focus ~ label,
+.labelEffect select.used ~ label {
+  bottom: 0;
+  font-size: 0.813em;
+  color: #753674;
+  padding: 0;
+  pointer-events: none;
+  height: calc(100% + 1.95em);
+}
+.labelEffect input:focus ~ label:before, .labelEffect input.used ~ label:before,
+.labelEffect textarea:focus ~ label:before,
+.labelEffect textarea.used ~ label:before,
+.labelEffect select:focus ~ label:before,
+.labelEffect select.used ~ label:before {
+  width: 50%;
+  left: 0%;
+}
+.labelEffect input:focus ~ label:after, .labelEffect input.used ~ label:after,
+.labelEffect textarea:focus ~ label:after,
+.labelEffect textarea.used ~ label:after,
+.labelEffect select:focus ~ label:after,
+.labelEffect select.used ~ label:after {
+  width: 50%;
+  right: 50%;
+}
+.labelEffect input.used ~ label:before,
+.labelEffect textarea.used ~ label:before,
+.labelEffect select.used ~ label:before {
+  width: 0%;
+  left: 50%;
+}
+.labelEffect input.used ~ label:after,
+.labelEffect textarea.used ~ label:after,
+.labelEffect select.used ~ label:after {
+  width: 0%;
+  left: 50%;
+}
+.labelEffect [class^=btn],
+.labelEffect .additonal {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 10%;
+          flex: 0 1 10%;
+  min-width: 0em;
+  margin: 0em 0 0 0.5em;
+  padding: 0.2em 0.25em;
+  font-size: 0.938em;
+}
+.labelEffect .btn-icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 3em;
+          flex: 0 1 3em;
+  min-width: 0em;
+  margin: 0;
+  font-size: 0.938em;
+  right: 0.3em;
+  height: 38px;
+  background: none;
+  border: transparent;
+  position: absolute;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 0.2em 0.5em !important;
+  opacity: 0.8;
+}
+.labelEffect .btn-icon i {
+  font-size: 1.25em;
+  border-right: none;
+  top: 0;
+}
+.labelEffect .additional {
+  white-space: nowrap;
+  font-size: 0.875rem;
+  color: #666;
+  padding: 0 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.labelEffect .additional img {
+  max-height: 3em;
+}
+.labelEffect .additional label input {
+  -webkit-box-flex: 0 !important;
+      -ms-flex: 0 1 1.2em !important;
+          flex: 0 1 1.2em !important;
+}
+.labelEffect .additional .btn_circle {
+  padding: 0;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  min-width: 2.5em;
+  background: #fff;
+  position: relative;
+  border: 1px solid #ddd;
+}
+.labelEffect .additional .btn_circle:hover, .labelEffect .additional .btn_circle:focus {
+  border: 1px solid #984696;
+  background: #fff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: #984696;
+}
+.labelEffect .additional .btn_circle:hover:before, .labelEffect .additional .btn_circle:focus:before {
+  border: 2px solid #fff;
+  border-left: none;
+  border-top: none;
+}
+.labelEffect .additional .btn_circle:hover i, .labelEffect .additional .btn_circle:focus i {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+.labelEffect .additional .btn_circle:hover i span, .labelEffect .additional .btn_circle:focus i span {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+.labelEffect .additional .btn_circle:hover span, .labelEffect .additional .btn_circle:focus span {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
 }
 
 [class^=i_]:before {
@@ -2429,6 +2615,20 @@ input[type=submit][disabled]:focus,
 
 .i_youtube:before {
   background-image: url(../images/icon/icon_youtube.svg);
+  background-size: cover;
+  margin-top: -0.1em;
+  margin-bottom: 0.1em;
+}
+
+.i_hide:before {
+  background-image: url(../images/icon/icon_hide.svg);
+  background-size: cover;
+  margin-top: -0.1em;
+  margin-bottom: 0.1em;
+}
+
+.i_show:before {
+  background-image: url(../images/icon/icon_show.svg);
   background-size: cover;
   margin-top: -0.1em;
   margin-bottom: 0.1em;
@@ -9394,13 +9594,22 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   font-size: 1.25rem;
   letter-spacing: 1px;
   display: block;
-  padding: 24px;
+  padding: 24px 58px 24px 24px;
   border-radius: 9px;
   color: #fff;
   background: #ff9734;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   position: relative;
+}
+.happiness_right .happiness_link2 a span {
+  font-size: 0.9375rem;
+  letter-spacing: 0;
+  display: block;
+  margin-top: 6px;
+  font-weight: normal;
+  padding-top: 6px;
+  border-top: 1px solid #fff;
 }
 .happiness_right .happiness_link2 a:after {
   content: "";
@@ -10125,6 +10334,8 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .member_resume .memberTab_content .form_block .form_grp .form_content.form_inline input[type=button] {
   margin-left: 8px;
+  padding: 0.45em 0.5em;
+  margin-top: 0;
 }
 .member_resume .memberTab_content .form_block .form_grp .form_content.form_inline span {
   margin: 0 4px;
