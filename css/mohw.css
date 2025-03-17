@@ -10008,6 +10008,13 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   bottom: 0;
   margin-left: -4.5rem;
 }
+.happiness_content .content_block .subTitle_2 {
+  color: #262626;
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 0.9375rem;
+}
 .happiness_content .content_block .update {
   position: absolute;
   right: 0;

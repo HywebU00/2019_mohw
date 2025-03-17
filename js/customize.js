@@ -1593,19 +1593,19 @@ $(function() {
 });
 
 $('.dummiesPolicy .policy1 a').click(function(e) {
-  let _scrollTop = $(".dummies .policy01").offset().top - 100;
+  let _scrollTop = $(".dummies .policy1").offset().top - 100;
       $('html, body').stop(true, true).animate({ scrollTop: _scrollTop }, 800, 'easeOutExpo');
       e.preventDefault();
 
 });
 $('.dummiesPolicy .policy2 a').click(function(e) {
-  let _scrollTop = $(".dummies .policy07").offset().top - 100;
+  let _scrollTop = $(".dummies .policy2").offset().top - 100;
       $('html, body').stop(true, true).animate({ scrollTop: _scrollTop }, 800, 'easeOutExpo');
       e.preventDefault();
 
 });
 $('.dummiesPolicy .policy3 a').click(function(e) {
-  let _scrollTop = $(".dummies .policy10").offset().top - 100;
+  let _scrollTop = $(".dummies .policy3").offset().top - 100;
       $('html, body').stop(true, true).animate({ scrollTop: _scrollTop }, 800, 'easeOutExpo');
       e.preventDefault();
 
