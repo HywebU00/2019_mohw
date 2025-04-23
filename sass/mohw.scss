@@ -49,7 +49,9 @@
 @import "page/_nurse"; //護理人員專區
 // 外掛
 @import "sass/_slick"; //slick
+// google search
+@import "sass/_slick"; //slick
 // 無障礙
-@import "sass/_nojs"; //無障礙關閉js設定
+@import "sass/_hack"; //無障礙關閉js設定
 // 列印
 @import "sass/_print"; //列印樣式

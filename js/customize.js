@@ -1892,3 +1892,31 @@ $('.dummiesPolicy .policy3 a').click(function(e) {
 // width: 767, // 尺寸以上tab功能，尺寸以下手風琴功能
 // index: 0, // 預設開啟第幾個
 // });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const cpDivs = document.querySelectorAll('.cp iframe');
+
+  cpDivs.forEach(iframe => {
+    // 移除 width 和 height 屬性
+    iframe.removeAttribute('width');
+    iframe.removeAttribute('height');
+
+    // 將 iframe 包裝在一個具有 RWD 的 div 裡
+    const wrapper = document.createElement('div');
+    wrapper.style.position = 'relative';
+    wrapper.style.paddingBottom = '56.25%'; // 16:9 比例
+    wrapper.style.height = '0';
+    wrapper.style.overflow = 'hidden';
+
+    iframe.style.position = 'absolute';
+    iframe.style.top = '0';
+    iframe.style.left = '0';
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+    iframe.style.border = '0';
+
+    const parent = iframe.parentNode;
+    parent.replaceChild(wrapper, iframe);
+    wrapper.appendChild(iframe);
+  });
+});
