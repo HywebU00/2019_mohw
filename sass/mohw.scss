@@ -50,8 +50,8 @@
 // 外掛
 @import "sass/_slick"; //slick
 // google search
-@import "sass/_slick"; //slick
+@import "sass/_hack"; //google search
 // 無障礙
-@import "sass/_hack"; //無障礙關閉js設定
+@import "sass/_nojs"; //無障礙關閉js設定
 // 列印
 @import "sass/_print"; //列印樣式
