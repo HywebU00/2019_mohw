@@ -1,31 +1,31 @@
 // 按鈕設定
-$btn-font-color:$color-word;
-$btn-border:darken($color-word, 5);
-$btn-padding:.5em 2em;
-$btn-radius:3px;
+$btn-font-color: $color-word;
+$btn-border: darken($color-word, 5);
+$btn-padding: 0.5em 2em;
+$btn-radius: 3px;
 // 按鈕外框
 .btn_grp {
   text-align: center;
   padding: 1em 0;
   .btn {
     min-width: 5em;
-    margin: .25em .1em;
+    margin: 0.25em 0.1em;
     width: auto;
   }
 }
 
 // 按鈕的共用設定
-@mixin btn_setting($btn-bg:#DDD, $btn-font-color:$btn-font-color) {
+@mixin btn_setting($btn-bg: #ddd, $btn-font-color: $btn-font-color) {
   background: $btn-bg;
   border: 1px solid darken($btn-bg, 10);
   color: $btn-font-color;
-  box-shadow: 0px 2px 2px RGBA(0, 0, 0, .08);
+  box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: $btn-radius;
   &:hover,
   &:focus {
     background: darken($btn-bg, 10);
     cursor: pointer;
-    color: #FFF;
+    color: #fff;
   }
   &:focus {
     @include box-shadow(0px 0px 0px 3px lighten($btn-bg, 25));
@@ -51,7 +51,7 @@ $btn-radius:3px;
   min-width: 4em;
   padding-left: 1em;
   padding-right: 1em;
-  margin: 0 .1em .3em .1em;
+  margin: 0 0.1em 0.3em 0.1em;
 }
 
 .btn {
@@ -60,13 +60,17 @@ $btn-radius:3px;
   touch-action: manipulation;
   @include box-sizing;
   @include btn_setting();
-  text-shadow: RGBA(0, 0, 0, .3) 0px 0px 0px;
-  @include gradient(#f7f7f7, #DADADA, vertical);
-  transition: .3s ease-out;
+  text-shadow: RGBA(0, 0, 0, 0.3) 0px 0px 0px;
+  @include gradient(#f7f7f7, #dadada, vertical);
+  transition: 0.3s ease-out;
+  @include screen("mobile") {
+    padding-left: 1em !important;
+    padding-right: 1em !important;
+  }
   &:hover,
   &:focus {
     color: $btn-font-color;
-    @include gradient(#fAfAfA, #CDCDCD, vertical);
+    @include gradient(#fafafa, #cdcdcd, vertical);
   }
 }
 
@@ -74,37 +78,37 @@ $btn-radius:3px;
 //@include btn_setting(按鈕顏色,字的顏色);
 .btn-green {
   @extend %btn;
-  @include btn_setting($color-green, #FFF);
+  @include btn_setting($color-green, #fff);
 }
 
 .btn-blue {
   @extend %btn;
-  @include btn_setting($color-blue, #FFF);
+  @include btn_setting($color-blue, #fff);
 }
 
 .btn-yellow {
   @extend %btn;
-  @include btn_setting($color-yellow, #FFF);
+  @include btn_setting($color-yellow, #fff);
 }
 
 .btn-orange {
   @extend %btn;
-  @include btn_setting($color-orange, #FFF);
+  @include btn_setting($color-orange, #fff);
 }
 
 .btn-red {
   @extend %btn;
-  @include btn_setting($color-red, #FFF);
+  @include btn_setting($color-red, #fff);
 }
 
 .btn-purple {
   @extend %btn;
-  @include btn_setting($primaryColor, #FFF);
+  @include btn_setting($primaryColor, #fff);
 }
 
 .btn-purple2 {
   @extend %btn;
-  @include btn_setting(#f06153, #FFF);
+  @include btn_setting(#f06153, #fff);
 }
 
 // 按鈕大小
@@ -117,9 +121,9 @@ $btn-radius:3px;
 }
 
 .btn-sm {
-  font-size: $font-size * .938; //15px
+  font-size: $font-size * 0.938; //15px
 }
 
 .btn-xs {
-  font-size: $font-size * .75; //12px
+  font-size: $font-size * 0.75; //12px
 }

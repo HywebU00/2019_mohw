@@ -899,7 +899,7 @@ input[type=button], .btn-purple2, .btn-purple, .btn-red, .btn-orange, .btn-yello
       touch-action: manipulation;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: #DDD;
+  background: #ddd;
   border: 1px solid #c4c4c4;
   color: #555;
   -webkit-box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
@@ -907,15 +907,15 @@ input[type=button], .btn-purple2, .btn-purple, .btn-red, .btn-orange, .btn-yello
   border-radius: 3px;
   text-shadow: RGBA(0, 0, 0, 0.3) 0px 0px 0px;
   background: #f7f7f7;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#DADADA));
-  background: linear-gradient(to bottom, #f7f7f7, #DADADA);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#dadada));
+  background: linear-gradient(to bottom, #f7f7f7, #dadada);
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
 }
 .btn:hover, .btn:focus {
   background: #c4c4c4;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
 }
 .btn:focus {
   -webkit-box-shadow: 0px 0px 0px 3px white;
@@ -926,17 +926,23 @@ input[type=button], .btn-purple2, .btn-purple, .btn-red, .btn-orange, .btn-yello
   background: #eaeaea;
   cursor: pointer;
 }
+@media screen and (max-width: 767px) {
+  .btn {
+    padding-left: 1em !important;
+    padding-right: 1em !important;
+  }
+}
 .btn:hover, .btn:focus {
   color: #555;
-  background: #fAfAfA;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fAfAfA), to(#CDCDCD));
-  background: linear-gradient(to bottom, #fAfAfA, #CDCDCD);
+  background: #fafafa;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#cdcdcd));
+  background: linear-gradient(to bottom, #fafafa, #cdcdcd);
 }
 
 .btn-green {
   background: #5CB85C;
   border: 1px solid #449d44;
-  color: #FFF;
+  color: #fff;
   -webkit-box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
           box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 3px;
@@ -944,7 +950,7 @@ input[type=button], .btn-purple2, .btn-purple, .btn-red, .btn-orange, .btn-yello
 .btn-green:hover, .btn-green:focus {
   background: #449d44;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
 }
 .btn-green:focus {
   -webkit-box-shadow: 0px 0px 0px 3px #b5dfb5;
@@ -959,7 +965,7 @@ input[type=button], .btn-purple2, .btn-purple, .btn-red, .btn-orange, .btn-yello
 .btn-blue {
   background: #21BAFF;
   border: 1px solid #00a3ed;
-  color: #FFF;
+  color: #fff;
   -webkit-box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
           box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 3px;
@@ -967,7 +973,7 @@ input[type=button], .btn-purple2, .btn-purple, .btn-red, .btn-orange, .btn-yello
 .btn-blue:hover, .btn-blue:focus {
   background: #00a3ed;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
 }
 .btn-blue:focus {
   -webkit-box-shadow: 0px 0px 0px 3px #a1e2ff;
@@ -982,7 +988,7 @@ input[type=button], .btn-purple2, .btn-purple, .btn-red, .btn-orange, .btn-yello
 .btn-yellow {
   background: #FCC211;
   border: 1px solid #d7a303;
-  color: #FFF;
+  color: #fff;
   -webkit-box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
           box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 3px;
@@ -990,7 +996,7 @@ input[type=button], .btn-purple2, .btn-purple, .btn-red, .btn-orange, .btn-yello
 .btn-yellow:hover, .btn-yellow:focus {
   background: #d7a303;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
 }
 .btn-yellow:focus {
   -webkit-box-shadow: 0px 0px 0px 3px #fee28f;
@@ -1005,7 +1011,7 @@ input[type=button], .btn-purple2, .btn-purple, .btn-red, .btn-orange, .btn-yello
 .btn-orange {
   background: #F77810;
   border: 1px solid #cd6007;
-  color: #FFF;
+  color: #fff;
   -webkit-box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
           box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 3px;
@@ -1013,7 +1019,7 @@ input[type=button], .btn-purple2, .btn-purple, .btn-red, .btn-orange, .btn-yello
 .btn-orange:hover, .btn-orange:focus {
   background: #cd6007;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
 }
 .btn-orange:focus {
   -webkit-box-shadow: 0px 0px 0px 3px #fbbe8b;
@@ -1028,7 +1034,7 @@ input[type=button], .btn-purple2, .btn-purple, .btn-red, .btn-orange, .btn-yello
 .btn-red {
   background: #FF3E4D;
   border: 1px solid #ff0b1e;
-  color: #FFF;
+  color: #fff;
   -webkit-box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
           box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 3px;
@@ -1036,7 +1042,7 @@ input[type=button], .btn-purple2, .btn-purple, .btn-red, .btn-orange, .btn-yello
 .btn-red:hover, .btn-red:focus {
   background: #ff0b1e;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
 }
 .btn-red:focus {
   -webkit-box-shadow: 0px 0px 0px 3px #ffbec3;
@@ -1051,7 +1057,7 @@ input[type=button], .btn-purple2, .btn-purple, .btn-red, .btn-orange, .btn-yello
 .btn-purple {
   background: #984696;
   border: 1px solid #753674;
-  color: #FFF;
+  color: #fff;
   -webkit-box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
           box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 3px;
@@ -1059,7 +1065,7 @@ input[type=button], .btn-purple2, .btn-purple, .btn-red, .btn-orange, .btn-yello
 .btn-purple:hover, .btn-purple:focus {
   background: #753674;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
 }
 .btn-purple:focus {
   -webkit-box-shadow: 0px 0px 0px 3px #cc91cb;
@@ -1074,7 +1080,7 @@ input[type=button], .btn-purple2, .btn-purple, .btn-red, .btn-orange, .btn-yello
 .btn-purple2 {
   background: #f06153;
   border: 1px solid #ec3624;
-  color: #FFF;
+  color: #fff;
   -webkit-box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
           box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 3px;
@@ -1082,7 +1088,7 @@ input[type=button], .btn-purple2, .btn-purple, .btn-red, .btn-orange, .btn-yello
 .btn-purple2:hover, .btn-purple2:focus {
   background: #ec3624;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
 }
 .btn-purple2:focus {
   -webkit-box-shadow: 0px 0px 0px 3px #facdc8;
@@ -1912,7 +1918,7 @@ input[type=button]:hover,
 input[type=button]:focus {
   background: #753674;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
 }
 button:focus,
 input[type=button]:focus {
@@ -1942,7 +1948,7 @@ input[type=button][disabled]:hover,
 input[type=button][disabled]:focus {
   background: #2b2b2b;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
 }
 button:disabled:focus, button[disabled]:focus,
 input[type=button]:disabled:focus,
@@ -1978,7 +1984,7 @@ input[type=submit] {
 input[type=submit]:hover, input[type=submit]:focus {
   background: #753674;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
 }
 input[type=submit]:focus {
   -webkit-box-shadow: 0px 0px 0px 3px #cc91cb;
@@ -2058,7 +2064,7 @@ input[type=reset] {
 input[type=reset]:hover, input[type=reset]:focus {
   background: gray;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
 }
 input[type=reset]:focus {
   -webkit-box-shadow: 0px 0px 0px 3px #d9d9d9;
@@ -2156,7 +2162,7 @@ input[disable]:focus {
 .upload_grp .upload_btn:hover, .upload_grp .upload_btn:focus {
   background: #753674;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
 }
 .upload_grp .upload_btn:focus {
   -webkit-box-shadow: 0px 0px 0px 3px #cc91cb;
@@ -8397,6 +8403,11 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0 0 2em 0;
+}
+@media screen and (max-width: 767px) {
+  .survey blockquote {
+    padding: 20px 20px 10px 20px;
+  }
 }
 .survey blockquote p {
   margin: 0 0 0.5em 0;
