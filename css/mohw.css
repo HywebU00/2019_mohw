@@ -12811,13 +12811,15 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   background: url(../images/hospitalized/icon_arrowW.png) no-repeat center center;
   display: block;
   margin-right: 8px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .hospitalized_content .content_search .filters:hover, .hospitalized_content .content_search .filters:focus {
   background: #7f3b8c;
 }
 .hospitalized_content .content_search .filters.active:before {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 .hospitalized_content .content_search .form_grp {
   display: -webkit-box;
