@@ -1920,3 +1920,46 @@ document.addEventListener("DOMContentLoaded", function () {
     wrapper.appendChild(iframe);
   });
 });
+// 住院整合照護服務進階搜尋收合展開
+$(document).ready(function() {
+  // === 預設是否展開 ===
+  var isSearchAdvVisible = true; // true = 展開；false = 收合
+
+  // 根據預設開關狀態來處理初始顯示
+  if (!isSearchAdvVisible) {
+    $('.search_adv').hide();
+    $('.filters').removeClass('active');
+  } else {
+    $('.search_adv').show();
+    $('.filters').addClass('active');
+  }
+
+  // 點擊 .filters 切換開關與樣式
+  $('.filters').on('click', function() {
+    $('.search_adv').slideToggle();
+    $(this).toggleClass('active');
+  });
+});
+//住院整合照護服務下拉選單
+$(document).ready(function () {
+  // 點擊展開/收起選單
+  $('.filter_content .selected_option').on('click', function (e) {
+    e.stopPropagation();
+    $('.filter_content .options_list').not($(this).next()).hide(); // 關閉其他
+    $(this).next('.options_list').toggle();
+  });
+
+  // 點選選項 -> 更換文字 + 關閉選單
+  $('.filter_content .options_list li').on('click', function (e) {
+    e.stopPropagation();
+    var selectedText = $(this).text();
+    $(this).closest('.filter_content').find('.selected_option').text(selectedText);
+    $(this).parent().hide();
+  });
+
+  // 點畫面其他地方關閉選單
+  $(document).on('click', function () {
+    $('.filter_content .options_list').hide();
+  });
+});
+

@@ -1,4 +1,4 @@
-$function_color:#888;
+$function_color: #888;
 //可自訂顏色，或是自帶既有變數，但請注意背景色與字的對比度
 //icon基本設定
 %function_before {
@@ -6,14 +6,14 @@ $function_color:#888;
   content: "";
   width: 1.2em;
   height: 1.2em;
-  margin-right: .2em;
+  margin-right: 0.2em;
   display: inline-block;
 }
 
 div.function {
   @include box-sizing;
   @extend %clearfix;
-  margin: .5em 0;
+  margin: 0.5em 0;
   ul {
     @include li-reset;
     li {
@@ -22,12 +22,12 @@ div.function {
       margin: 0 3px 3px 0;
       button,
       a {
-        font-size: .813em;
+        font-size: 0.813em;
         display: block;
-        padding: .2em 1em;
+        padding: 0.2em 1em;
         background: $function_color;
         border-color: $function_color;
-        color: #FFF;
+        color: #fff;
         border-radius: 4px;
         &:hover,
         &:focus {
@@ -47,7 +47,8 @@ div.function {
       &.icon_print {
         a:before {
           @extend %function_before;
-          background: url(../images/basic/icon_print.svg) no-repeat center center;
+          background: url(../images/basic/icon_print.svg) no-repeat center
+            center;
           background-size: cover;
         }
       }
@@ -55,7 +56,8 @@ div.function {
       &.icon_forward {
         a:before {
           @extend %function_before;
-          background: url(../images/basic/icon_forward.svg) no-repeat center center;
+          background: url(../images/basic/icon_forward.svg) no-repeat center
+            center;
           background-size: cover;
         }
       }
@@ -77,7 +79,7 @@ div.function {
         background: url(../images/basic/icon_share.png) no-repeat center center !important;
         background-size: 24px !important;
       }
-      text-indent:-9999px;
+      text-indent: -9999px;
       &:hover,
       &:focus {
         &:before {
@@ -96,7 +98,7 @@ div.function {
         font-size: 1em;
         float: left;
         display: block;
-        margin: 0 .2em;
+        margin: 0 0.2em;
         a {
           display: block;
           @include box-sizing;
@@ -110,9 +112,9 @@ div.function {
           position: relative;
           &:hover,
           &:focus {
-            background: $aHover;
-            color: #FFF;
-            outline: 2px solid $primaryColor;
+            background: $primaryColor;
+            color: #fff;
+            // outline: 2px solid $primaryColor;
             &:before {
               filter: invert(100%);
             }
@@ -128,22 +130,25 @@ div.function {
         }
         &.back {
           a:before {
-            background: url(../images/basic/icon_back.png) no-repeat center center;
+            background: url(../images/basic/icon_back.png) no-repeat center
+              center;
             background-size: 100%;
           }
         }
         &.print {
           a:before {
-            background: url(../images/basic/icon_printer.png) no-repeat center center;
+            background: url(../images/basic/icon_printer.png) no-repeat center
+              center;
             background-size: 100%;
           }
-          @include screen('mobile') {
+          @include screen("mobile") {
             display: none;
           }
         }
         &.forward {
           a:before {
-            background: url(../images/basic/icon_forward.png) no-repeat center center;
+            background: url(../images/basic/icon_forward.png) no-repeat center
+              center;
             background-size: 100%;
           }
         }

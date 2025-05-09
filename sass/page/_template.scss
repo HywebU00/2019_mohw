@@ -53,6 +53,9 @@ body {
       display: block;
       margin-top: 4px;
     }
+    @include screen("mobile") {
+      margin: 1em 0 1rem;
+    }
   }
 }
 

@@ -1,0 +1,426 @@
+.hospitalized {
+  background: #fff url(../images/hospitalized/inner_bg.png) no-repeat center
+    84px;
+  --hospitalized_color: #9d4694;
+  @include screen("mobile") {
+    background: none;
+    padding: 5em 1em 0 1em;
+  }
+  .toptitle {
+    position: absolute;
+    top: 134px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-weight: normal;
+    font-size: 1.7rem;
+    gap: 14px;
+    @include screen("mobile") {
+      position: relative;
+      top: 0;
+      padding: 1rem 0;
+      margin-bottom: 1rem;
+      border-radius: 9px;
+      background: url(../images/hospitalized/inner_bg.png) no-repeat center 0;
+      margin: 15px;
+      width: auto;
+      gap: 6px;
+    }
+    span {
+      color: #ffcde3;
+      text-shadow: 0 0 7px rgba($color: #000000, $alpha: 0.5);
+      @include screen("mobile") {
+        font-size: 1.2rem;
+        img {
+          max-width: 280px;
+        }
+      }
+      &.logo {
+        @include screen("mobile") {
+          display: none;
+        }
+      }
+    }
+  }
+  .function_panel {
+    @include screen("mobile") {
+      width: 100%;
+      padding: 0;
+    }
+  }
+}
+.hospitalized_content {
+  .content_info {
+    background: #fcecf3;
+    padding: 30px;
+    margin-bottom: 22px;
+    p {
+      margin-top: 0;
+      color: #4c4c4c;
+      strong {
+        color: #0d0d0d;
+      }
+    }
+    .info_download {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      @include screen("mobile") {
+        justify-content: center;
+      }
+      a {
+        background: #994696;
+        color: #fff;
+        padding: 12px 24px;
+        border-radius: 25px;
+        display: flex;
+        gap: 12px;
+        @include screen("mobile") {
+          padding: 12px 20px;
+        }
+        &:before {
+          content: "";
+          width: 18px;
+          height: 18px;
+          display: block;
+          background: url(../images/hospitalized/icon_download.png) no-repeat
+            center center;
+          flex: 0 0 18px;
+          // @include screen("mobile") {
+          //   display: none;
+          //   font-size: 0.9375rem;
+          // }
+        }
+        &:hover,
+        &:focus {
+          background: #7f3b8c;
+        }
+      }
+    }
+  }
+  .content_search {
+    background: #f2f2f2;
+    padding: 45px 30px;
+    margin-bottom: 28px;
+    position: relative;
+    .title {
+      font-size: 1.5rem;
+      color: var(--hospitalized_color);
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: 2px;
+      line-height: 120%;
+    }
+    .clear {
+      display: flex;
+      justify-content: flex-end;
+      border-bottom: 1px solid #999;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+      .clearBtn {
+        color: #262626;
+        background: transparent;
+        display: flex;
+        border: 1px solid transparent;
+        box-shadow: none;
+        font-size: 1.125rem;
+        &:hover,
+        &:focus {
+          color: var(--hospitalized_color);
+          border: 1px solid var(--hospitalized_color);
+        }
+        &:before {
+          content: "";
+          width: 20px;
+          height: 22px;
+          background: url(../images/hospitalized/icon_clear.png) no-repeat
+            center center;
+          display: block;
+          margin-right: 8px;
+        }
+      }
+    }
+    .filters {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      background: var(--hospitalized_color);
+      color: #fff;
+      font-weight: bold;
+      &:before {
+        content: "";
+        width: 18px;
+        height: 18px;
+        background: url(../images/hospitalized/icon_arrowW.png) no-repeat center
+          center;
+        display: block;
+        margin-right: 8px;
+      }
+      &:hover,
+      &:focus {
+        background: #7f3b8c;
+      }
+      &.active {
+        &:before {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    .form_grp {
+      display: flex;
+      padding: 4px 0;
+      @include screen("mobile") {
+        flex-direction: column;
+      }
+      .form_title {
+        text-align: right;
+        flex: 0 0 120px;
+        margin-right: 20px;
+        @include screen("mobile") {
+          flex: 1 1 auto;
+          text-align: left;
+        }
+        &.keywords {
+          font-size: 1.125rem;
+          font-weight: bold;
+          padding-top: 8px;
+        }
+      }
+      .form_content {
+        flex: 1 1 auto;
+        input[type="text"] {
+          width: 80%;
+          @include screen("mobile") {
+            width: 100%;
+          }
+          &:focus {
+            border-color: #9d4694;
+            box-shadow: none;
+            outline: none;
+          }
+        }
+        .check_grp {
+          display: flex;
+          margin-right: 0;
+          @include screen("mobile") {
+            flex-wrap: wrap;
+          }
+          .left {
+            flex: 0 0 auto;
+          }
+        }
+      }
+    }
+    .btn_grp {
+      padding-bottom: 0;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .content_search_results {
+    .results_total {
+      font-size: 1.5rem;
+      color: #fff;
+      font-weight: bold;
+      text-align: center;
+      padding: 1rem 1.5rem;
+      text-align: center;
+      background: #262626;
+      letter-spacing: 2px;
+      margin-bottom: 50px;
+      @include screen("mobile") {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+      }
+    }
+    .results_info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      margin-bottom: 6px;
+      @include screen("mobile") {
+        flex-direction: column;
+      }
+      .results_filter {
+        display: flex;
+        align-items: center;
+        @include screen("mobile") {
+          margin-bottom: 10px;
+        }
+        .filter_title {
+          margin-right: 10px;
+        }
+        .filter_content {
+          position: relative;
+          width: 150px;
+          cursor: pointer;
+          user-select: none;
+          .selected_option {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 8px 24px;
+            border-radius: 25px;
+            &:after {
+              content: "";
+              width: 18px;
+              height: 18px;
+              background: url(../images/hospitalized/icon_arrowW.png) no-repeat
+                center center;
+              display: block;
+              position: absolute;
+              right: 10px;
+              top: 50%;
+              transform: translateY(-50%) rotate(180deg);
+            }
+          }
+          .options_list {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            border: 1px solid #ccc;
+            background: #fff;
+            display: none;
+            z-index: 1000;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+              padding: 10px;
+              &:hover {
+                background: #f0f0f0;
+              }
+            }
+          }
+        }
+      }
+      .results_update {
+        color: #999999;
+      }
+    }
+    .results_table {
+      table {
+        border: 6px solid #f2f2f2;
+      }
+      th {
+        background: #f2f2f2;
+        color: #262626;
+        padding: 10px;
+        border: 0;
+      }
+      td {
+        border: 0;
+        border-bottom: 15px solid #f2f2f2;
+        color: #262626;
+        &.num,
+        &.dollar {
+          text-align: center;
+          font-weight: bold;
+          @include screen("mobile") {
+            text-align: left;
+          }
+        }
+        &.dollar {
+          color: #ef0021;
+        }
+        .sec {
+          white-space: nowrap;
+          color: #8c8c8c;
+          margin-top: 3px;
+          span {
+            color: #fff;
+            background: #008090;
+            padding: 3px 12px;
+            margin-right: 10px;
+            border-radius: 3px;
+          }
+        }
+        .link {
+          font-size: 0.8rem;
+          margin-top: 3px;
+          a {
+            padding: 4px 22px 4px 10px;
+            display: inline-block;
+            align-items: center;
+            color: #fff;
+            background: var(--hospitalized_color);
+            position: relative;
+            border-radius: 25px;
+            &:after {
+              content: "";
+              width: 11px;
+              height: 11px;
+              background: url(../images/hospitalized/icon_arrowR.png) no-repeat
+                center center;
+              display: block;
+              position: absolute;
+              top: 50%;
+              right: 8px;
+              transform: translateY(-50%);
+            }
+            &:hover,
+            &:focus {
+              background: #7f3b8c;
+            }
+          }
+        }
+      }
+      &.table_list {
+        @include screen("mobile") {
+          background-color: transparent !important; //Force table to not be like tables anymore
+          thead,
+          tbody,
+          th,
+          td,
+          tr {
+            display: block;
+          }
+          thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+          }
+          tr {
+            margin-bottom: 10px;
+            border: 0;
+            border-bottom: 10px solid #f2f2f2;
+            &:last-child {
+              margin-bottom: 0;
+              border-bottom: 4px solid #f2f2f2;
+            }
+          }
+          td {
+            border: none !important;
+            border-bottom: 1px solid #eee !important;
+            position: relative;
+            padding-left: 10px !important;
+            white-space: normal;
+            text-align: left;
+            &:before {
+              content: attr(data-title);
+              position: relative;
+              top: 0;
+              left: 0;
+              width: 100%;
+              padding-right: 0;
+              display: block;
+              white-space: nowrap;
+              text-align: left;
+              font-weight: bold;
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}

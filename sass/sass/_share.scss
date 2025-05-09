@@ -1,7 +1,7 @@
 // 基本樣式
 .share {
   @include box-sizing();
-  margin: .5em 0;
+  margin: 0.5em 0;
   ul {
     @include li-reset;
     li {
@@ -9,9 +9,9 @@
       height: 40px;
       float: left;
       text-align: left;
-      margin: 0 .2em;
-      @include screen('tablet') {
-        margin: 0 .2em;
+      margin: 0 0.2em;
+      @include screen("tablet") {
+        margin: 0 0.2em;
         width: 40px;
         height: 40px;
       }
@@ -62,7 +62,8 @@
           &:focus {
             background: transparent;
             img {
-              filter: invert(0%);
+              // filter: invert(0%);
+              filter: grayscale(1);
             }
           }
           &:focus {
@@ -73,7 +74,7 @@
     }
     a.shareButton {
       display: block;
-      background: #F1F1F1;
+      background: #f1f1f1;
       border-radius: 50%;
       width: 40px;
       height: 40px;
