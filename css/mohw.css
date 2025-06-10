@@ -12618,7 +12618,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 
 .hospitalized {
-  background: #fff url(../images/hospitalized/inner_bg.png) no-repeat center 84px;
+  background: #fff url(../images/hospitalized/inner_bg.jpg) no-repeat center 84px;
   --hospitalized_color: #9d4694;
 }
 @media screen and (max-width: 767px) {
@@ -12656,7 +12656,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
     padding: 1rem 0;
     margin-bottom: 1rem;
     border-radius: 9px;
-    background: url(../images/hospitalized/inner_bg.png) no-repeat center 0;
+    background: url(../images/hospitalized/inner_bg.jpg) no-repeat center bottom;
     margin: 15px;
     width: auto;
     gap: 6px;
@@ -13036,9 +13036,8 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .hospitalized_content .content_search_results .results_table td .sec span {
   color: #fff;
-  background: #008090;
-  padding: 3px 12px;
-  margin-right: 10px;
+  color: #8f1082;
+  margin-right: 16px;
   border-radius: 3px;
 }
 .hospitalized_content .content_search_results .results_table td .link {
@@ -13046,7 +13045,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   margin-top: 3px;
 }
 .hospitalized_content .content_search_results .results_table td .link a {
-  padding: 4px 22px 4px 10px;
+  padding: 5px 38px 4px 15px;
   display: inline-block;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -13055,16 +13054,17 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   background: var(--hospitalized_color);
   position: relative;
   border-radius: 25px;
+  font-size: 0.9375rem;
 }
 .hospitalized_content .content_search_results .results_table td .link a:after {
   content: "";
-  width: 11px;
-  height: 11px;
-  background: url(../images/hospitalized/icon_arrowR.png) no-repeat center center;
+  width: 18px;
+  height: 18px;
+  background: url(../images/hospitalized/icon_open.png) no-repeat center center;
   display: block;
   position: absolute;
   top: 50%;
-  right: 8px;
+  right: 15px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
