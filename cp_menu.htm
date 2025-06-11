@@ -1,474 +1,836 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-Hant" class="no-js">
-
-<head>
-  <meta name="robots" content="noindex">
-  <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>衛福部照護司-護動e起來</title>
-  <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+  <head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>衛福部照護司-護動e起來</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
   <![endif]-->
-  <!-- slick css-->
-  <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
-  <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
-  <link rel="stylesheet" type="text/css" href="vendor/animate.css">
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="vendor/slick/slick-theme.css"
+    />
+    <link rel="stylesheet" type="text/css" href="vendor/animate.css" />
 
-  <!-- hyUI css -->
-  <link rel="stylesheet" href="css/mohw.css">
-  <link rel="stylesheet" href="css/add_menu.css">
-</head>
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/mohw.css" />
+    <link rel="stylesheet" href="css/add_menu.css" />
+  </head>
 
-<body>
-  <!-- 直接跳主內容區 -->
-  <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
-  <aside class="sidebar">
-    <div class="m_area">
-      <!-- menu Start -->
-      <nav class="menu">
-        <ul>
-          <li><a href="#">通報爭議</a>
-            <ul>
-              <li><a href="#">第二層選單</a></li>
-              <li><a href="#">第二層選單</a></li>
-              <li><a href="#">第二層選單</a></li>
-              <li><a href="#">第二層選單</a></li>
-            </ul>
-          </li>
-          <li><a href="#">最新消息</a>
-            <ul>
-              <li><a href="#">第二層選單</a></li>
-              <li><a href="#">第二層選單</a></li>
-              <li><a href="http://www.google.com">第二層有連結</a></li>
-              <li><a href="#">第二層選單</a></li>
-            </ul>
-          </li>
-          <li><a href="#">查詢進度</a>
-            <ul>
-              <li><a href="#">第二層選單</a></li>
-              <li><a href="#">第二層選單</a></li>
-              <li><a href="#">第二層選單</a></li>
-              <li><a href="#">第二層選單</a></li>
-            </ul>
-          </li>
-          <li><a href="#">通報儀表板</a>
-            <ul>
-              <li><a href="#">第二層選單</a></li>
-              <li><a href="#">第二層選單</a></li>
-              <li><a href="#">第二層選單</a></li>
-              <li><a href="#">第二層選單</a></li>
-            </ul>
-          </li>
-          <li><a href="#">加班費試算</a>
-            <ul>
-              <li><a href="#">第二層選單</a></li>
-              <li><a href="#">第二層選單</a></li>
-              <li><a href="#">第二層選單</a></li>
-              <li><a href="#">第二層選單</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <!-- menu End -->
-      <button type="button" class="sidebarClose">關閉</button>
-    </div>
-  </aside>
-  <!-- wrapper Start -->
-  <div class="wrapper">
-    <!-- header Start -->
-    <header class="header wow fadeInDown" data-wow-delay=".2s">
-      <div class="container">
-        <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
-        <h1>
-          <a href="#" title="衛福部照護司-護動e起來"><img src="images/logo.png" alt="" /></a>
-        </h1>
-        <!-- noscript -->
-        <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="#">網站導覽</a>
-        </noscript>
-        <!-- navigation Start -->
-        <nav class="navigation">
+  <body>
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
+    <aside class="sidebar">
+      <div class="m_area">
+        <!-- menu Start -->
+        <nav class="menu">
           <ul>
-            <li><a href="#" class="icon_sitemap">sitemap</a></li>
-            <li><a href="#" class="icon_fb">Facebook</a></li>
-            <li><a href="#" class="icon_youtube">Youtube</a></li>
-            <li><a href="#" class="icon_rss">RSS</a></li>
             <li>
-              <a href="#" class="icon_search">Search</a>
-              <!-- Search Start -->
-              <section class="search">
-                <noscript>
-                  您的瀏覽器不支援 JavaScript 或 JavaScript已停用
-                </noscript>
-                <form action="" class="form_inline">
-                  <div class="form_grp">
-                    <input name="username" id="mustSameAsId" type="text" placeholder="請輸入文字" accesskey="S">
-                  </div>
-                  <div class="btn_grp">
-                    <input name="" type="submit" value="查詢" />
-                  </div>
-                </form>
-                <div class="keywordHot">
-                  <ul>
-                    <li><a href="#">熱門熱門</a></li>
-                    <li><a href="#">查詢</a></li>
-                    <li><a href="#">字詞三</a></li>
-                  </ul>
-                </div>
-              </section>
-              <!-- Search End -->
+              <a href="#">通報爭議</a>
+              <ul>
+                <li><a href="#">第二層選單</a></li>
+                <li><a href="#">第二層選單</a></li>
+                <li><a href="#">第二層選單</a></li>
+                <li><a href="#">第二層選單</a></li>
+              </ul>
             </li>
-            <li><a href="#" class="icon_live">直播</a></li>
+            <li>
+              <a href="#">最新消息</a>
+              <ul>
+                <li><a href="#">第二層選單</a></li>
+                <li><a href="#">第二層選單</a></li>
+                <li><a href="http://www.google.com">第二層有連結</a></li>
+                <li><a href="#">第二層選單</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">查詢進度</a>
+              <ul>
+                <li><a href="#">第二層選單</a></li>
+                <li><a href="#">第二層選單</a></li>
+                <li><a href="#">第二層選單</a></li>
+                <li><a href="#">第二層選單</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">通報儀表板</a>
+              <ul>
+                <li><a href="#">第二層選單</a></li>
+                <li><a href="#">第二層選單</a></li>
+                <li><a href="#">第二層選單</a></li>
+                <li><a href="#">第二層選單</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">加班費試算</a>
+              <ul>
+                <li><a href="#">第二層選單</a></li>
+                <li><a href="#">第二層選單</a></li>
+                <li><a href="#">第二層選單</a></li>
+                <li><a href="#">第二層選單</a></li>
+              </ul>
+            </li>
           </ul>
         </nav>
-        <!-- navigation End -->
+        <!-- menu End -->
+        <button type="button" class="sidebarClose">關閉</button>
       </div>
-    </header>
-    <!-- header End -->
-    <!-- main Start -->
-    <div id="center" class="main innerpage">
-      <!-- 內頁新增一個classname-->
-      <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
-      <div class="container">
-        <!-- breadcrumb路徑 -->
-        <div class="breadcrumb">
-          <ul>
-            <li><a href="#">首頁</a></li>
-            <li><a href="#">節點</a></li>
-            <li>節點</li>
-          </ul>
-        </div>
-        <!-- h2節點 -->
-        <h2 class="title">一般條列頁
-          <span class="entitle">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Alias corporis velit et sunt doloremque rem quae explicabo iure dignissimos distinctio, pariatur non magni dolore. Expedita dolorum architecto ea nisi consectetur.</span>
-        </h2>
-        <!-- function_panel -->
-        <div class="function_panel">
-          <!-- function功能區塊 -->
-          <div class="function">
+    </aside>
+    <!-- wrapper Start -->
+    <div class="wrapper">
+      <!-- header Start -->
+      <header class="header wow fadeInDown" data-wow-delay=".2s">
+        <div class="container">
+          <a
+            class="accesskey"
+            href="#aU"
+            id="aU"
+            accesskey="U"
+            title="網站標題"
+            tabindex="2"
+            >:::</a
+          >
+          <h1>
+            <a href="#" title="衛福部照護司-護動e起來"
+              ><img src="images/logo.png" alt=""
+            /></a>
+          </h1>
+          <!-- noscript -->
+          <noscript>
+            您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+
+            (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的
+            Alt+左方向鍵(←)
+            快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結
+            <a href="#">網站導覽</a>
+          </noscript>
+          <!-- navigation Start -->
+          <nav class="navigation">
             <ul>
-              <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
-              <li class="print"><a href="#">友善列印</a></li>
-              <li class="forward"><a href="#">轉寄友人</a></li>
+              <li><a href="#" class="icon_sitemap">sitemap</a></li>
+              <li><a href="#" class="icon_fb">Facebook</a></li>
+              <li><a href="#" class="icon_youtube">Youtube</a></li>
+              <li><a href="#" class="icon_rss">RSS</a></li>
+              <li>
+                <a href="#" class="icon_search">Search</a>
+                <!-- Search Start -->
+                <section class="search">
+                  <noscript>
+                    您的瀏覽器不支援 JavaScript 或 JavaScript已停用
+                  </noscript>
+                  <form action="" class="form_inline">
+                    <div class="form_grp">
+                      <input
+                        name="username"
+                        id="mustSameAsId"
+                        type="text"
+                        placeholder="請輸入文字"
+                        accesskey="S"
+                      />
+                    </div>
+                    <div class="btn_grp">
+                      <input name="" type="submit" value="查詢" />
+                    </div>
+                  </form>
+                  <div class="keywordHot">
+                    <ul>
+                      <li><a href="#">熱門熱門</a></li>
+                      <li><a href="#">查詢</a></li>
+                      <li><a href="#">字詞三</a></li>
+                    </ul>
+                  </div>
+                </section>
+                <!-- Search End -->
+              </li>
+              <li><a href="#" class="icon_live">直播</a></li>
+            </ul>
+          </nav>
+          <!-- navigation End -->
+        </div>
+      </header>
+      <!-- header End -->
+      <div class="mobileLogin wow fadeInDown">
+        <a href="mp.htm" class="loginBtn">登 入</a>
+      </div>
+      <!-- main Start -->
+      <div id="center" class="main innerpage">
+        <!-- 內頁新增一個classname-->
+        <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區"
+          >:::</a
+        >
+        <div class="container">
+          <!-- breadcrumb路徑 -->
+          <div class="breadcrumb">
+            <ul>
+              <li><a href="#">首頁</a></li>
+              <li><a href="#">節點</a></li>
+              <li>節點</li>
             </ul>
           </div>
-          <!-- 社群分享 -->
-          <div class="share">
-            <ul>
-              <li>
-                <a href="#"><img src="images/basic/icon_facebook.png" alt="facebook"></a>
-              </li>
-              <li>
-                <a href="#"><img src="images/basic/icon_twitter.png" alt="twitter"></a>
-              </li>
-              <li>
-                <a href="#"><img src="images/basic/icon_youtube.png" alt="youtube"></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- LP Start -->
-        <section class="cp">
-          <ul class="info">
-            <li><i class="i_clock"></i>資料發布日期:111-05-15</li>
-            <li><i class="i_clock"></i>最後更新日期:111-09-22</li>
-          </ul>
-          <nav class="en_menu">
-            <ol>
-              <li class="menu-item"><a href="#" onclick="window.open('https://nurse.mohw.gov.tw/cp-57-249-7201a-2.html', 'myWin'); return false;">Offshore Areas</a>
-                <ol class="sub-menu">
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-890-781a6-2.html">Kinmen County</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-1007-184e5-2.html">Lienchiang County</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-1008-805bd-2.html">Penghu County</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-893-a7ba1-2.html">Ludao Township</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-894-112b8-2.html">Lanyu Township</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-895-fe398-2.html">Liuqiu Township</a></li>
-                </ol>
-              </li>
-              <li class="menu-item"><a href="#" onclick="window.open('https://nurse.mohw.gov.tw/cp-57-1430-da73c-2.html', 'myWin'); return false;">NAAC of MOHW</a>
-                <ol class="sub-menu">
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-1431-d3462-2.html">Mechanism of EAMT Approval</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-1432-d4963-2.html">Evaluation Criteria</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-1433-e3a9d-2.html">NAAC Doctors On Duty</a></li>
-                </ol>
-              </li>
-              <li class="menu-item"><a href="#" onclick="window.open('https://nurse.mohw.gov.tw/cp-57-1533-36088-2.html', 'myWin'); return false;">ATTP of MOHW</a>
-                <ol class="sub-menu">
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-1534-5d408-2.html">Hackathon Award- SMART</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-1535-c1c26-2.html">Civil Service Outstanding Contribution Award</a></li>
-                </ol>
-              </li>
-              <li class="menu-item"><a href="#" onclick="window.open('https://nurse.mohw.gov.tw/cp-57-1455-206e3-2.html', 'myWin'); return false;">Personnel &amp; Training</a>
-                <ol class="sub-menu">
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-1456-34e14-2.html">EMT on Air</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-1457-29ba3-2.html">Medical Personnel</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-1458-c4f09-2.html">Education &amp; Training</a></li>
-                </ol>
-              </li>
-              <li class="menu-item"><a href="#" onclick="window.open('https://nurse.mohw.gov.tw/cp-57-1459-9c37d-2.html', 'myWin'); return false;">Air &amp; Sea Vehicle</a>
-                <ol class="sub-menu">
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-1460-1c305-2.html">Phenom 300 Fixed-Wing Aircraft</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-1461-89fca-2.html">AW169 Helicopter</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-1463-0f9ae-2.html">Tzu Hang Lun Ambulance Boat</a></li>
-                </ol>
-              </li>
-              <li class="menu-item"><a href="#" onclick="window.open('https://nurse.mohw.gov.tw/cp-57-938-62244-2.html', 'myWin'); return false;">Other EAMT Information</a>
-                <ol class="sub-menu">
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-248-b3015-2.html">Risk Factors</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-937-29e4a-2.html">COVID-19 Response</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-948-67145-2.html">History of EAMT</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-1000-ea856-2.html">News Report</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-1020-7205b-2.html">Q&amp;A</a></li>
-                </ol>
-              </li>
-            </ol>
-            <div class="language_switch"><a href="https://nurse.mohw.gov.tw/lp-57-2.html" target="_blank">中文 English</a></div>
-          </nav>
-          <nav class="ch_menu">
-            <ol>
-              <li class="menu-item"><a href="#" onclick="window.open('https://nurse.mohw.gov.tw/cp-57-249-7201a-2.html', 'myWin'); return false;">服務地區</a>
-                <ol class="sub-menu">
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-890-781a6-2.html">金門縣</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-1007-184e5-2.html">連江縣</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-1008-805bd-2.html">澎湖縣</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-893-a7ba1-2.html">臺東縣綠島鄉</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-894-112b8-2.html">臺東縣蘭嶼鄉</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-895-fe398-2.html">屏東縣琉球鄉</a></li>
-                </ol>
-              </li>
-              <li class="menu-item"><a href="#" onclick="window.open('https://nurse.mohw.gov.tw/cp-57-897-107d2-2.html', 'myWin'); return false;">空審中心</a>
-                <ol class="sub-menu">
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-250-8119d-2.html">審核機制</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-903-3e696-2.html">評估條件</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-931-ba0a3-2.html">值班醫師</a></li>
-                </ol>
-              </li>
-              <li class="menu-item"><a href="#" onclick="window.open('https://nurse.mohw.gov.tw/cp-57-251-5a1b8-2.html', 'myWin'); return false;">遠距會診平臺</a>
-                <ol class="sub-menu">
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-984-8b459-2.html">黑客松零時差隊</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-1158-9e5a4-2.html">公務人員傑出貢獻獎</a></li>
-                </ol>
-              </li>
-              <li class="menu-item"><a href="#" onclick="window.open('https://nurse.mohw.gov.tw/cp-57-927-dc3af-2.html', 'myWin'); return false;">人員及訓練</a>
-                <ol class="sub-menu">
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-929-b0a60-2.html">空中救護技術員</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-930-47f37-2.html">離島醫護人員</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-927-dc3af-2.html">空中救護訓練</a></li>
-                </ol>
-              </li>
-              <li class="menu-item"><a href="#" onclick="window.open('https://nurse.mohw.gov.tw/cp-57-978-b8b5c-2.html', 'myWin'); return false;">轉診航行器</a>
-                <ol class="sub-menu">
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-972-08345-2.html">Phenom 300 定翼機</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-973-9363e-2.html">AW169 直昇機</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-974-05031-2.html">慈航輪 救護船</a></li>
-                </ol>
-              </li>
-              <li class="menu-item"><a href="#" onclick="window.open('https://nurse.mohw.gov.tw/cp-57-938-62244-2.html', 'myWin'); return false;">其他轉診資訊</a>
-                <ol class="sub-menu">
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-248-b3015-2.html">轉診飛航風險</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-937-29e4a-2.html">因應COVID-19作業</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-948-67145-2.html">空中轉診發展史</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-1000-ea856-2.html">相關報導</a></li>
-                  <li class="menu-item"><a href="https://nurse.mohw.gov.tw/cp-57-1020-7205b-2.html">Q&amp;A</a></li>
-                </ol>
-              </li>
-            </ol>
-            <div class="language_switch"><a href="https://nurse.mohw.gov.tw/lp-57-2.html" target="_blank">中文 English</a></div>
-          </nav>
-
-          <p style="text-align: center;"><img alt="0. Home_02" src="/Public/Images/202206/2602206071845b1042.jpg" style="width: 97%;"></p>
-
-          <p>The Ministry of Health and Welfare (MOHW) is committed to improving the quality of medical care in the offshore areas under the principle of "Health Cannot Wait". In view of the current shortage of medical resources of personnel and equipment
-            for emergency medical and intensive care specialties in the offshore areas of Lienchiang County, Kinmen County, Penghu County, Ludao Township, Lanyu Township, and Liuqiu Township, MOHW has established "The Mechanism of EAMT Approval" since
-            2002 to meet the needs of the public for Emergency Air Medical Transport (EAMT) service and to ensure its quality and professionalism. The MOHW has also formalized the "Standard Operating Procedures (SOP) for Offshore EAMT Cases by the National
-          Aeromedical Approval Center (NAAC), MOHW", which provides the acceptance of application, evaluation, coordination and consultation, etc., required of EAMT for people living in the offshore areas 24-hours around the clock.</p>
-
-          <p style="text-align: center;"><img alt="sBanner_0. Home" src="/Public/Images/202206/156220609181961bad.gif" style="width: 79%;"></p>
-
-          <p>In order to enhance the timeliness of Emergency Air Medical Transport (EAMT) for people in offshore areas, in August 2018, MOHW and the local governments officially launched the "Kinmen, Lienchiang, and Penghu Base of Ambulance Aircrafts Service
-            Project". MOHW outsourced the project that three offshore counties of Lienchiang, Kinmen and Penghu were assigned one civilian aircraft to be based for EAMT service; Ludao Township and Lanyu Township are assisted by the National Airborne Service
-          Corps of the Ministry of the Interior for timeliness and safe transport.</p>
-
-          <p>In addition, MOHW completed the establishment of the Aeromedical Transport and Teleconsultation Platform (ATTP) in 2019, with 105 sites including the National Aeromedical Approval Center (NAAC), medical institutions (including health centers)
-            in offshore areas, health centers in indigenous communities, and regional hospitals responsible for EAMT services in Taiwan Island. The operation mechanism of the "Aeromedical Transport and Teleconsultation Platform (ATTP)" is to establish
-          shared medical decision-making by introducing multi-party real-time telemedicine consultation; and to simplify the application process through systematization and digitalization.</p>
-
-        </section>
-        <!-- LP End -->
-        <!-- Pagination -->
-        <div class="pagination">
-          <form action="" class="form_inline">
-            <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示
-              <select name="" id="">
-                <option value="">10</option>
-                <option value="">20</option>
-                <option value="">30</option>
-                <option value="">40</option>
-              </select> 筆， <input type="button" class="btn" value="確定">
+          <!-- h2節點 -->
+          <h2 class="title">
+            一般條列頁
+            <span class="entitle"
+              >Lorem ipsum dolor sit amet consectetur adipisicing, elit. Alias
+              corporis velit et sunt doloremque rem quae explicabo iure
+              dignissimos distinctio, pariatur non magni dolore. Expedita
+              dolorum architecto ea nisi consectetur.</span
+            >
+          </h2>
+          <!-- function_panel -->
+          <div class="function_panel">
+            <!-- function功能區塊 -->
+            <div class="function">
+              <ul>
+                <li class="back">
+                  <a href="javascript:history.back()">回上一頁</a>
+                </li>
+                <li class="print"><a href="#">友善列印</a></li>
+                <li class="forward"><a href="#">轉寄友人</a></li>
+              </ul>
             </div>
-          </form>
-          <ul class="page">
-            <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
-            <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
-            <li class="active"><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">6</a></li>
-            <li><a href="#">7</a></li>
-            <li><a href="#">8</a></li>
-            <li><a href="#">9</a></li>
-            <li><a href="#">10</a></li>
-            <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
-            <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <!-- fatfooter Start -->
-    <section class="fatfooter">
-      <div class="container">
-        <button type="button" name="收合" class="btn btn-fatfooter">收合</button>
-        <nav>
-          <ul>
-            <li>
-              <a href="javascript:;">最新消息</a>
+            <!-- 社群分享 -->
+            <div class="share">
               <ul>
-                <li><a href="">最新公告</a></li>
-                <li><a href="">活動資訊</a></li>
-                <li><a href="">線上報名</a></li>
+                <li>
+                  <a href="#"
+                    ><img src="images/basic/icon_facebook.png" alt="facebook"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/basic/icon_twitter.png" alt="twitter"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/basic/icon_youtube.png" alt="youtube"
+                  /></a>
+                </li>
               </ul>
-            </li>
-            <li>
-              <a href="javascript:;">護理執業</a>
-              <ul>
-                <li><a href="">護理優質職場</a></li>
-                <li><a href="">護理職場爭議通報平台</a></li>
-                <li><a href="">護理進階制度</a></li>
-                <li><a href="">住院友善照顧共聘</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="javascript:;">護理機構</a>
-              <ul>
-                <li><a href="">護理機構防災安全管理</a></li>
-                <li><a href="">一般護理之家評鑑專區</a></li>
-                <li><a href="">產後護理機構評鑑專區</a></li>
-                <li><a href="">居家護理機構評鑑專區</a></li>
-                <li><a href="">護理機構評鑑查詢_民眾查詢專頁</a></li>
-                <li><a href="">護理機構評鑑資訊系統</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="javascript:;">原鄉健康</a>
-              <ul>
-                <li><a href="">原鄉健康照謢十大行動</a></li>
-                <li><a href="">原鄉研討會</a></li>
-                <li><a href="">原鄉就醫交通補助</a></li>
-                <li><a href="">部落健康營造</a></li>
-                <li><a href="">強化基礎醫療照護設施</a></li>
-                <li><a href="">開業醫療機構獎勵及輔導業務</a></li>
-                <li><a href="">緊急醫療零時差多方遠距會診平臺</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="javascript:;">離島健康</a>
-              <ul>
-                <li><a href="">離島醫療照謢十大行動</a></li>
-                <li><a href="">離島研討會</a></li>
-                <li><a href="">轉診來臺就醫交通補助</a></li>
-                <li><a href="">開業醫療機構獎勵及輔導業務</a></li>
-                <li><a href="">離島地區醫院醫療營運維持業務</a></li>
-                <li><a href="">空中轉診後送</a></li>
-                <li><a href="">緊急醫療零時差多方遠距會診平臺</a></li>
-                <li><a href="">強化基礎醫療照護設施</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="javascript:;">培育訓練</a>
-              <ul>
-                <li><a href="">公費生養成</a></li>
-                <li><a href="">繼續教育</a></li>
-                <li><a href="">醫事系統入口網</a></li>
-                <li><a href="">實證護理培訓</a></li>
-                <li><a href="">國際交流</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="javascript:;">政策法規</a>
-              <ul>
-                <li><a href="">法規命令</a></li>
-                <li><a href="">行政規則</a></li>
-                <li><a href="">函釋</a></li>
-                <li><a href="">新制身心障礙鑑定</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="javascript:;">年報資訊</a>
-              <ul>
-                <li><a href="">統計資訊</a></li>
-                <li><a href="">研究成果</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="javascript:;">影音交流</a>
-              <ul>
-                <li><a href="">教學影像</a></li>
-                <li><a href="">宣導影片</a></li>
-                <li><a href="">直播影音</a></li>
-                <li><a href="">活動成果</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="javascript:;">關於本站</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </section>
-    <!-- fatfooter End -->
-    <!-- footer Start-->
-    <footer>
-      <div class="container">
-        <a class="accesskey" href="#aF" id="aF" accesskey="F" title="頁尾區">:::</a>
-        <div class="footer_qrcode">
-          <img src="images/qrcode.png" alt="">
-        </div>
-        <div class="footer_info">
-          <h3>連絡我們</h3>
-          <p>(02)8590-7106 / (02)8590-7105<br>11558 台北市南港區忠孝東路6段488號 <a href="">位置圖</a></p>
-          <div class="social_link">
-            FOLLOW US ON
-            <a href="" class="facebook"></a>
-            <a href="" class="youtube"></a>
+            </div>
           </div>
-          <ul class="footer_link">
-            <li><a href="javascript:;">隱私權政策</a></li>
-            <li><a href="javascript:;">網站安全政策</a></li>
-            <li><a href="javascript:;">政府網站資料開放宣告</a></li>
-          </ul>
-          <p class="Copyright"> Copyright©2018 衛生福利部護理及健康照護司</p>
+          <!-- LP Start -->
+          <section class="cp">
+            <ul class="info">
+              <li><i class="i_clock"></i>資料發布日期:111-05-15</li>
+              <li><i class="i_clock"></i>最後更新日期:111-09-22</li>
+            </ul>
+            <nav class="en_menu">
+              <ol>
+                <li class="menu-item">
+                  <a
+                    href="#"
+                    onclick="window.open('https://nurse.mohw.gov.tw/cp-57-249-7201a-2.html', 'myWin'); return false;"
+                    >Offshore Areas</a
+                  >
+                  <ol class="sub-menu">
+                    <li class="menu-item">
+                      <a href="https://nurse.mohw.gov.tw/cp-57-890-781a6-2.html"
+                        >Kinmen County</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a
+                        href="https://nurse.mohw.gov.tw/cp-57-1007-184e5-2.html"
+                        >Lienchiang County</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a
+                        href="https://nurse.mohw.gov.tw/cp-57-1008-805bd-2.html"
+                        >Penghu County</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a href="https://nurse.mohw.gov.tw/cp-57-893-a7ba1-2.html"
+                        >Ludao Township</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a href="https://nurse.mohw.gov.tw/cp-57-894-112b8-2.html"
+                        >Lanyu Township</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a href="https://nurse.mohw.gov.tw/cp-57-895-fe398-2.html"
+                        >Liuqiu Township</a
+                      >
+                    </li>
+                  </ol>
+                </li>
+                <li class="menu-item">
+                  <a
+                    href="#"
+                    onclick="window.open('https://nurse.mohw.gov.tw/cp-57-1430-da73c-2.html', 'myWin'); return false;"
+                    >NAAC of MOHW</a
+                  >
+                  <ol class="sub-menu">
+                    <li class="menu-item">
+                      <a
+                        href="https://nurse.mohw.gov.tw/cp-57-1431-d3462-2.html"
+                        >Mechanism of EAMT Approval</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a
+                        href="https://nurse.mohw.gov.tw/cp-57-1432-d4963-2.html"
+                        >Evaluation Criteria</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a
+                        href="https://nurse.mohw.gov.tw/cp-57-1433-e3a9d-2.html"
+                        >NAAC Doctors On Duty</a
+                      >
+                    </li>
+                  </ol>
+                </li>
+                <li class="menu-item">
+                  <a
+                    href="#"
+                    onclick="window.open('https://nurse.mohw.gov.tw/cp-57-1533-36088-2.html', 'myWin'); return false;"
+                    >ATTP of MOHW</a
+                  >
+                  <ol class="sub-menu">
+                    <li class="menu-item">
+                      <a
+                        href="https://nurse.mohw.gov.tw/cp-57-1534-5d408-2.html"
+                        >Hackathon Award- SMART</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a
+                        href="https://nurse.mohw.gov.tw/cp-57-1535-c1c26-2.html"
+                        >Civil Service Outstanding Contribution Award</a
+                      >
+                    </li>
+                  </ol>
+                </li>
+                <li class="menu-item">
+                  <a
+                    href="#"
+                    onclick="window.open('https://nurse.mohw.gov.tw/cp-57-1455-206e3-2.html', 'myWin'); return false;"
+                    >Personnel &amp; Training</a
+                  >
+                  <ol class="sub-menu">
+                    <li class="menu-item">
+                      <a
+                        href="https://nurse.mohw.gov.tw/cp-57-1456-34e14-2.html"
+                        >EMT on Air</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a
+                        href="https://nurse.mohw.gov.tw/cp-57-1457-29ba3-2.html"
+                        >Medical Personnel</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a
+                        href="https://nurse.mohw.gov.tw/cp-57-1458-c4f09-2.html"
+                        >Education &amp; Training</a
+                      >
+                    </li>
+                  </ol>
+                </li>
+                <li class="menu-item">
+                  <a
+                    href="#"
+                    onclick="window.open('https://nurse.mohw.gov.tw/cp-57-1459-9c37d-2.html', 'myWin'); return false;"
+                    >Air &amp; Sea Vehicle</a
+                  >
+                  <ol class="sub-menu">
+                    <li class="menu-item">
+                      <a
+                        href="https://nurse.mohw.gov.tw/cp-57-1460-1c305-2.html"
+                        >Phenom 300 Fixed-Wing Aircraft</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a
+                        href="https://nurse.mohw.gov.tw/cp-57-1461-89fca-2.html"
+                        >AW169 Helicopter</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a
+                        href="https://nurse.mohw.gov.tw/cp-57-1463-0f9ae-2.html"
+                        >Tzu Hang Lun Ambulance Boat</a
+                      >
+                    </li>
+                  </ol>
+                </li>
+                <li class="menu-item">
+                  <a
+                    href="#"
+                    onclick="window.open('https://nurse.mohw.gov.tw/cp-57-938-62244-2.html', 'myWin'); return false;"
+                    >Other EAMT Information</a
+                  >
+                  <ol class="sub-menu">
+                    <li class="menu-item">
+                      <a href="https://nurse.mohw.gov.tw/cp-57-248-b3015-2.html"
+                        >Risk Factors</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a href="https://nurse.mohw.gov.tw/cp-57-937-29e4a-2.html"
+                        >COVID-19 Response</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a href="https://nurse.mohw.gov.tw/cp-57-948-67145-2.html"
+                        >History of EAMT</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a
+                        href="https://nurse.mohw.gov.tw/cp-57-1000-ea856-2.html"
+                        >News Report</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a
+                        href="https://nurse.mohw.gov.tw/cp-57-1020-7205b-2.html"
+                        >Q&amp;A</a
+                      >
+                    </li>
+                  </ol>
+                </li>
+              </ol>
+              <div class="language_switch">
+                <a href="https://nurse.mohw.gov.tw/lp-57-2.html" target="_blank"
+                  >中文 English</a
+                >
+              </div>
+            </nav>
+            <nav class="ch_menu">
+              <ol>
+                <li class="menu-item">
+                  <a
+                    href="#"
+                    onclick="window.open('https://nurse.mohw.gov.tw/cp-57-249-7201a-2.html', 'myWin'); return false;"
+                    >服務地區</a
+                  >
+                  <ol class="sub-menu">
+                    <li class="menu-item">
+                      <a href="https://nurse.mohw.gov.tw/cp-57-890-781a6-2.html"
+                        >金門縣</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a
+                        href="https://nurse.mohw.gov.tw/cp-57-1007-184e5-2.html"
+                        >連江縣</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a
+                        href="https://nurse.mohw.gov.tw/cp-57-1008-805bd-2.html"
+                        >澎湖縣</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a href="https://nurse.mohw.gov.tw/cp-57-893-a7ba1-2.html"
+                        >臺東縣綠島鄉</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a href="https://nurse.mohw.gov.tw/cp-57-894-112b8-2.html"
+                        >臺東縣蘭嶼鄉</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a href="https://nurse.mohw.gov.tw/cp-57-895-fe398-2.html"
+                        >屏東縣琉球鄉</a
+                      >
+                    </li>
+                  </ol>
+                </li>
+                <li class="menu-item">
+                  <a
+                    href="#"
+                    onclick="window.open('https://nurse.mohw.gov.tw/cp-57-897-107d2-2.html', 'myWin'); return false;"
+                    >空審中心</a
+                  >
+                  <ol class="sub-menu">
+                    <li class="menu-item">
+                      <a href="https://nurse.mohw.gov.tw/cp-57-250-8119d-2.html"
+                        >審核機制</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a href="https://nurse.mohw.gov.tw/cp-57-903-3e696-2.html"
+                        >評估條件</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a href="https://nurse.mohw.gov.tw/cp-57-931-ba0a3-2.html"
+                        >值班醫師</a
+                      >
+                    </li>
+                  </ol>
+                </li>
+                <li class="menu-item">
+                  <a
+                    href="#"
+                    onclick="window.open('https://nurse.mohw.gov.tw/cp-57-251-5a1b8-2.html', 'myWin'); return false;"
+                    >遠距會診平臺</a
+                  >
+                  <ol class="sub-menu">
+                    <li class="menu-item">
+                      <a href="https://nurse.mohw.gov.tw/cp-57-984-8b459-2.html"
+                        >黑客松零時差隊</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a
+                        href="https://nurse.mohw.gov.tw/cp-57-1158-9e5a4-2.html"
+                        >公務人員傑出貢獻獎</a
+                      >
+                    </li>
+                  </ol>
+                </li>
+                <li class="menu-item">
+                  <a
+                    href="#"
+                    onclick="window.open('https://nurse.mohw.gov.tw/cp-57-927-dc3af-2.html', 'myWin'); return false;"
+                    >人員及訓練</a
+                  >
+                  <ol class="sub-menu">
+                    <li class="menu-item">
+                      <a href="https://nurse.mohw.gov.tw/cp-57-929-b0a60-2.html"
+                        >空中救護技術員</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a href="https://nurse.mohw.gov.tw/cp-57-930-47f37-2.html"
+                        >離島醫護人員</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a href="https://nurse.mohw.gov.tw/cp-57-927-dc3af-2.html"
+                        >空中救護訓練</a
+                      >
+                    </li>
+                  </ol>
+                </li>
+                <li class="menu-item">
+                  <a
+                    href="#"
+                    onclick="window.open('https://nurse.mohw.gov.tw/cp-57-978-b8b5c-2.html', 'myWin'); return false;"
+                    >轉診航行器</a
+                  >
+                  <ol class="sub-menu">
+                    <li class="menu-item">
+                      <a href="https://nurse.mohw.gov.tw/cp-57-972-08345-2.html"
+                        >Phenom 300 定翼機</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a href="https://nurse.mohw.gov.tw/cp-57-973-9363e-2.html"
+                        >AW169 直昇機</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a href="https://nurse.mohw.gov.tw/cp-57-974-05031-2.html"
+                        >慈航輪 救護船</a
+                      >
+                    </li>
+                  </ol>
+                </li>
+                <li class="menu-item">
+                  <a
+                    href="#"
+                    onclick="window.open('https://nurse.mohw.gov.tw/cp-57-938-62244-2.html', 'myWin'); return false;"
+                    >其他轉診資訊</a
+                  >
+                  <ol class="sub-menu">
+                    <li class="menu-item">
+                      <a href="https://nurse.mohw.gov.tw/cp-57-248-b3015-2.html"
+                        >轉診飛航風險</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a href="https://nurse.mohw.gov.tw/cp-57-937-29e4a-2.html"
+                        >因應COVID-19作業</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a href="https://nurse.mohw.gov.tw/cp-57-948-67145-2.html"
+                        >空中轉診發展史</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a
+                        href="https://nurse.mohw.gov.tw/cp-57-1000-ea856-2.html"
+                        >相關報導</a
+                      >
+                    </li>
+                    <li class="menu-item">
+                      <a
+                        href="https://nurse.mohw.gov.tw/cp-57-1020-7205b-2.html"
+                        >Q&amp;A</a
+                      >
+                    </li>
+                  </ol>
+                </li>
+              </ol>
+              <div class="language_switch">
+                <a href="https://nurse.mohw.gov.tw/lp-57-2.html" target="_blank"
+                  >中文 English</a
+                >
+              </div>
+            </nav>
+
+            <p style="text-align: center">
+              <img
+                alt="0. Home_02"
+                src="/Public/Images/202206/2602206071845b1042.jpg"
+                style="width: 97%"
+              />
+            </p>
+
+            <p>
+              The Ministry of Health and Welfare (MOHW) is committed to
+              improving the quality of medical care in the offshore areas under
+              the principle of "Health Cannot Wait". In view of the current
+              shortage of medical resources of personnel and equipment for
+              emergency medical and intensive care specialties in the offshore
+              areas of Lienchiang County, Kinmen County, Penghu County, Ludao
+              Township, Lanyu Township, and Liuqiu Township, MOHW has
+              established "The Mechanism of EAMT Approval" since 2002 to meet
+              the needs of the public for Emergency Air Medical Transport (EAMT)
+              service and to ensure its quality and professionalism. The MOHW
+              has also formalized the "Standard Operating Procedures (SOP) for
+              Offshore EAMT Cases by the National Aeromedical Approval Center
+              (NAAC), MOHW", which provides the acceptance of application,
+              evaluation, coordination and consultation, etc., required of EAMT
+              for people living in the offshore areas 24-hours around the clock.
+            </p>
+
+            <p style="text-align: center">
+              <img
+                alt="sBanner_0. Home"
+                src="/Public/Images/202206/156220609181961bad.gif"
+                style="width: 79%"
+              />
+            </p>
+
+            <p>
+              In order to enhance the timeliness of Emergency Air Medical
+              Transport (EAMT) for people in offshore areas, in August 2018,
+              MOHW and the local governments officially launched the "Kinmen,
+              Lienchiang, and Penghu Base of Ambulance Aircrafts Service
+              Project". MOHW outsourced the project that three offshore counties
+              of Lienchiang, Kinmen and Penghu were assigned one civilian
+              aircraft to be based for EAMT service; Ludao Township and Lanyu
+              Township are assisted by the National Airborne Service Corps of
+              the Ministry of the Interior for timeliness and safe transport.
+            </p>
+
+            <p>
+              In addition, MOHW completed the establishment of the Aeromedical
+              Transport and Teleconsultation Platform (ATTP) in 2019, with 105
+              sites including the National Aeromedical Approval Center (NAAC),
+              medical institutions (including health centers) in offshore areas,
+              health centers in indigenous communities, and regional hospitals
+              responsible for EAMT services in Taiwan Island. The operation
+              mechanism of the "Aeromedical Transport and Teleconsultation
+              Platform (ATTP)" is to establish shared medical decision-making by
+              introducing multi-party real-time telemedicine consultation; and
+              to simplify the application process through systematization and
+              digitalization.
+            </p>
+          </section>
+          <!-- LP End -->
+          <!-- Pagination -->
+          <div class="pagination">
+            <form action="" class="form_inline">
+              <div class="total">
+                共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示
+                <select name="" id="">
+                  <option value="">10</option>
+                  <option value="">20</option>
+                  <option value="">30</option>
+                  <option value="">40</option>
+                </select>
+                筆， <input type="button" class="btn" value="確定" />
+              </div>
+            </form>
+            <ul class="page">
+              <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+              <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">6</a></li>
+              <li><a href="#">7</a></li>
+              <li><a href="#">8</a></li>
+              <li><a href="#">9</a></li>
+              <li><a href="#">10</a></li>
+              <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+              <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </footer>
-    <!-- footer End -->
-  </div>
-  <a href="javascript:;" class="scrollToTop">回頁首</a>
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <!-- JQ -->
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <!-- plugin js -->
-  <script src="vendor/jquery.easing.min.js"></script>
-  <script src="vendor/slick/slick.min.js "></script>
-  <script src="vendor/slick/slick-lightbox.js "></script>
-  <script src="vendor/lazyload/lazyload.min.js"></script>
-  <!-- hyUI -->
-  <script src="js/hyui.js"></script>
-  <!-- 客製js -->
-  <script src="js/customize.js"></script>
-</body>
-
+      <!-- fatfooter Start -->
+      <section class="fatfooter">
+        <div class="container">
+          <button type="button" name="收合" class="btn btn-fatfooter">
+            收合
+          </button>
+          <nav>
+            <ul>
+              <li>
+                <a href="javascript:;">最新消息</a>
+                <ul>
+                  <li><a href="">最新公告</a></li>
+                  <li><a href="">活動資訊</a></li>
+                  <li><a href="">線上報名</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="javascript:;">護理執業</a>
+                <ul>
+                  <li><a href="">護理優質職場</a></li>
+                  <li><a href="">護理職場爭議通報平台</a></li>
+                  <li><a href="">護理進階制度</a></li>
+                  <li><a href="">住院友善照顧共聘</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="javascript:;">護理機構</a>
+                <ul>
+                  <li><a href="">護理機構防災安全管理</a></li>
+                  <li><a href="">一般護理之家評鑑專區</a></li>
+                  <li><a href="">產後護理機構評鑑專區</a></li>
+                  <li><a href="">居家護理機構評鑑專區</a></li>
+                  <li><a href="">護理機構評鑑查詢_民眾查詢專頁</a></li>
+                  <li><a href="">護理機構評鑑資訊系統</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="javascript:;">原鄉健康</a>
+                <ul>
+                  <li><a href="">原鄉健康照謢十大行動</a></li>
+                  <li><a href="">原鄉研討會</a></li>
+                  <li><a href="">原鄉就醫交通補助</a></li>
+                  <li><a href="">部落健康營造</a></li>
+                  <li><a href="">強化基礎醫療照護設施</a></li>
+                  <li><a href="">開業醫療機構獎勵及輔導業務</a></li>
+                  <li><a href="">緊急醫療零時差多方遠距會診平臺</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="javascript:;">離島健康</a>
+                <ul>
+                  <li><a href="">離島醫療照謢十大行動</a></li>
+                  <li><a href="">離島研討會</a></li>
+                  <li><a href="">轉診來臺就醫交通補助</a></li>
+                  <li><a href="">開業醫療機構獎勵及輔導業務</a></li>
+                  <li><a href="">離島地區醫院醫療營運維持業務</a></li>
+                  <li><a href="">空中轉診後送</a></li>
+                  <li><a href="">緊急醫療零時差多方遠距會診平臺</a></li>
+                  <li><a href="">強化基礎醫療照護設施</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="javascript:;">培育訓練</a>
+                <ul>
+                  <li><a href="">公費生養成</a></li>
+                  <li><a href="">繼續教育</a></li>
+                  <li><a href="">醫事系統入口網</a></li>
+                  <li><a href="">實證護理培訓</a></li>
+                  <li><a href="">國際交流</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="javascript:;">政策法規</a>
+                <ul>
+                  <li><a href="">法規命令</a></li>
+                  <li><a href="">行政規則</a></li>
+                  <li><a href="">函釋</a></li>
+                  <li><a href="">新制身心障礙鑑定</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="javascript:;">年報資訊</a>
+                <ul>
+                  <li><a href="">統計資訊</a></li>
+                  <li><a href="">研究成果</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="javascript:;">影音交流</a>
+                <ul>
+                  <li><a href="">教學影像</a></li>
+                  <li><a href="">宣導影片</a></li>
+                  <li><a href="">直播影音</a></li>
+                  <li><a href="">活動成果</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="javascript:;">關於本站</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <!-- fatfooter End -->
+      <!-- footer Start-->
+      <footer>
+        <div class="container">
+          <a class="accesskey" href="#aF" id="aF" accesskey="F" title="頁尾區"
+            >:::</a
+          >
+          <div class="footer_qrcode">
+            <img src="images/qrcode.png" alt="" />
+          </div>
+          <div class="footer_info">
+            <h3>連絡我們</h3>
+            <p>
+              (02)8590-7106 / (02)8590-7105<br />11558
+              台北市南港區忠孝東路6段488號 <a href="">位置圖</a>
+            </p>
+            <div class="social_link">
+              FOLLOW US ON
+              <a href="" class="facebook"></a>
+              <a href="" class="youtube"></a>
+            </div>
+            <ul class="footer_link">
+              <li><a href="javascript:;">隱私權政策</a></li>
+              <li><a href="javascript:;">網站安全政策</a></li>
+              <li><a href="javascript:;">政府網站資料開放宣告</a></li>
+            </ul>
+            <p class="Copyright">Copyright©2018 衛生福利部護理及健康照護司</p>
+          </div>
+        </div>
+      </footer>
+      <!-- footer End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- JQ -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script>
+    <script src="vendor/slick/slick.min.js "></script>
+    <script src="vendor/slick/slick-lightbox.js "></script>
+    <script src="vendor/lazyload/lazyload.min.js"></script>
+    <!-- hyUI -->
+    <script src="js/hyui.js"></script>
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+  </body>
 </html>

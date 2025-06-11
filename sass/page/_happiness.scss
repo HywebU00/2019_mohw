@@ -2,7 +2,6 @@
   background: #fff url(../images/happiness/inner_bg.png) no-repeat center 84px;
   @include screen("mobile") {
     background: none;
-    padding: 5em 1em 0 1em;
   }
   .toptitle {
     position: absolute;
@@ -306,6 +305,56 @@
             }
           }
         }
+      }
+    }
+  }
+  .happiness_link2 {
+    margin-bottom: 14px;
+    a {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      display: block;
+      padding: 24px 82px 24px 24px;
+      border-radius: 9px;
+      color: #fff;
+      background: #ff9734;
+      // background: linear-gradient(90deg, #ff9734 0%, #ff7b42 100%);
+      transition: all 0.5s;
+      position: relative;
+      @include screen("mobile") {
+        font-size: 1.25rem;
+        padding: 24px 58px 24px 24px;
+      }
+      span {
+        font-size: 0.9375rem;
+        letter-spacing: 0;
+        display: block;
+        margin-top: 8px;
+        font-weight: normal;
+        padding-top: 8px;
+        border-top: 1px solid #fff;
+        @include screen("mobile") {
+          margin-top: 6px;
+          padding-top: 6px;
+        }
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        display: block;
+        background: url("../images/happiness/icon_linkout.svg") no-repeat center
+          center;
+        background-size: 100%;
+        right: 24px;
+        top: 50%;
+        margin-top: -12px;
+      }
+      &:hover,
+      &:focus {
+        background: #ff7b42;
+        // background: linear-gradient(90deg, #ff7b42 0%, #ff9734 100%);
       }
     }
   }
@@ -904,48 +953,6 @@
           color: #fff;
           background: #00857c;
         }
-      }
-    }
-  }
-  .happiness_link2 {
-    margin-bottom: 14px;
-    a {
-      font-size: 1.25rem;
-      letter-spacing: 1px;
-      display: block;
-      padding: 24px 58px 24px 24px;
-      border-radius: 9px;
-      color: #fff;
-      background: #ff9734;
-      // background: linear-gradient(90deg, #ff9734 0%, #ff7b42 100%);
-      transition: all 0.5s;
-      position: relative;
-      span {
-        font-size: 0.9375rem;
-        letter-spacing: 0;
-        display: block;
-        margin-top: 6px;
-        font-weight: normal;
-        padding-top: 6px;
-        border-top: 1px solid #fff;
-      }
-      &:after {
-        content: "";
-        position: absolute;
-        width: 24px;
-        height: 24px;
-        display: block;
-        background: url("../images/happiness/icon_linkout.svg") no-repeat center
-          center;
-        background-size: 100%;
-        right: 24px;
-        top: 50%;
-        margin-top: -12px;
-      }
-      &:hover,
-      &:focus {
-        background: #ff7b42;
-        // background: linear-gradient(90deg, #ff7b42 0%, #ff9734 100%);
       }
     }
   }

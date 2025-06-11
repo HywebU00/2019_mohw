@@ -1334,7 +1334,9 @@ $nurse3: #5e1681;
   line-height: 100%;
   text-align: center;
   margin-top: -0.5rem;
-
+  @include screen("mobile") {
+    margin-top: 0;
+  }
   &.policy1 {
     background: linear-gradient(180deg, $nurse1 0%, rgba($nurse1, 0.7) 100%);
   }

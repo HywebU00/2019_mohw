@@ -4,7 +4,6 @@
   --hospitalized_color: #9d4694;
   @include screen("mobile") {
     background: none;
-    padding: 5em 1em 0 1em;
   }
   .toptitle {
     position: absolute;

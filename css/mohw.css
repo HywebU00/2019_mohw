@@ -2803,8 +2803,6 @@ img.img-responsive {
     width: 100%;
     z-index: 999;
     height: 60px;
-    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-            box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
     background: #fefefe;
   }
 }
@@ -4812,7 +4810,7 @@ body.noscroll {
 }
 @media screen and (max-width: 767px) {
   .main {
-    padding-top: 55px;
+    padding-top: 100px;
   }
 }
 .main h1.title,
@@ -4844,7 +4842,7 @@ body.noscroll {
 @media screen and (max-width: 767px) {
   .innerpage {
     background: none;
-    padding: 4em 1em 1em 1em;
+    padding: 110px 1em 1em 1em;
   }
 }
 .innerpage > .container {
@@ -5106,6 +5104,49 @@ body.noscroll {
 }
 .innerpage.article_cp .cp .article_comment p {
   clear: both;
+}
+
+.mobileLogin {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .mobileLogin {
+    display: block;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 60px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #fefefe;
+    color: #3d3d3d;
+    font-weight: bold;
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+  }
+  .mobileLogin a.loginBtn {
+    color: #fff;
+    background: #6e6e6e;
+    border-radius: 4px;
+    height: 34px;
+    line-height: 34px;
+    display: inline-block;
+    padding: 0 14px;
+    text-align: center;
+  }
+  .mobileLogin .icon_member {
+    width: 31px;
+    height: 31px;
+    display: inline-block;
+    background: url(../images/icon_member.png) center center no-repeat;
+    background-size: contain;
+    position: relative;
+    text-indent: 0;
+    font-size: 0;
+    margin-right: 6px;
+  }
 }
 
 .mpSlider {
@@ -8632,7 +8673,6 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 @media screen and (max-width: 767px) {
   .happiness {
     background: none;
-    padding: 5em 1em 0 1em;
   }
 }
 .happiness .toptitle {
@@ -8963,6 +9003,57 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .happiness_center .welcome .welcome_alertblock .alertlist .more a:hover, .happiness_center .welcome .welcome_alertblock .alertlist .more a:focus {
   background: #00857c;
   color: #fff;
+}
+.happiness_center .happiness_link2 {
+  margin-bottom: 14px;
+}
+.happiness_center .happiness_link2 a {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  display: block;
+  padding: 24px 82px 24px 24px;
+  border-radius: 9px;
+  color: #fff;
+  background: #ff9734;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .happiness_center .happiness_link2 a {
+    font-size: 1.25rem;
+    padding: 24px 58px 24px 24px;
+  }
+}
+.happiness_center .happiness_link2 a span {
+  font-size: 0.9375rem;
+  letter-spacing: 0;
+  display: block;
+  margin-top: 8px;
+  font-weight: normal;
+  padding-top: 8px;
+  border-top: 1px solid #fff;
+}
+@media screen and (max-width: 767px) {
+  .happiness_center .happiness_link2 a span {
+    margin-top: 6px;
+    padding-top: 6px;
+  }
+}
+.happiness_center .happiness_link2 a:after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  display: block;
+  background: url("../images/happiness/icon_linkout.svg") no-repeat center center;
+  background-size: 100%;
+  right: 24px;
+  top: 50%;
+  margin-top: -12px;
+}
+.happiness_center .happiness_link2 a:hover, .happiness_center .happiness_link2 a:focus {
+  background: #ff7b42;
 }
 .happiness_center .happiness_slider {
   border-radius: 9px;
@@ -9603,45 +9694,6 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .happiness_right .happiness_link .more a:hover, .happiness_right .happiness_link .more a:focus {
   color: #fff;
   background: #00857c;
-}
-.happiness_right .happiness_link2 {
-  margin-bottom: 14px;
-}
-.happiness_right .happiness_link2 a {
-  font-size: 1.25rem;
-  letter-spacing: 1px;
-  display: block;
-  padding: 24px 58px 24px 24px;
-  border-radius: 9px;
-  color: #fff;
-  background: #ff9734;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  position: relative;
-}
-.happiness_right .happiness_link2 a span {
-  font-size: 0.9375rem;
-  letter-spacing: 0;
-  display: block;
-  margin-top: 6px;
-  font-weight: normal;
-  padding-top: 6px;
-  border-top: 1px solid #fff;
-}
-.happiness_right .happiness_link2 a:after {
-  content: "";
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  display: block;
-  background: url("../images/happiness/icon_linkout.svg") no-repeat center center;
-  background-size: 100%;
-  right: 24px;
-  top: 50%;
-  margin-top: -12px;
-}
-.happiness_right .happiness_link2 a:hover, .happiness_right .happiness_link2 a:focus {
-  background: #ff7b42;
 }
 
 .happiness_hospital .hospital_filter {
@@ -12059,6 +12111,11 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   text-align: center;
   margin-top: -0.5rem;
 }
+@media screen and (max-width: 767px) {
+  .policyClass {
+    margin-top: 0;
+  }
+}
 .policyClass.policy1 {
   background: -webkit-gradient(linear, left top, left bottom, from(#b6107e), to(rgba(182, 16, 126, 0.7)));
   background: linear-gradient(180deg, #b6107e 0%, rgba(182, 16, 126, 0.7) 100%);
@@ -12624,7 +12681,6 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 @media screen and (max-width: 767px) {
   .hospitalized {
     background: none;
-    padding: 5em 1em 0 1em;
   }
 }
 .hospitalized .toptitle {
