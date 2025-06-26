@@ -317,6 +317,10 @@ body {
       display: inline-block;
       padding: 0 14px;
       text-align: center;
+      span {
+        font-size: 0.8125rem;
+        font-weight: normal;
+      }
     }
     .icon_member {
       width: 31px;

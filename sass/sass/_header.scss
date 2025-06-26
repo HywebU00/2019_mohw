@@ -132,7 +132,7 @@
   // 導覽列
   .navigation {
     @extend %clearfix;
-    overflow: hidden;
+    // overflow: hidden;
     width: 100%;
     box-sizing: border-box;
     margin-top: 26px;
@@ -147,6 +147,7 @@
       float: left;
       margin: 0;
       border-left: 1px dotted #c4c2c2;
+      position: relative;
       &:first-child,
       &:last-child {
         border-left: 0;
@@ -193,6 +194,7 @@
           position: relative;
           text-indent: 0;
           font-size: 0;
+          margin-left: 5px;
           span {
             width: 16px;
             height: 16px;
@@ -216,8 +218,36 @@
           color: #fff;
           border-radius: 2px;
           margin-left: 10px;
+          cursor: pointer;
+          & + .tip {
+            background: #222;
+            color: #fff;
+            top: 40px;
+            left: -10px;
+            position: absolute;
+            white-space: nowrap;
+            padding: 4px 10px;
+            font-size: 0.8125rem;
+            border-radius: 2px;
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+            &:before {
+              content: "";
+              width: 0px;
+              height: 0px;
+              border-style: solid;
+              border-width: 0 4px 6px 4px;
+              border-color: transparent transparent #222 transparent;
+              position: absolute;
+              top: -6px;
+              left: 62px;
+            }
+          }
           &:hover {
             @include gradient(#873783, #ab52a8, horizontal);
+            & + .tip {
+              opacity: 1;
+            }
           }
         }
       }
