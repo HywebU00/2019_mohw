@@ -3371,7 +3371,7 @@ img.img-responsive {
   position: absolute;
   top: 0;
   left: 0;
-  color: #FFF;
+  color: #fff;
   width: 100%;
   height: 3em;
   padding: 0 1em;
@@ -3460,7 +3460,7 @@ img.img-responsive {
   transition: 0.3s;
 }
 .sidebar .m_area .menu li li {
-  background: #FFF;
+  background: #fff;
   border-bottom: 1px solid #b7b7b7;
 }
 .sidebar .m_area .menu li li a {
@@ -3482,7 +3482,7 @@ img.img-responsive {
 .sidebar .m_area .menu li li li a {
   background: rgba(0, 0, 0, 0.15) !important;
   padding: 0.8em 1em 0.8em 4em !important;
-  border-bottom: 1px solid #BBB;
+  border-bottom: 1px solid #bbb;
 }
 .sidebar .m_area .menu li li li a:hover, .sidebar .m_area .menu li li li a:focus {
   background: rgba(0, 0, 0, 0.25) !important;
@@ -3520,7 +3520,7 @@ img.img-responsive {
   line-height: 2em;
   padding: 0.5em 1em;
   font-size: 0.938em;
-  color: #FFF;
+  color: #fff;
   font-weight: bold;
   text-decoration: none;
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -3533,6 +3533,11 @@ img.img-responsive {
 }
 .sidebar .navigation ul li a:hover, .sidebar .navigation ul li a:focus {
   background: #522651;
+}
+@media screen and (max-width: 767px) {
+  .sidebar .navigation ul li a.icon_live + .tip, .sidebar .navigation ul li a.icon_logout + .tip {
+    display: none;
+  }
 }
 .sidebar .navigation .language {
   position: relative;

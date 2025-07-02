@@ -11,7 +11,7 @@
   overflow-y: auto !important;
   -webkit-overflow-scrolling: touch;
   -webkit-transform: translate3d(0, 0, 0);
-  background:#9f4a9c url(../images/menu_bg.jpg) no-repeat center center;
+  background: #9f4a9c url(../images/menu_bg.jpg) no-repeat center center;
   background-size: cover;
   @include box-sizing;
   .m_area {
@@ -20,22 +20,21 @@
       position: absolute;
       top: 0;
       left: 0;
-      color: #FFF;
+      color: #fff;
       width: 100%;
       height: 3em;
       padding: 0 1em;
       line-height: 3em;
       @include box-sizing;
     }
-    width:100%;
+    width: 100%;
     height: 100%;
     padding: 3em 0;
     // position:absolute;
     // top: 0;
-    // left: 0; 
-    
-    
-    overflow:hidden;
+    // left: 0;
+
+    overflow: hidden;
     overflow-y: auto;
     z-index: 9999;
     -webkit-overflow-scrolling: touch;
@@ -46,13 +45,13 @@
       margin: 0 auto;
       margin-bottom: 1em;
       font-size: 1.125em;
-      @include screen('mobile') {
+      @include screen("mobile") {
         width: 90%;
       }
       a {
         display: block;
         text-decoration: none;
-        transition: .4s ease-out;
+        transition: 0.4s ease-out;
       }
       ul {
         margin: 0;
@@ -60,16 +59,16 @@
         list-style: none;
         ul {
           display: none;
-          width: 100%;            
+          width: 100%;
           background: #fff;
-          font-size: .938em;
+          font-size: 0.938em;
           position: relative;
           a {
             padding-left: 2em;
           }
           ul {
             left: 0;
-            display: none;                
+            display: none;
             ul {
               display: none;
             }
@@ -80,30 +79,31 @@
         display: block;
         float: none;
         width: 100%;
+
         ul {
         }
-        >a {
-          padding: .5em 1em;
-          border-bottom: 1px solid rgba(255,255,255,.38);
+        > a {
+          padding: 0.5em 1em;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.38);
           text-align: center;
           min-height: 2em;
           font-weight: bold;
           line-height: 2em;
           letter-spacing: 1px;
           color: #fff;
-          span{
+          span {
             display: block;
-            font-size: .937rem;
+            font-size: 0.937rem;
             line-height: 160%;
           }
         }
         &.hasChild {
-          >a {
-            padding: .5em 36px;
+          > a {
+            padding: 0.5em 36px;
             color: #fff;
             position: relative;
             &:after {
-              content: '';
+              content: "";
               position: absolute;
               right: 16px;
               top: 1em;
@@ -114,41 +114,41 @@
               transform: rotate(45deg);
               border-top: none;
               border-left: none;
-              transition: .3s;
+              transition: 0.3s;
             }
           }
         }
         li {
-          background: #FFF;
+          background: #fff;
           border-bottom: 1px solid #b7b7b7;
           a {
-            padding: .5em!important;
+            padding: 0.5em !important;
             background: #fff;
             color: #444;
             &:hover,
             &:focus {
               color: #000;
-              background: rgba(0, 0, 0, .15);
+              background: rgba(0, 0, 0, 0.15);
             }
           }
           &.hasChild {
             a {
-              background: rgba(0, 0, 0, .05);
+              background: rgba(0, 0, 0, 0.05);
               padding: 1em 1em 1em 2em;
               &:hover,
               &:focus {
-                background: rgba(0, 0, 0, .05);
+                background: rgba(0, 0, 0, 0.05);
               }
             }
           }
           li {
             a {
-              background: rgba(0, 0, 0, .15) !important;
-              padding: .8em 1em .8em 4em !important;
-              border-bottom: 1px solid #BBB;
+              background: rgba(0, 0, 0, 0.15) !important;
+              padding: 0.8em 1em 0.8em 4em !important;
+              border-bottom: 1px solid #bbb;
               &:hover,
               &:focus {
-                background: rgba(0, 0, 0, .25) !important;
+                background: rgba(0, 0, 0, 0.25) !important;
               }
               &:after {
                 display: none !important;
@@ -169,7 +169,7 @@
       padding: 0;
       overflow: hidden;
       list-style: none;
-      border: 1px solid rgba(255, 255, 255, .5);
+      border: 1px solid rgba(255, 255, 255, 0.5);
       border-bottom: none;
       border-right: none;
       li {
@@ -183,12 +183,12 @@
           display: block;
           height: 3em;
           line-height: 2em;
-          padding: .5em 1em;
-          font-size: .938em;
-          color: #FFF;
+          padding: 0.5em 1em;
+          font-size: 0.938em;
+          color: #fff;
           font-weight: bold;
           text-decoration: none;
-          border: 1px solid rgba(255, 255, 255, .5);
+          border: 1px solid rgba(255, 255, 255, 0.5);
           @include box-sizing;
           &:nth-child(odd) {
             border-left: none;
@@ -198,6 +198,14 @@
           &:focus {
             background: darken($primaryColor, 20);
           }
+          &.icon_live,
+          &.icon_logout {
+            & + .tip {
+              @include screen("mobile") {
+                display: none;
+              }
+            }
+          }
         }
       }
     }
@@ -206,13 +214,13 @@
       width: 100%;
       @include gutter;
       a {
-        padding: .6em 1em;
-        background: rgba(0, 0, 0, .4);
+        padding: 0.6em 1em;
+        background: rgba(0, 0, 0, 0.4);
         &:after {
           top: 1.3em;
         }
         &:before {
-          top: .8em;
+          top: 0.8em;
         }
       }
       ul {
@@ -222,12 +230,12 @@
         top: 0;
         padding: 0;
         border: none;
-        background:none;
+        background: none;
         li {
           width: 100% !important;
           a {
             border: none;
-            background: rgba(0, 0, 0, .4);
+            background: rgba(0, 0, 0, 0.4);
           }
         }
       }
